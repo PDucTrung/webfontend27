@@ -1,0 +1,1 @@
+1. tạo respon (không nằm bên trong respon khác - chỉ tạo 1 lần)
