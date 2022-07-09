@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  width: 1320px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* row -> column */
+.row > * {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 10px;
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: end;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.static {
+  background-color: chocolate;
+  position: static;
+}
+
+.relative {
+  background-color: deeppink;
+  left: 150px;
+  bottom: 50px;
+  position: relative;
+}
+/* chi a dung duoc 2/4 thuoc tinh top/left/right/bottom */
+/* thhuong relative su dung de tao moc cho nhung pha tu khac (absolute) can theo */
+
+.absolute {
+  background-color: rgba(25, 25, 112, 0.534);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+/* kich thuoc/vi tri ban dau khong ton tai, cac phan tu xung quanh se tu dong sap xep lai de lap day khoang trong */
+/* kich thuoc tu dong co lai chi vua voi noi dung */
+/* cho phep dat ca 4 thuoc tinh la top,left,right,bottom ( chi co ta dung khi khong co width/hight tuc la auto ) */
+/* can theo thang cha gan nhat co position khac relative */
+
+.smail-box {
+  /* width: 100px;
+  height: 50px; */
+}
+
+.main {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+}
+
+.box-static {
+  width: 100px;
+  height: 100px;
+  background-color: palevioletred;
+}
+
+.circle-1 {
+  width: 100px;
+  height: 100px;
+  background-color: palevioletred;
+  position: absolute;
+  border-radius: 50%;
+  top: -50px;
+}
+
+.circle-2 {
+  width: 100px;
+  height: 100px;
+  background-color: palevioletred;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 50px;
+}
+
+.fixed {
+  position: fixed;
+}
+/* fixed: can theo khung trinh duyet */
+/* vi tri goc/kich thuoc ban dau khong ton tai, cac phan tu xung quanh cung lap vi tri trong */
+/* co the ap dung dc top/left.. (khong co width/height) */
+
+.back-to-top {
+  right: 15px;
+  bottom: 15px;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(128, 128, 128, 0.648);
+  border-radius: 50%;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  bottom: 12px;
+  font-size: 30px;
+}
+
+.text {
+  position: absolute;
+  right: 50px;
+  width: 100px;
+  bottom: 25px;
+  display: none;
+}
+
+.back-to-top:hover .text {
+  display: block;
+}
+
+.phone {
+  right: 15px;
+  bottom: 100px;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(128, 128, 128, 0.648);
+  border-radius: 50%;
+}
+
+.phone:hover .text-1 {
+  display: block;
+}
+
+.text-1 {
+  position: absolute;
+  right: 50px;
+  width: 100px;
+  bottom: 20px;
+  display: none;
+  background-color: rgba(128, 128, 128, 0.648);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.menu{
+  list-style-type: none;
+  width: 200px;
+}

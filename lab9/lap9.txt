@@ -1,0 +1,7 @@
+tu vung : keywords
+cu phap: syrtak
+number: kieu so - 12345
+string: kieu chuoi - "dasfa"
+
+gia tri -> khoa va nguoc lai
+key: value

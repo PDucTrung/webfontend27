@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA1VBMVEX///8BsPEAsPAAsfoIq+IEsfZivO0AsvEArfEArfUDsOdZw+Sd3/oAq/Lt+vzg9vvC6v1mw/TZ7vMEtPAAp/L3/Pwst/225fBkzP3N7v+a3+4Ap+MiuN4wv+7s+f+h1/bR8fkjufAhsf0Aou4Ao+ng+fhey+Vt0uvu/fnr9P0ttPMAr9sFqNcItOUHuvwYnu8AuuUVnPADwPZmw+s7ruw0qeJKvOLJ7/YjxOolweAMqP7I5POP2PSw4PhVyvMFoepu0vSm2upcs+pewPyFy/YAvflhvuu4TYIcAAAEgElEQVR4nO3df1PaSBzHcbNJupscAWrWUhtQSDjtiRs8aOUOi9j70ef/kKpzk7DT3mZBYrpLP6//HL9i3ixKJqx4dAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANvr14pVRLt/XXTjkrlnadRf+xjyjXJ3UXXg88U3i9mtfw2NOjOLUXxg5RiEo3LOQ7HAolbM73NA3X/iChcSjjh+qEZZcx8VwyFKXqGd9V2qkccQrbjgOfEobKXTyWPQDNTdN32yOOqciTFWjaShGuU+K5XR96qlv1594cd5IIZtOeaZ8ngoTIiZeUhxHNs0yqn5Wc3iWZcUqJtf9G0+9hpRPl7+zJgrpTMwGvvpkI4+lu3omhBipZ8UgFLNy2CcVN+v6YhSOaAOFhGXzTrujdnbWZcVdTYIPlbPt9vBDedclt8dnx1XDw4+8kUcpDfqa2VNe/vrw3mjOrtqpVz78R5qjPglC2wvPqmdRuJ9dCu8OvvDw13CnQrcsdFCIwv2gUIZCGQplKNwPCmUolKFQhsL9oFCGQhkKZSjcDwplKJSZWBjzFyok2sK0mUIS32pmF5tZ/oemsCPKF1sCobuqP2JNvDKzReFpWs5mf+rWUPDtCwdpM4XpR83sqVMcCGHaNbxKi4c00c2eXC0bKfSCda/bq3D3KS5f5U7C+bvVO6XW5f26/Jklk/Oq2+2uLrMsbqIwnK1v1lwpisZxUN7VsR95U4cpkCVj0aCYjVigvlnOl+TGF2EThY+Ys4vq/RZE+cF35G+L/TQoROGPh0IU/pyFW24jJN9/pPzKbz/Ltnqm/W8Lbe2FnceTla0wtg6D4uTKn7hJ7gXq6TDPRHHgQSTYeJvv8HSf5LUXHq1aW1qtHjbrfZ1/bi26SnefH9jmRKz/dKa6pV7tgbtY+OUjynutm/U2j9KHJg6uFous/HGir3Sz126xvzS6r/0vDF6KdBXDmWtmO0mx4JTr1tscUmEy0MwOefFbibBfGjm6OkiFRFs4LgsDFJoDhTIUmgmFMhSaCYUyFJoJhTIUmgmFMhSaCYUyFJpppytRthfG95rZofOv3YXrvzSznWlid2H+VjO7cC1fw+xvzWxnya0uZOGo96niVavVosUEs6+wG5WbsxzlfqhCOWht4dZQaBIUotB8KDy8wop3zpP2C1laGDLuO1RpHLOMWl1I3HwkwkB1PuMnHnHtXkPKGeU8UfKXfuxZXeiM+hcX92+V5v8MhN2PUudpF1DlTqdeWO6JsrNQe51m5QR2F2qvtZ0TFJpol8LWwReeb97N8mALycEXHv4aotBEKJSh0EwolKHQTCiUodBMKJSh0EwolKHQTCiUWV+ov+Yd2H0linDdXzp33dDqQie7bVfpvD/PbNybKBXmo1kolDu+Iu8m9m3cmygVsmC59GOlx89mqd1X9SfCoVT9f7hihwobd0HLezGengyq9mJs2Fq4PRSa5CcoHD+n0ImsKiTqfVBKFr23yWPhMwLtKqS6/ev/e4ZjT+Hpl/nr57j80QcOAAAAAAAAAAAAAAAAAAfuK5Df2CxAQwH7AAAAAElFTkSuQmCC"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600&family=Raleway:wght@100;200;400;500&family=Roboto:wght@100;300;400&family=Sarabun:wght@100;200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="img-header">
+        <img
+          src="https://techmaster.vn/resources/image/logo-techmaster/white/white_200x74.png"
+          alt="logo"
+          style="max-height: 100%; margin-left: 30px; vertical-align: middle"
+        />
+        <div class="menu text-white">
+          <ul class="list-menu font-roboto">
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >LỘ TRÌNH</a
+              >
+              <ul class="dropdown-menu text-center">
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://php.techmaster.vn/"
+                    target="_blank"
+                    ><span>PHP Fullstack</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://frontend.techmaster.vn/"
+                    target="_blank"
+                    ><span>Web Front End + React.js</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://java.techmaster.vn/"
+                    target="_blank"
+                    ><span>Java Spring Boot FullStack</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://devops.techmaster.vn/"
+                    target="_blank"
+                    ><span>DevOps</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://aws.techmaster.vn/"
+                    target="_blank"
+                    ><span>Amazon Web Service</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://flutter.techmaster.vn/"
+                    target="_blank"
+                    ><span>Google Flutter</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://ios.techmaster.vn/"
+                    target="_blank"
+                    ><span>Apple iOS</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >DOANH NGHIỆP</a
+              >
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >KHÓA HỌC</a
+              >
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >SẢN PHẨM HỌC VIÊN</a
+              >
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >KHAI GIẢNG</a
+              >
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >BLOG</a
+              >
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >LỘ TRÌNH</a
+              >
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >TRẢI NGHIỆM</a
+              >
+            </li>
+            <li class="mr-20">
+              <a
+                class="decoration-none text-white"
+                href="https://php.techmaster.vn/"
+                target="_blank"
+                >CHÚNG TÔI</a
+              >
+              <ul class="dropdown-menu text-center">
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://php.techmaster.vn/"
+                    target="_blank"
+                    ><span>Trung tâm</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://frontend.techmaster.vn/"
+                    target="_blank"
+                    ><span>Giảng viên</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://java.techmaster.vn/"
+                    target="_blank"
+                    ><span>Quy định chung</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="decoration-none text-black"
+                    href="https://devops.techmaster.vn/"
+                    target="_blank"
+                    ><span>hướng dẫn đăng kí học</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="main-content">
+      <div class="container">
+        <div class="section font-roboto">
+          <div class="section-header"></div>
+          <div class="setion-content">
+            <div class="blog-list">
+              <!-- 1 -->
+              <div class="blog box-shadow mr-20">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/c2m5ou451cob24f6skeg/OOWsCl64"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    [Techmaster] Khai giảng lộ trình Web Frontend + React.js số
+                    27
+                  </div>
+                  <p class="lh-2">
+                    Khóa học Lộ trình Web Frontend + React.js Được xây dựng dành
+                    cho mọi đối tượng...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>119</span>
+                  </div>
+                  <div class="time">09-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="blog box-shadow mr-20">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/brbgh4451coepbqoch60/eeZsdaix"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Thông báo khai giảng lớp Java Spring Boot tháng 6 và kế
+                    hoạch điều chỉnh học phí
+                  </div>
+                  <p class="lh-2">
+                    Tham gia lớp học ban ngày đồng nghĩa bạn đã nghỉ việc hoặc
+                    chỉ chọn làm côn...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>246</span>
+                  </div>
+                  <div class="time">08-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="blog box-shadow">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/c5l7m5fk0cmm38nmgv2g/fiGkPnwl"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Giải thích các Annotations trong SpringBoot (Phần 1)
+                  </div>
+                  <p class="lh-2">
+                    Giải thích các Annotations trong SpringBoot (Phần 1)
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>144</span>
+                  </div>
+                  <div class="time">07-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="blog box-shadow mr-20" style="margin-top: -5px">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/36/4E9Cq-kH"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Cài đặt môi trường lập trình Nginx - PHP bằng Docker Compose
+                  </div>
+                  <p class="lh-2">
+                    Docker là công nghệ phổ biến, cấu hình thêm, bớt các thành
+                    phần được bằng fi...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>98</span>
+                  </div>
+                  <div class="time">07-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 5 -->
+              <div class="blog box-shadow mr-20 mt-20">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/53/YDJIwxz8"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Cách tạo một trang blog cá nhân miễn phí dành cho dev
+                  </div>
+                  <p class="lh-2">
+                    Vào một ngày đẹp trời, bỗng dưng mình nảy ra ý định làm một
+                    trang blog cá nh�...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>72</span>
+                  </div>
+                  <div class="time">07-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 6 -->
+              <div class="blog box-shadow" style="margin-top: -25px">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/s8YiWakR/W_bmhEWS"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    AWS Certified Solutions Architect Professional - Identity &
+                    Federation - STS to Assume a Role
+                  </div>
+                  <p class="lh-2">
+                    Quick note about STS you should know for a example. This
+                    post is a quick note from the course Ultima...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>53</span>
+                  </div>
+                  <div class="time">07-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 7 -->
+              <div class="blog box-shadow mr-20">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/brbgh4451coepbqoch60/ifmqRt74"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Thời kì làm việc remote cần chấm dứt ngay ! Elon Musk gửi
+                    email tới toàn bộ nhân viên Tesla
+                  </div>
+                  <p class="lh-2">
+                    Tất cả nhân viên Tesla được yêu cầu đến văn phòng làm việc
+                    ít nhất 40 giờ ...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>242</span>
+                  </div>
+                  <div class="time">06-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 8 -->
+              <div class="blog box-shadow mr-20 mt-20">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/36/hp0VyvlU"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Hỏi : Chọn Spring Boot Thymeleaf hay Spring Boot với
+                    Angular, React, Vue?
+                  </div>
+                  <p class="lh-2">
+                    Gần đây một số sinh viên thường hỏi tôi nên chọn hướng nào
+                    khi lập trình �...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>126</span>
+                  </div>
+                  <div class="time">06-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 9 -->
+              <div class="blog box-shadow" style="margin-top: 5px">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/BPZDWx5G/OBrKQMwK"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Sử dụng OpenAPI 3.0 để ghi lại các dịch vụ Spring REST API
+                  </div>
+                  <p class="lh-2">
+                    Hướng dẫn sử dụng OpenAPI 3.0 để ghi lại các dịch vụ Spring
+                    REST API
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>112</span>
+                  </div>
+                  <div class="time">04-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 10 -->
+              <div class="blog box-shadow mr-20">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/KCFI4XKz"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Tháng 5/2022 - Khai giảng lớp Lộ trình DevOps trực tuyến
+                  </div>
+                  <p class="lh-2">
+                    Lộ trình trong 43 buổi với 7 học phần từ cơ bản đến nâng
+                    cao, đội ngũ giản...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>136</span>
+                  </div>
+                  <div class="time">04-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 11 -->
+              <div class="blog box-shadow mr-20 mt-20">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/c2m5ou451cob24f6skeg/MIEilocP"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    Kết quả bảo vệ đồ án lớp Web Frontend 22 - TechMaster
+                    Vietnam
+                  </div>
+                  <p class="lh-2">
+                    Ngày 28/05/2022, buổi bảo vệ đồ án web tĩnh cho học viên lớp
+                    web 22 đã thành cô...
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>115</span>
+                  </div>
+                  <div class="time">04-06-2022</div>
+                  <br />
+                </div>
+              </div>
+              <!-- 12 -->
+              <div class="blog box-shadow" style="margin-top: -45px">
+                <div class="post-thumbnail">
+                  <img
+                    src="https://media.techmaster.vn/api/static/buhqipv0k7qsdafmebd0/I08W_YWm"
+                    alt="web27"
+                    class="img-post"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fs-18 lh-2">
+                    JAVA : Giới thiệu về appenders, layouts và filters trong
+                    Log4J2
+                  </div>
+                  <p class="lh-2">
+                    Giới thiệu về appenders, layouts và filters trong Log4J2
+                  </p>
+                </div>
+                <hr />
+                <div class="card-footer">
+                  <div class="view-count">
+                    <i class="fas fa-eye"></i>&nbsp;<span>359</span>
+                  </div>
+                  <div class="time">04-06-2022</div>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aside font-roboto">
+          <p class="aside-header">Xem nhiều</p>
+          <div class="underline"></div>
+          <br />
+          <ul class="top-list">
+            <li>
+              <a
+                href="https://techmaster.vn/posts/37094/nhat-ky-mobile-leader-toi-co-hoi-han-khi-chon-flutter"
+                target="_blank"
+                class="top-link"
+                ><span class="number">1</span
+                ><span class="title color-black"
+                  >Nhật ký Mobile Leader: Tôi có hối hận khi chọn Flutter?
+                  &nbsp; </span
+                ><i class="fas fa-eye"></i>&nbsp;<span class="color-blue"
+                  >119</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://techmaster.vn/posts/37094/nhat-ky-mobile-leader-toi-co-hoi-han-khi-chon-flutter"
+                target="_blank"
+                class="top-link"
+                ><span class="number">2</span
+                ><span class="title color-black"
+                  >AWS Certified Solutions Architect Professional - Identity &
+                  ... &nbsp; </span
+                ><i class="fas fa-eye"></i>&nbsp;<span class="color-blue"
+                  >119</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://techmaster.vn/posts/37094/nhat-ky-mobile-leader-toi-co-hoi-han-khi-chon-flutter"
+                target="_blank"
+                class="top-link"
+                ><span class="number">3</span
+                ><span class="title color-black"
+                  >Review khóa học Java Spring Boot của Techmaster &nbsp; </span
+                ><i class="fas fa-eye"></i>&nbsp;<span class="color-blue"
+                  >119</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://techmaster.vn/posts/37094/nhat-ky-mobile-leader-toi-co-hoi-han-khi-chon-flutter"
+                target="_blank"
+                class="top-link"
+                ><span class="number color-black">4</span
+                ><span class="title"
+                  >JAVA : Giới thiệu về appenders, layouts và filters &nbsp; </span
+                ><i class="fas fa-eye"></i>&nbsp;<span class="color-blue"
+                  >119</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://techmaster.vn/posts/37094/nhat-ky-mobile-leader-toi-co-hoi-han-khi-chon-flutter"
+                target="_blank"
+                class="top-link"
+                ><span class="number">5</span
+                ><span class="title color-black"
+                  >Thông báo khai giảng lớp Java Spring Boot tháng 6 &nbsp; </span
+                ><i class="fas fa-eye"></i>&nbsp;<span class="color-blue"
+                  >119</span
+                ></a
+              >
+            </li>
+          </ul>
+          <br />
+          <br />
+          <br />
+          <p class="aside-header">Tác giả nổi bật</p>
+          <div class="underline"></div>
+          <br />
+          <ul class="top-list">
+            <li class="mb-40">
+              <span class="number">1</span
+              ><span
+                ><img
+                  src="https://media.techmaster.vn/api/static/crop/brm3huc51co50mv77sag"
+                  alt="dsad"
+                  class="avatar"
+                />&nbsp;</span
+              >
+              <span class="name">Hương Thanh</span>
+              <p style="margin-top: 5px">
+                &nbsp;&nbsp;<span><i class="fa-solid fa-file-lines"></i></span>
+                <span class="color-blue">3 bài viết trong tháng</span>
+              </p>
+            </li>
+            <li class="mb-40">
+              <span class="number">2</span
+              ><span
+                ><img
+                  src="https://media.techmaster.vn/api/static/crop/bqu25ik51co0sqthsj0g"
+                  alt="dsad"
+                  class="avatar"
+                />&nbsp;</span
+              >
+              <span class="name">Trịnh Minh Cường</span>
+              <p style="margin-top: 5px">
+                &nbsp;&nbsp;<span><i class="fa-solid fa-file-lines"></i></span>
+                <span class="color-blue">3 bài viết trong tháng</span>
+              </p>
+            </li>
+            <li class="mb-40">
+              <span class="number">3</span
+              ><span
+                ><img
+                  src="https://media.techmaster.vn/api/static/crop/bv9jp4k51co7nj2mhht0"
+                  alt="dsad"
+                  class="avatar"
+                />&nbsp;</span
+              >
+              <span class="name">Phạm Thị Mẫn</span>
+              <p style="margin-top: 5px">
+                &nbsp;&nbsp;<span><i class="fa-solid fa-file-lines"></i></span>
+                <span class="color-blue">3 bài viết trong tháng</span>
+              </p>
+            </li>
+            <li class="mb-40">
+              <span class="number">4</span
+              ><span
+                ><img
+                  src="https://media.techmaster.vn/api/static/c2m5ou451cob24f6skeg/ccjlg0NC"
+                  alt="dsad"
+                  class="avatar"
+                />&nbsp;</span
+              >
+              <span class="name">Đức Thịnh</span>
+              <p style="margin-top: 5px">
+                &nbsp;&nbsp;<span><i class="fa-solid fa-file-lines"></i></span>
+                <span class="color-blue">3 bài viết trong tháng</span>
+              </p>
+            </li>
+            <li class="mb-40">
+              <span class="number">5</span
+              ><span
+                ><img
+                  src="https://media.techmaster.vn/api/static/s8YiWakR/PzYB3BJb"
+                  alt="dsad"
+                  class="avatar"
+                />&nbsp;</span
+              >
+              <span class="name">Huỳnh Minh Quân</span>
+              <p style="margin-top: 5px">
+                &nbsp;&nbsp;<span><i class="fa-solid fa-file-lines"></i></span>
+                <span class="color-blue">3 bài viết trong tháng</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <br />
+    <div class="footer">
+      <div class="container-footer font-roboto">
+        <div class="footer-info mr-40 text-white">
+          <p class="fz-18 lh-text-footer">CHỦ SỞ HỮU WEBSITE</p>
+          <a
+            class="lh-text-footer decoration-none text-white"
+            href="https://techmaster.vn/"
+            target="_blank"
+            >Công ty TNHH TechMaster Vietnam Ltd
+          </a>
+          <p class="lh-text-footer">Số ĐKDN: 0105392153</p>
+          <p class="lh-text-footer">Ngày cấp: 4-7-2011</p>
+          <p class="lh-text-footer">Nơi cấp: Sở kế hoạch - đầu tư Hà nội</p>
+          <p class="lh-text-footer">Người đại diện pháp luật: Lê Minh Thu</p>
+          <p class="lh-text-footer">Phụ trách nội dung: Trịnh Minh Cường</p>
+        </div>
+        <div class="footer-info mr-40 text-white">
+          <p class="fz-18 lh-text-footer">GIỚI THIỆU</p>
+          <a
+            class="lh-text-footer decoration-none text-white"
+            href="https://techmaster.vn/"
+            target="_blank"
+            >Học viện CNTT TechMaster
+          </a>
+          <p class="lh-text-footer">Giảng viên</p>
+          <p class="lh-text-footer">Quy định</p>
+          <p class="lh-text-footer">Hướng dẫn mua khóa học</p>
+          <p class="lh-text-footer">Ưu đãi và hoàn trả học phí</p>
+          <p class="lh-text-footer">Bảo vệ thông tin khách hàng</p>
+        </div>
+        <div class="footer-info mr-40 text-white">
+          <p class="fz-18 lh-text-footer">TƯ VẤN TUYỂN SINH</p>
+          <a
+            class="lh-text-footer decoration-none text-white"
+            href="https://techmaster.vn/"
+            target="_blank"
+            >Phạm Thị Mẫn - 0963023185
+          </a>
+          <p class="lh-text-footer">manpham@techmaster.vn</p>
+          <p class="lh-text-footer">Dương Đức Thịnh - 0987273764</p>
+          <p class="lh-text-footer">thinh@techmaster.vn</p>
+          <p class="lh-text-footer">Nguyễn Thanh Hương - 0382416368</p>
+          <p class="lh-text-footer">huong@techmaster.vn</p>
+          <p class="lh-text-footer">TƯ VẤN ĐÀO TẠO DOANH NGHIỆP</p>
+          <p class="lh-text-footer">0902209011</p>
+        </div>
+        <div class="footer-info text-white">
+          <p class="fz-18 lh-text-footer">ĐỊA CHỈ</p>
+          <a
+            class="lh-text-footer decoration-none text-white"
+            href="https://techmaster.vn/"
+            target="_blank"
+            >Cơ sở 1: 14 ngõ 4, Nguyễn Đình Chiểu, Quận Hai Bà Trưng, Hà Nội
+          </a>
+          <br />
+          <a
+            class="lh-text-footer decoration-none text-white"
+            href="https://techmaster.vn/"
+            target="_blank"
+            >Cơ sở 2: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Lê Văn
+            Lương kéo dài, Hà Nội
+          </a>
+          <br />
+          <a
+            class="lh-text-footer decoration-none text-white"
+            href="https://techmaster.vn/"
+            target="_blank"
+            >Cơ sở 3: 77 Đường số 23, khu nhà thương mại, KĐT TP Giao lưu, Bắc
+            Từ Liêm, Hà Nội
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+table,
+td {
+  border: 2px double black;
+  border-collapse: initial;
+  font-family: serif;
+}
+td {
+  padding: 5px;
+}

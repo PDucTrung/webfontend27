@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <caption>
+          Hóa đơn mua hàng
+        </caption>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên sản phẩm</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Iphone 15 pro max</td>
+            <td>$1.000</td>
+            <td>1000</td>
+            <td>$1.000.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Macbook pro</td>
+            <td>$1.000</td>
+            <td>1000</td>
+            <td>$1.000.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Apple watch</td>
+            <td>$1.000</td>
+            <td>1000</td>
+            <td>$1.000.000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>lenovo legion 5</td>
+            <td>$1.000</td>
+            <td>1000</td>
+            <td>$1.000.000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Tổng số lượng</td>
+            <td>4000</td>
+          </tr>
+          <tr>
+            <td colspan="4">Tổng tiền</td>
+            <td>$4.000.000</td>
+          </tr>
+          <tr>
+            <td colspan="4">Chiết khấu</td>
+            <td>0</td>
+          </tr>
+        </tfoot>
+      </table>
+      <br />
+      <form action="">
+        <div class="form-field d-flex">
+          <label for="username">username</label>
+          <input name="username" type="text" id="username" />
+        </div>
+        <div class="form-field d-flex">
+          <label for="password">Pass</label>
+          <input name="password" type="password" id="password" />
+        </div>
+        <div class="form-field d-flex">
+          <label>Gender</label>
+          <div class="option d-flex a-center">
+            <label for="female">female</label>
+            <input type="radio" name="gender" id="female" />
+          </div>
+          <div class="option d-flex a-center">
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="male" />
+          </div>
+          <div class="option d-flex a-center">
+            <label for="guy">3d</label>
+            <input type="radio" name="gender" id="guy" />
+          </div>
+        </div>
+        <div class="form-field d-flex">
+          <label for="date">Birthday</label>
+          <input type="date" name="" id="date" />
+        </div>
+        <div class="form-field d-flex">
+          <label for="city">city</label>
+          <select name="city" id="">
+            <option value="29">ha noi</option>
+            <option value="18">nam dinh</option>
+            <option value="15">hai phong</option>
+            <option value="98">bac giang</option>
+            <option value="24">lao cai</option>
+          </select>
+        </div>
+        <div class="form-field d-flex">
+          <label for="comment">Comment</label>
+          <textarea name="text" id="comment" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-field d-flex">
+          <label for=""></label><button>dasd</button>
+        </div>
+      </form>
+    </div>
+    <br />
+    <form action="">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <section class="section-header">
+              <p class="text-center">Ask Question</p>
+              <h2 class="text-gray text-center">
+                Les us header form you directly!
+              </h2>
+            </section>
+            <section class="section-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="body-left lh-2">
+                    <h3>Address</h3>
+                    <div class="international">
+                      <span><i class="fa-solid fa-location-pin"></i></span>
+                      <span>Cnifonia, USA</span>
+                    </div>
+                    <div class="number">
+                      <span><i class="fa-solid fa-phone"></i></span>
+                      <span>(+880) 1243 665566</span>
+                    </div>
+                    <div class="email">
+                      <span><i class="fa-solid fa-envelope"></i></span>
+                      <span>Hello@example.com</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="body-right">
+                    <div class="form-top">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-filed">
+                            <label for="name"><h3>Full name</h3></label>
+                            <br />
+                            <input
+                              type="text"
+                              name="fullname"
+                              id="name"
+                              placeholder="Full name"
+                              size="30"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-filed">
+                            <label for="name"><h3>Email</h3></label>
+                            <br />
+                            <input
+                              type="email"
+                              name="fullname"
+                              id="name"
+                              placeholder="Hello@example.com"
+                              size="30"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="text-area">
+                    <div class="row">
+                      <div class="col-12">
+                        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Tell us what me can help you with!"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="but">
+                    <div class="row">
+                      <div class="col-12">
+                        <button class="but-send">Send massage</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </form>
+    <br />
+  </body>
+</html>

@@ -1,0 +1,47 @@
+body {
+  font-family: "Sarabun", sans-serif;
+}
+.star {
+  color: rgb(232, 232, 61);
+  font-size: 48px;
+  font-size: small;
+}
+.cart-bg {
+  margin-top: 100px;
+  float: right;
+  display: inline-block;
+  width: 15%;
+  height: 300px;
+  background-color: rgb(212, 211, 211);
+}
+
+.cart-tag {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+img {
+  width: 100%;
+  height: 90%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.react-native {
+  padding-left: 20px;
+  width: 90%;
+  font-size: 80%;
+}
+.lap {
+  width: 90%;
+  padding-left: 20px;
+  font-size: 70%;
+}
+.vnd {
+  font-size: 80%;
+  padding-left: 20px;
+  color: rgb(227, 102, 56);
+}

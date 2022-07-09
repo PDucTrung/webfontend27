@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.d-block {
+  display: block;
+}
+
+.square-small {
+  width: 200px;
+  height: 200px;
+}
+
+.bg-red {
+  background-color: rgb(213, 68, 68);
+}
+
+.broder-solid {
+  border: solid;
+}
+
+.boder-yellow {
+  border-color: rgb(211, 211, 134);
+}
+
+.border-thin {
+  border-width: 5px;
+}
+
+/*  */
+
+.square-medium {
+  width: 600px;
+  height: 600px;
+}
+
+.bg-green {
+  background-color: rgb(75, 182, 75);
+}
+
+.broder-dashed {
+  border: dashed;
+}
+
+.border-yellow {
+  border-color: cyan;
+}
+
+.border-medium {
+  border-width: 20px;
+}
+
+/*  */
+.square-big {
+  width: 1000px;
+  height: 1000px;
+}
+
+.bg-blue {
+  background-color: rgb(133, 133, 200);
+}
+
+.broder-dotted {
+  border: dotted;
+}
+
+.border-brown {
+  border-color: brown;
+}
+
+.border-thick {
+  border-width: 30px;
+}
+
+.text-overflow {
+  overflow: scroll;
+}
+
+.mb-30 {
+  margin: 30px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mb-10 {
+  margin: 10px;
+}
+
+.mb-60 {
+  margin: 60px;
+}
+
+.p-20 {
+  padding: 10px;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.product {
+  float: left;
+  width: 235px;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}

@@ -1,0 +1,87 @@
+.text-CornflowerBlue {
+  color: CornflowerBlue;
+}
+
+.text-Coral {
+  color: Coral;
+}
+
+.text-Crimson {
+  color: Crimson;
+}
+
+.text-DarkGray {
+  color: DarkGray;
+}
+
+.text-DeepPink {
+  color: DeepPink;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.vertical-top {
+  vertical-align: top;
+}
+
+.vertical-left {
+  vertical-align: left;
+}
+
+.vertical-right {
+  vertical-align: right;
+}
+
+.vertical-bottom {
+  vertical-align: bottom;
+}
+
+.decoration-overline {
+  text-decoration-line: overline underline;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.decoration-line {
+  text-decoration-line: line-through;
+}
+
+.decoration-underline {
+  text-decoration-line: underline;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-spacing {
+  letter-spacing: 5px;
+}

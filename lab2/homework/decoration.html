@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text Decoration</title>
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/W3Schools_logo.svg/2175px-W3Schools_logo.svg.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600&family=Raleway:wght@100;200;400;500&family=Sarabun:wght@100;200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="font-Arial text-shadow-red">CSS Text Decoration</h1>
+    <a class="button-pre text-white" href="index.html" target="_blank"
+      >❮ previous</a
+    >
+    <a class="button-next text-white" href="spacing.html" target="_blank"
+      >Spacing ❯</a
+    >
+    <p class="font-Verdana">
+      In this chapter you will learn about the following properties:
+    </p>
+    <ul>
+      <li>
+        <span class="font-Mulish text-crimson p-span"
+          >text-decoration-line</span
+        >
+      </li>
+      <li>
+        <span class="font-Mulish text-crimson p-span"
+          >text-decoration-color</span
+        >
+      </li>
+      <li>
+        <span class="font-Mulish text-crimson p-span"
+          >text-decoration-style</span
+        >
+      </li>
+      <li>
+        <span class="font-Mulish text-crimson p-span"
+          >text-decoration-thickness</span
+        >
+      </li>
+      <li>
+        <span class="font-Mulish text-crimson p-span">text-decoration</span>
+      </li>
+    </ul>
+    <br />
+    <hr />
+    <h2 class="font-Arial text-shadow-white-blue">Add a Decoration Line to Text</h2>
+    <p class="font-Verdana">
+      The
+      <span class="font-Mulish text-crimson p-span">text-decoration-line</span>
+      property is used to add a decoration line to text.
+    </p>
+
+    <p class="font-Verdana">
+      <b>Tip</b>: You can combine more than one value, like overline and
+      underline to display lines both over and under a text.
+    </p>
+    <div class="example">
+      <h3 class="font-Arial">Example</h3>
+      <div class="code">
+        <span class="font-Mulish text-brown">
+          h1 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> overline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h2 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> line-through<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h3 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br /><br />p
+          <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> overline
+              underline<span class="font-Mulish text-black">;</span></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span>
+        </span>
+      </div>
+      <br />
+      <br />
+      <a class="button-pre text-white" href="#" target="_blank"
+        >Try it Yourself »</a
+      >
+    </div>
+    <br />
+    <div class="note font-Verdana">
+      <b>Note</b>: It is not recommended to underline text that is not a link,
+      as this often confuses the reader.
+    </div>
+    <br />
+    <hr />
+    <h2 class="font-Arial text-shadow-white-blue">Specify a Color for the Decoration Line</h2>
+    <p class="font-Verdana">
+      The
+      <span class="font-Mulish text-crimson p-span">text-decoration-color</span>
+      property is used to set the color of the decoration line.
+    </p>
+    <div class="example">
+      <h3 class="font-Arial">Example</h3>
+      <div class="code">
+        <span class="font-Mulish text-brown">
+          h1 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> overline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-color<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> red<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h2 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> line-through<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-color<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> blue<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h3 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-color<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> green<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br /><br />p
+          <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> overline
+              underline<span class="font-Mulish text-black">;</span></span
+            ><br />&nbsp; text-decoration-color<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> purple<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span>
+        </span>
+      </div>
+      <br />
+      <br />
+      <a class="button-pre text-white" href="#" target="_blank"
+        >Try it Yourself »</a
+      >
+    </div>
+    <br />
+    <hr />
+    <br />
+    <hr />
+    <h2 class="font-Arial text-shadow-white-blue">Specify a Style for the Decoration Line</h2>
+    <p class="font-Verdana">
+      The
+      <span class="font-Mulish text-crimson p-span">text-decoration-style</span>
+      property is used to set the style of the decoration line.
+    </p>
+    <div class="example">
+      <h3 class="font-Arial">Example</h3>
+      <div class="code">
+        <span class="font-Mulish text-brown">
+          h1 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-style<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> solid<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h2 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-style<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> double<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h3 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-style<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> dotted<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br /><br />p.ex1
+          <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> uderline
+              underline<span class="font-Mulish text-black">;</span></span
+            ><br />&nbsp; text-decoration-style<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> dashed<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span>
+          <br />
+          <br />p.ex2 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-style<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> wavy<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />p.ex3 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-color<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> red<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            >
+            <br />&nbsp; text-decoration-style<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+        </span>
+      </div>
+      <br />
+      <br />
+      <a class="button-pre text-white" href="#" target="_blank"
+        >Try it Yourself »</a
+      >
+    </div>
+    <br />
+    <hr />
+    <h2 class="font-Arial text-shadow-white-blue">Specify the Thickness for the Decoration Line</h2>
+    <p class="font-Verdana">
+      The
+      <span class="font-Mulish text-crimson p-span"
+        >text-decoration-thickness</span
+      >
+      property is used to set the thickness of the decoration line.
+    </p>
+    <div class="example">
+      <h3 class="font-Arial">Example</h3>
+      <div class="code">
+        <span class="font-Mulish text-brown">
+          h1 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-thickness<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> auto<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h2 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-thickness<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> 5px<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h3 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br />&nbsp; text-decoration-thickness<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> 25%<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br /><br />p
+          <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-line<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline
+              <span class="font-Mulish text-black">;</span></span
+            ><br />&nbsp; text-decoration-color<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> red<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ></span
+          >
+          <span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration-style<span
+              class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> double
+              <span class="font-Mulish text-black">;</span></span
+            >
+            <span class="font-Mulish text-red"
+              ><br />&nbsp; text-decoration-thickness<span
+                class="font-Mulish text-blue"
+                ><span class="font-Mulish text-black">:</span> overline 5px<span
+                  class="font-Mulish text-black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="font-Mulish text-black">}</span>
+          </span>
+        </span>
+      </div>
+      <br />
+      <br />
+      <a class="button-pre text-white" href="#" target="_blank"
+        >Try it Yourself »</a
+      >
+    </div>
+    <br />
+    <hr />
+    <h2 class="font-Arial text-shadow-white-blue">The Shorthand Property</h2>
+    <p class="font-Verdana">
+      The
+      <span class="font-Mulish text-crimson p-span">text-decoration</span>
+      property is a shorthand property for:
+    </p>
+    <ul class="font-Verdana">
+      <li>
+        <span class="font-Mulish text-crimson p-span">text-decoration-line</span
+        >(required)
+      </li>
+      <li>
+        <span class="font-Mulish text-crimson p-span"
+          >text-decoration-color</span
+        >(optional)
+      </li>
+      <li>
+        <span class="font-Mulish text-crimson p-span"
+          >text-decoration-style</span
+        >(optional)
+      </li>
+      <li>
+        <span class="font-Mulish text-crimson p-span"
+          >text-decoration-thickness</span
+        >(optional)
+      </li>
+    </ul>
+    <div class="example">
+      <h3 class="font-Arial">Example</h3>
+      <div class="code">
+        <span class="font-Mulish text-brown">
+          h1 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration<span class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h2 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration<span class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline red<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br />
+          <br />h3 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration<span class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline red
+              double<span class="font-Mulish text-black">;</span></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span><br /><br />p
+          <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration<span class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> underline red
+              double 5px <span class="font-Mulish text-black">;</span></span
+            ></span
+          ><br /></span
+        ><span class="font-Mulish text-black">}</span>
+      </div>
+      <br />
+      <br />
+      <a class="button-pre text-white" href="#" target="_blank"
+        >Try it Yourself »</a
+      >
+    </div>
+    <h2 class="font-Arial text-shadow-white-blue">A Small Tip</h2>
+    <p class="font-Verdana">
+      All links in HTML are underlined by default. Sometimes you see that links
+      are styled with no underline. The
+      <span class="font-Mulish text-crimson p-span"
+        >text-decoration: none;</span
+      >
+      is used to remove the underline from links, like this:
+    </p>
+    <div class="example">
+      <h3 class="font-Arial">Example</h3>
+      <div class="code">
+        <span class="font-Mulish text-brown">
+          h1 <span class="font-Mulish text-black">{</span
+          ><span class="font-Mulish text-red"
+            ><br />&nbsp; text-decoration<span class="font-Mulish text-blue"
+              ><span class="font-Mulish text-black">:</span> none<span
+                class="font-Mulish text-black"
+                >;</span
+              ></span
+            ><br /></span
+          ><span class="font-Mulish text-black">}</span>
+        </span>
+      </div>
+      <br />
+      <br />
+      <a class="button-pre text-white" href="#" target="_blank"
+        >Try it Yourself »</a
+      >
+    </div>
+    <h2 class="font-Arial text-shadow-white-blue">The CSS Text Alignment/Direction Properties</h2>
+    <table class="table-text font-Verdana">
+      <tbody>
+        <tr>
+          <th style="width: 30%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr class="tr-gray">
+          <td>
+            <a class="text-black" href="/cssref/pr_text_direction.asp"
+              >text-decoration</a
+            >
+          </td>
+          <td>Sets all the text-decoration properties in one declaration</td>
+        </tr>
+        <tr>
+          <td>
+            <a class="text-black" href="/cssref/pr_text_text-align.asp"
+              >text-decoration-color</a
+            >
+          </td>
+          <td>Specifies the color of the text-decoration</td>
+        </tr>
+        <tr class="tr-gray">
+          <td>
+            <a class="text-black" href="/cssref/css3_pr_text-align-last.asp"
+              >text-decoration-line</a
+            >
+          </td>
+          <td>
+            Specifies the kind of text decoration to be used (underline,
+            overline, etc.)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a class="text-black" href="/cssref/pr_text_unicode-bidi.asp"
+              >text-decoration-style</a
+            >
+          </td>
+          <td>
+            Specifies the style of the text decoration (solid, dotted, etc.)
+          </td>
+        </tr>
+        <tr class="tr-gray">
+          <td>
+            <a class="text-black" href="/cssref/pr_pos_vertical-align.asp"
+              >text-decoration-thickness</a
+            >
+          </td>
+          <td>Specifies the thickness of the text decoration line</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <a class="button-pre text-white" href="index.html" target="_blank"
+      >❮ previous</a
+    >
+    <a class="button-next text-white" href="spacing.html" target="_blank"
+      >Spacing ❯</a
+    >
+  </body>
+</html>
