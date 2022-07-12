@@ -231,11 +231,11 @@ console.log(bai4(arr));
 
 //baitonghop
 //bai2
-function sapXep(x, y, h) {
+function ocSen(x, y, h) {
   if (x < y) console.log("khong bo len dc dau");
   else return "Số ngày để bò lên là " + h / (x - y);
 }
 
-console.log(sapXep(3, 2, 10));
+console.log(ocSen(3, 2, 10));
 
 //bai3
