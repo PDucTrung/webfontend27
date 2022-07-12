@@ -145,6 +145,7 @@ students.sort(function (number1, number2) {
   else return 1;
 });
 
+console.log(students);
 students.sort(function (a, b) {
   return a.name - b.name;
 });

@@ -375,7 +375,7 @@ function difference(arr1, arr2) {
   }, []);
 }
 
-console.log(difference([1, 2, 3], [3, 2, 5]));
+console.log(difference([2, 2, 3], [3, 2, 5]));
 
 //10
 function removeDuplicate(arr) {
