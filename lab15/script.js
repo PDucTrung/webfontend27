@@ -239,3 +239,4 @@ function ocSen(x, y, h) {
 console.log(ocSen(3, 2, 10));
 
 //bai3
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Basic</title>
+  </head>
+  <body>
+    <h1 class="heading">Hello DOM</h1>
+
+    <img class="avatar" src="" alt="" />
+
+    <a class="profile" rel="stylesheet" href=""></a>
+
+    <ul class="favorite">
+      <li>A</li>
+      <li>Play game</li>
+      <li>Listen music</li>
+      <li>D</li>
+    </ul>
+
+    <div class="clock">Bây giờ là</div>
+
+    <p class="bio">
+      Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai Thầy giáo ba đẹp trai Thầy
+      giáo Ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai Thầy giáo Ba
+      đẹp trai Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai
+      Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai Thầy
+      giáo Ba đẹp trai Thầy giáo ba đẹp trai
+    </p>
+
+    <p class="num-of-words"></p>
+
+    <table class="list-students">
+      <tbody>
+        <tr>
+          <td>Giang Hồng Sơn</td>
+        </tr>
+        <tr>
+          <td>Bùi Lan Nhi</td>
+        </tr>
+        <tr>
+          <td>Hoàng Thị Ngọc Linh</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const heading = "Thầy giáo Ba đẹp trai 🤓";
+      const avatar = "https://i.imgur.com/2rP9dFO.png";
+      const profile = "https://twitter.com/banx9x";
+
+      //1
+      document.title = heading;
+
+      //2
+      document.querySelector("h1").textContent = heading;
+
+      //3
+      document.querySelector("img").src = avatar;
+
+      //4
+      document.querySelector("a").href = profile;
+
+      //5
+      document.querySelector("li").textContent = "Code application";
+
+      //6
+      document.querySelector(".favorite").lastElementChild.textContent =
+        "Sleep";
+
+      //7
+      const date = new Date();
+      const time = document.querySelector(".clock");
+      time.textContent +=
+        " " +
+        date.getHours() +
+        " : " +
+        date.getSeconds() +
+        ", Ngay " +
+        date.getDay() +
+        " / " +
+        date.getMonth() +
+        " / " +
+        date.getFullYear();
+
+      //8
+      const setP = document.querySelector(".bio").textContent;
+      let ba = setP.split(new RegExp("Ba", "gi")).length - 1;
+      document.querySelector(".num-of-words").textContent =
+        "Đoạn văn trên có " + ba + " từ Ba";
+      //9
+
+      //tham chiếu đến bảng
+      let tableRef = document.querySelector(".list-students");
+
+      // chèn hàng vào cuối bảng
+      let newRow = tableRef.insertRow(-1); //3
+
+      //Chèn một ô trong hàng tại chỉ mục 0
+      let newCell = newRow.insertCell(0);
+
+      //Nối một nút văn bản vào ô
+      let newText = document.createTextNode("Ba gà");
+      newCell.appendChild(newText);
+
+      //10
+      let newCell2 = newRow.insertCell(1);
+
+      let newText2 = document.createTextNode("Thầy giáo Ba siêu cấp đẹp trai");
+      newCell2.appendChild(newText2);
+
+      //11
+      function tableCreate() {
+        let body = document.body,
+          tbl = document.createElement("table");
+        tbl.style.width = "200px";
+        tbl.style.height = "200px";
+        tbl.style.border = "1px solid black";
+        tbl.style.borderCollapse = "collapse";
+        tbl.style.textAlign = "center";
+        let count = 0;
+        let count2 = 0;
+        for (let i = 0; i < 5; i++) {
+          let tr = tbl.insertRow();
+          count++;
+          let td = tr.insertCell(0);
+          td.appendChild(document.createTextNode(count + " : " + 1));
+
+          let td1 = tr.insertCell(1);
+          td1.appendChild(document.createTextNode(count + " : " + 2));
+          td1.style.border = "1px solid black";
+
+          let td2 = tr.insertCell(2);
+          td2.appendChild(document.createTextNode(count + " : " + 3));
+          td2.style.border = "1px solid black";
+
+          let td3 = tr.insertCell(3);
+          td3.appendChild(document.createTextNode(count + " : " + 4));
+          td3.style.border = "1px solid black";
+
+          let td4 = tr.insertCell(4);
+          td4.appendChild(document.createTextNode(count + " : " + 5));
+          td4.style.border = "1px solid black";
+          td.style.background = "red";
+          break;
+        }
+        for (let i = 0; i < 5; i++) {
+          let tr = tbl.insertRow();
+          count++;
+          let td = tr.insertCell(0);
+          td.appendChild(document.createTextNode(count + " : " + 1));
+          td.style.border = "1px solid black";
+
+          let td1 = tr.insertCell(1);
+          td1.appendChild(document.createTextNode(count + " : " + 2));
+          td1.style.border = "1px solid black";
+
+          let td2 = tr.insertCell(2);
+          td2.appendChild(document.createTextNode(count + " : " + 3));
+          td2.style.border = "1px solid black";
+
+          let td3 = tr.insertCell(3);
+          td3.appendChild(document.createTextNode(count + " : " + 4));
+          td3.style.border = "1px solid black";
+
+          let td4 = tr.insertCell(4);
+          td4.appendChild(document.createTextNode(count + " : " + 5));
+          td4.style.border = "1px solid black";
+          td1.style.background = "red";
+          break;
+        }
+        for (let i = 0; i < 5; i++) {
+          let tr = tbl.insertRow();
+          count++;
+          let td = tr.insertCell(0);
+          td.appendChild(document.createTextNode(count + " : " + 1));
+          td.style.border = "1px solid black";
+
+          let td1 = tr.insertCell(1);
+          td1.appendChild(document.createTextNode(count + " : " + 2));
+          td1.style.border = "1px solid black";
+
+          let td2 = tr.insertCell(2);
+          td2.appendChild(document.createTextNode(count + " : " + 3));
+          td2.style.border = "1px solid black";
+
+          let td3 = tr.insertCell(3);
+          td3.appendChild(document.createTextNode(count + " : " + 4));
+          td3.style.border = "1px solid black";
+
+          let td4 = tr.insertCell(4);
+          td4.appendChild(document.createTextNode(count + " : " + 5));
+          td4.style.border = "1px solid black";
+          td2.style.background = "red";
+          break;
+        }
+        for (let i = 0; i < 5; i++) {
+          let tr = tbl.insertRow();
+          count++;
+          let td = tr.insertCell(0);
+          td.appendChild(document.createTextNode(count + " : " + 1));
+          td.style.border = "1px solid black";
+
+          let td1 = tr.insertCell(1);
+          td1.appendChild(document.createTextNode(count + " : " + 2));
+          td1.style.border = "1px solid black";
+
+          let td2 = tr.insertCell(2);
+          td2.appendChild(document.createTextNode(count + " : " + 3));
+          td2.style.border = "1px solid black";
+
+          let td3 = tr.insertCell(3);
+          td3.appendChild(document.createTextNode(count + " : " + 4));
+          td3.style.border = "1px solid black";
+
+          let td4 = tr.insertCell(4);
+          td4.appendChild(document.createTextNode(count + " : " + 5));
+          td4.style.border = "1px solid black";
+          td3.style.background = "red";
+          break;
+        }
+        for (let i = 0; i < 5; i++) {
+          let tr = tbl.insertRow();
+          count++;
+          let td = tr.insertCell(0);
+          td.appendChild(document.createTextNode(count + " : " + 1));
+          td.style.border = "1px solid black";
+
+          let td1 = tr.insertCell(1);
+          td1.appendChild(document.createTextNode(count + " : " + 2));
+          td1.style.border = "1px solid black";
+
+          let td2 = tr.insertCell(2);
+          td2.appendChild(document.createTextNode(count + " : " + 3));
+          td2.style.border = "1px solid black";
+
+          let td3 = tr.insertCell(3);
+          td3.appendChild(document.createTextNode(count + " : " + 4));
+          td3.style.border = "1px solid black";
+
+          let td4 = tr.insertCell(4);
+          td4.appendChild(document.createTextNode(count + " : " + 5));
+          td4.style.border = "1px solid black";
+          td4.style.background = "red";
+          break;
+        }
+        body.appendChild(tbl);
+      }
+      tableCreate();
+      br = document.createElement("br");
+      tableRef.after(br);
+    </script>
+  </body>
+</html>
