@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .calcutor {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid gray;
+        padding: 20px;
+      }
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class=".container">
+      <div class="calcutor">
+        <form class="form" name="tip">
+          <h1 class="text-center">Tip Calculator</h1>
+          <div class="form-field">
+            <label for="amount">Bill amount</label>
+            <div>
+              <i class="fas fa-money-bill"></i>
+              <input id="amount" type="number" name="amount" />
+            </div>
+          </div>
+
+          <br />
+          <div class="form-field">
+            <label for="guest">Number of guests</label>
+            <div>
+              <i class="fas fa-user-friends"></i>
+              <input id="guest" type="number" name="guest" />
+            </div>
+          </div>
+
+          <br />
+          <div class="form-field">
+            <label for="quanlity">Service Quanlity</label>
+            <div>
+              <select id="quanlity" name="quanlity">
+                <option>Choose</option>
+                <option value="0.3">30% - Outstanding</option>
+                <option value="0.2">20% - Good</option>
+                <option value="0.15">15% - It was OK</option>
+                <option value="0.1">10% - Bad</option>
+                <option value="0.05">5% - Terrible</option>
+              </select>
+            </div>
+          </div>
+
+          <br />
+          <div class="form-footer text-center">
+            <output name="result" class="result text-center"></output>
+            <br />
+            <br />
+            <button>Calculate</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.forms.tip.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        //lay gia tri cua input/select
+        //ap dung cong thuc de tinh
+        //hien thi ket qua
+        const amount = this.elements.amount.value;
+        const guest = this.elements.guest.value;
+        const quanlity = this.elements.quanlity.value;
+
+        const tipPerEachGuest = (amount * quanlity) / guest;
+
+        this.elements.result.innerHTML = `Tip <b>$${tipPerEachGuest}</b> each person`;
+      });
+    </script>
+  </body>
+</html>

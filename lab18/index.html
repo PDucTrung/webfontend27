@@ -8,6 +8,26 @@
     <style></style>
   </head>
   <body>
-    <script></script>
+    <button id="btn">Click em di :)</button>
+
+    <input type="text" id="other" />
+
+    <input type="checkbox" id="input" />
+    <script>
+      btn.addEventListener("click", function (e) {
+        //this == btn
+        //e.target
+        console.log(e);
+      });
+
+      other.addEventListener("keypress", function (e) {
+        e.preventDefault();
+      });
+
+      input.addEventListener("click", function (e) {
+        //ngan su kien mac dinh
+        e.preventDefault();
+      });
+    </script>
   </body>
 </html>
