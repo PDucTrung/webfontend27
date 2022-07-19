@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button onclick="handleClick()">Click em di</button>
+      <button class="btn">Handle em di</button>
+      <button class="abc">cham vao em di</button>
+      <button class="delete">xoa</button>
+    </div>
+
+    <script>
+      function handleClick() {
+        console.log("clicked!!!");
+      }
+
+      const btn = document.querySelector(".btn");
+      btn.onclick = function () {
+        handleClick();
+      };
+
+      // addEvenListener() / removeEventListener()
+      const otherBtn = document.querySelector(".abc");
+      // enventype
+      otherBtn.addEventListener("click", handleClick);
+
+      const otherBtnDelete = document.querySelector(".delete");
+      otherBtnDelete.addEventListener("click", function () {
+        otherBtn.removeEventListener("click", handleClick);
+      });
+    </script>
+  </body>
+</html>

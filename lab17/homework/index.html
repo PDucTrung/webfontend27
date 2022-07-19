@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: auto;
+      }
+      thead tr,
+      th {
+        border: 1px solid black;
+        padding: 5px;
+      }
+      tbody tr,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-right {
+        text-align: right;
+      }
+      tfoot td {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead></thead>
+      <tbody></tbody>
+      <tfoot></tfoot>
+    </table>
+    <script>
+      function createTthead() {
+        return `<tr>
+          <th colspan="4">HÓA ĐƠN ĂN NHẬU</th>
+        </tr>
+        <tr>
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Mức đóng góp</th>
+          <th>Nhận xét</th>
+        </tr>`;
+      }
+      function createTbody() {
+        return `<tr>
+          <td>1</td>
+          <td>Giang Hồng Sơn</td>
+          <td>1000000</td>
+          <td>Sugar Daddy</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Nguyễn Thế Anh</td>
+          <td>200000</td>
+          <td>Sugar Brother</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Bùi Lan Nhi</td>
+          <td>100000</td>
+          <td>Định mời Nhi ăn tối mà hóa ra lại thành bữa tối của Nhi :(</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Nguyễn Hữu Hà</td>
+          <td>150000</td>
+          <td>Tuổi trẻ tài cao :D</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Phạm Hồng Anh</td>
+          <td>100000</td>
+          <td>Lúc đầu gáy to, về sau hơi rén</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Nguyễn Văn Hùng</td>
+          <td>100000</td>
+          <td>Bị buồn =]]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Nguyễn Văn Tùng</td>
+          <td>200000</td>
+          <td>Kèo nào cũng cân</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Bùi Minh Đức</td>
+          <td>100000</td>
+          <td>Hơi rén về sau cần mạnh dạn hơn :D</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Dương Đức Thịnh</td>
+          <td>100000</td>
+          <td>Mồm to húp hết nửa bill @@</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Thầy giá Barr</td>
+          <td>100000</td>
+          <td>Cám ơn Nhi đã mời mình :)</td>
+        </tr>`;
+      }
+      function createTfoot() {
+        return ` <tr>
+          <td colspan="4">Tổng bill ca 1: 2022000</td>
+        </tr>
+        <tr>
+          <td colspan="4">Tổng bill ca 2: 105000</td>
+        </tr>
+        <tr>
+          <td colspan="4">Tổng thiệt hại: 2127000</td>
+        </tr>
+        <tr>
+          <td colspan="4">Tổng đóng góp: <b>21500000</b></td>
+        </tr>`;
+      }
+      function renderTable() {
+        const thead = document.querySelector("thead");
+        thead.innerHTML = createTthead();
+        thead.lastChild.setAttribute("class", "text-left");
+        const tbody = document.querySelector("tbody");
+        tbody.innerHTML = createTbody();
+        const tfoot = document.querySelector("tfoot");
+        tfoot.innerHTML = createTfoot();
+        tfoot.setAttribute("class", "text-right");
+      }
+      renderTable();
+    </script>
+  </body>
+</html>
