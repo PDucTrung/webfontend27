@@ -41,7 +41,7 @@ function showTasks() {
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li><input class="todo-checkbox" type="checkbox">${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+    newLiTag += `<li><input class="todo-checkbox" type="checkbox" id="${index}"><span>${element}</span><span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
   });
   todoList.innerHTML = newLiTag;
   inputBox.value = "";
@@ -50,6 +50,7 @@ function showTasks() {
 function deleteTask(index) {
   let getLocalStorageData = localStorage.getItem("New Todo");
   listArray = JSON.parse(getLocalStorageData);
+  confirm("Are you sure ?");
   listArray.splice(index, 1);
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks();
@@ -57,6 +58,7 @@ function deleteTask(index) {
 
 deleteAllBtn.onclick = () => {
   listArray = [];
+  confirm("Are you sure ?");
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks();
 };

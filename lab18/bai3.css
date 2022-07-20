@@ -95,7 +95,6 @@ body {
   position: absolute;
   right: -45px;
   top: 50%;
-  transform: translateY(-50%);
   background: #e74c3c;
   width: 45px;
   text-align: center;

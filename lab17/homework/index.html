@@ -53,76 +53,76 @@
         return `<tr>
           <td>1</td>
           <td>Giang Hồng Sơn</td>
-          <td>1000000</td>
+          <td class="price1">1000000</td>
           <td>Sugar Daddy</td>
         </tr>
         <tr>
           <td>2</td>
           <td>Nguyễn Thế Anh</td>
-          <td>200000</td>
+          <td class="price2">200000</td>
           <td>Sugar Brother</td>
         </tr>
         <tr>
           <td>3</td>
           <td>Bùi Lan Nhi</td>
-          <td>100000</td>
+          <td class="price3">100000</td>
           <td>Định mời Nhi ăn tối mà hóa ra lại thành bữa tối của Nhi :(</td>
         </tr>
         <tr>
           <td>4</td>
           <td>Nguyễn Hữu Hà</td>
-          <td>150000</td>
+          <td class="price4">150000</td>
           <td>Tuổi trẻ tài cao :D</td>
         </tr>
         <tr>
           <td>5</td>
           <td>Phạm Hồng Anh</td>
-          <td>100000</td>
+          <td class="price5">100000</td>
           <td>Lúc đầu gáy to, về sau hơi rén</td>
         </tr>
         <tr>
           <td>6</td>
           <td>Nguyễn Văn Hùng</td>
-          <td>100000</td>
+          <td class="price6">100000</td>
           <td>Bị buồn =]]</td>
         </tr>
         <tr>
           <td>7</td>
           <td>Nguyễn Văn Tùng</td>
-          <td>200000</td>
+          <td class="price7">200000</td>
           <td>Kèo nào cũng cân</td>
         </tr>
         <tr>
           <td>8</td>
           <td>Bùi Minh Đức</td>
-          <td>100000</td>
+          <td class="price8">100000</td>
           <td>Hơi rén về sau cần mạnh dạn hơn :D</td>
         </tr>
         <tr>
           <td>9</td>
           <td>Dương Đức Thịnh</td>
-          <td>100000</td>
+          <td class="price9">100000</td>
           <td>Mồm to húp hết nửa bill @@</td>
         </tr>
         <tr>
           <td>10</td>
           <td>Thầy giá Barr</td>
-          <td>100000</td>
+          <td class="price10">100000</td>
           <td>Cám ơn Nhi đã mời mình :)</td>
         </tr>`;
       }
       function createTfoot() {
         return ` <tr>
-          <td colspan="4"><i>Tổng bill ca 1: 2022000</i></td>
+          <td colspan="4"><i>Tổng bill ca 1: <span class="a">2022000</span></i></td>
         </tr>
         <tr>
-          <td colspan="4"><i>Tổng bill ca 2: 105000</i></td>
+          <td colspan="4"><i>Tổng bill ca 2: <span class="b">105000</span></i></td>
         </tr>
         <tr>
-          <td colspan="4"><i>Tổng thiệt hại: 2127000</i></td>
+          <td colspan="4"><i>Tổng thiệt hại: <span class="sum1"></span></i></td>
         </tr>
         <tr>
-          <td colspan="4"><i>Tổng đóng góp: <b>21500000</i></b></td>
+          <td colspan="4"><i>Tổng đóng góp: <b class="sum2"></i></b></td>
         </tr>`;
       }
       function renderTable() {
@@ -136,6 +136,20 @@
         tfoot.setAttribute("class", "text-right");
       }
       renderTable();
+      document.querySelector(".sum1").textContent =
+        Number(document.querySelector(".a").textContent) +
+        Number(document.querySelector(".b").textContent);
+      document.querySelector(".sum2").textContent =
+        Number(document.querySelector(".price1").textContent) +
+        Number(document.querySelector(".price2").textContent) +
+        Number(document.querySelector(".price3").textContent) +
+        Number(document.querySelector(".price4").textContent) +
+        Number(document.querySelector(".price5").textContent) +
+        Number(document.querySelector(".price6").textContent) +
+        Number(document.querySelector(".price7").textContent) +
+        Number(document.querySelector(".price8").textContent) +
+        Number(document.querySelector(".price9").textContent) +
+        Number(document.querySelector(".price10").textContent);
     </script>
   </body>
 </html>

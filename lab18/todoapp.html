@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo App</title>
+    <style>
+      /* Import Google Font - Poppins */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background: rgb(244, 63, 94);
+        background: linear-gradient(
+          27deg,
+          rgba(244, 63, 94, 1) 0%,
+          rgba(14, 133, 233, 1) 100%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+      ::selection {
+        color: #fff;
+        background: #3c87ff;
+      }
+      .wrapper {
+        max-width: 505px;
+        padding: 28px 0 30px;
+        margin: 137px auto;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .task-input {
+        height: 52px;
+        padding: 0 25px;
+        position: relative;
+      }
+      .task-input img {
+        top: 50%;
+        position: absolute;
+        transform: translate(17px, -50%);
+      }
+      .task-input input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        font-size: 18px;
+        border-radius: 5px;
+        padding: 0 20px 0 20px;
+        border: 1px solid #999;
+      }
+      .task-input input:focus,
+      .task-input input.active {
+        padding-left: 19px;
+        border: 2px solid #3c87ff;
+      }
+      .task-input input::placeholder {
+        color: #bfbfbf;
+      }
+      .controls,
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .controls {
+        padding: 18px 25px;
+        border-bottom: 1px solid #ccc;
+      }
+      .filters {
+        padding-left: 151px;
+      }
+      .mr-3 {
+        margin-right: 15px;
+      }
+      .filters span {
+        font-size: 17px;
+        color: #444444;
+        cursor: pointer;
+      }
+      .filters span:first-child {
+        margin-left: 0;
+      }
+      .footer {
+        padding: 25px;
+        justify-content: space-between;
+      }
+      .clear-btn {
+        border: none;
+        opacity: 0.6;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 7px 13px;
+        border-radius: 4px;
+        letter-spacing: 0.3px;
+        pointer-events: none;
+        transition: transform 0.25s ease;
+        background: rgba(255, 0, 0, 0.721);
+      }
+      .clear-btn.active {
+        opacity: 0.9;
+        pointer-events: auto;
+      }
+      .clear-btn:active {
+        transform: scale(0.93);
+      }
+      .task-box {
+        margin-top: 20px;
+        margin-right: 5px;
+        padding: 0 20px 10px 25px;
+      }
+      .task-box.overflow {
+        overflow-y: auto;
+        max-height: 300px;
+      }
+      .task-box::-webkit-scrollbar {
+        width: 5px;
+      }
+      .task-box::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 25px;
+      }
+      .task-box::-webkit-scrollbar-thumb {
+        background: #e6e6e6;
+        border-radius: 25px;
+      }
+      .task-box .task {
+        list-style: none;
+        font-size: 17px;
+        margin-bottom: 18px;
+        align-items: flex-start;
+        background-color: rgba(128, 128, 128, 0.226);
+        display: flex;
+        border-radius: 5px;
+        align-items: center;
+        padding-left: 10px;
+      }
+      .task-box .task:last-child {
+        margin-bottom: 0;
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+      .task-box .task label {
+        display: flex;
+        align-items: flex-start;
+      }
+      .task label input {
+        margin-top: 7px;
+        accent-color: #3c87ff;
+      }
+      .task label p {
+        user-select: none;
+        margin-left: 12px;
+        word-wrap: break-word;
+      }
+      .task-box .settings {
+        position: relative;
+      }
+      .settings :where(i, li) {
+        cursor: pointer;
+      }
+      .settings {
+        right: -45px;
+        opacity: 0.7;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 7px 13px;
+        border-radius: 5px;
+        letter-spacing: 0.3px;
+        transition: transform 0.2s ease;
+        background: rgba(128, 0, 128, 0.701);
+      }
+      .task-box li:hover .settings {
+        right: 0px;
+      }
+      .task-box li {
+        overflow: hidden;
+      }
+      .task-box .task:last-child .task-menu {
+        bottom: 0;
+        transform-origin: bottom right;
+      }
+      .task-box .task:first-child .task-menu {
+        bottom: -65px;
+        transform-origin: top right;
+      }
+      .task-menu.show {
+        transform: scale(1);
+      }
+
+      .settings li:hover {
+        background: #f5f5f5;
+      }
+      .settings li i {
+        padding-right: 8px;
+      }
+      .task-box {
+        overflow: visible;
+      }
+      @media (max-width: 400px) {
+        body {
+          padding: 0 10px;
+        }
+        .wrapper {
+          padding: 20px 0;
+        }
+        .filters span {
+          margin: 0 5px;
+        }
+        .task-input {
+          padding: 0 20px;
+        }
+        .controls {
+          padding: 18px 20px;
+        }
+        .task-box {
+          margin-top: 20px;
+          margin-right: 5px;
+          padding: 0 15px 10px 20px;
+        }
+        .task label input {
+          margin-top: 4px;
+        }
+      }
+      .text-title {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 2;
+      }
+      .check {
+        cursor: pointer;
+        width: 19px;
+        height: 19px;
+        margin: -2px 4px 0 0;
+        vertical-align: middle;
+      }
+      .checkbox {
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        vertical-align: middle;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .a-center {
+        align-items: center;
+      }
+      .btn {
+        width: 100px;
+        height: 100%;
+        border: none;
+        color: #fff;
+        margin-left: 5px;
+        font-size: 15px;
+        background: rgba(0, 0, 255, 0.63);
+        cursor: pointer;
+        border-radius: 3px;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+      }
+      .btn:hover,
+      .clear-btn:hover,
+      .settings:hover {
+        background-color: green;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Iconscout Link For Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="text-title">Simple TodoApp</p>
+      <br />
+      <div class="task-input d-flex">
+        <input type="text" placeholder="What do you want to do ?" />
+        <button class="btn">Create</button>
+      </div>
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all"
+            ><input class="check" type="radio" name="radio"
+          /></span>
+          <span class="mr-3">All</span>
+          <span id="pending"
+            ><input class="check" type="radio" name="radio"
+          /></span>
+          <span class="mr-3">Active</span>
+          <span id="completed"
+            ><input class="check" type="radio" name="radio"
+          /></span>
+          <span class="mr-3">Completed</span>
+        </div>
+      </div>
+      <ul class="task-box"></ul>
+      <div class="footer d-flex a-center">
+        <div>You have <b class="pendingTasks"></b> pending tasks</div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+    </div>
+
+    <script>
+      const taskInput = document.querySelector(".task-input input"),
+        filters = document.querySelectorAll(".filters span"),
+        clearAll = document.querySelector(".clear-btn"),
+        taskBox = document.querySelector(".task-box");
+      const addBtn = document.querySelector(".task-input button");
+
+      let editId,
+        isEditTask = false,
+        todos = JSON.parse(localStorage.getItem("todo-list"));
+
+      filters.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelector("span.active").classList.remove("active");
+          btn.classList.add("active");
+          showTodo(btn.id);
+        });
+      });
+
+      function showTodo(filter) {
+        const pendingTasksNumb = document.querySelector(".pendingTasks");
+        pendingTasksNumb.textContent = todos.length;
+        let liTag = "";
+        if (todos) {
+          todos.forEach((todo, id) => {
+            let completed = todo.status == "completed" ? "checked" : "";
+            if (filter == todo.status || filter == "all") {
+              liTag += `<li class="task">
+                            <label for="${id}">                    
+                                <input class="checkbox" onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
+                                <p class="${completed}">${todo.name}</p>                               
+                            </label>
+                            <div class="settings">
+                                <div onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash icon"></i></div>
+                            </div>
+                        </li>`;
+            }
+          });
+        }
+        taskBox.innerHTML =
+          liTag || `<span>You don't have any task here</span>`;
+        let checkTask = taskBox.querySelectorAll(".task");
+        !checkTask.length
+          ? clearAll.classList.remove("active")
+          : clearAll.classList.add("active");
+        taskBox.offsetHeight >= 300
+          ? taskBox.classList.add("overflow")
+          : taskBox.classList.remove("overflow");
+      }
+      showTodo("all");
+
+      function updateStatus(selectedTask) {
+        let taskName = selectedTask.parentElement.lastElementChild;
+        if (selectedTask.checked) {
+          taskName.classList.add("checked");
+          todos[selectedTask.id].status = "completed";
+        } else {
+          taskName.classList.remove("checked");
+          todos[selectedTask.id].status = "pending";
+        }
+        localStorage.setItem("todo-list", JSON.stringify(todos));
+      }
+
+      function deleteTask(deleteId, filter) {
+        isEditTask = false;
+        todos.splice(deleteId, 1);
+        localStorage.setItem("todo-list", JSON.stringify(todos));
+        showTodo(filter);
+      }
+
+      clearAll.addEventListener("click", () => {
+        isEditTask = false;
+        todos.splice(0, todos.length);
+        localStorage.setItem("todo-list", JSON.stringify(todos));
+        showTodo();
+      });
+
+      taskInput.addEventListener("keyup", (e) => {
+        let userTask = taskInput.value.trim();
+        if (e.key == "Enter" && userTask) {
+          if (!isEditTask) {
+            todos = !todos ? [] : todos;
+            let taskInfo = { name: userTask, status: "pending" };
+            todos.push(taskInfo);
+          } else {
+            isEditTask = false;
+            todos[editId].name = userTask;
+          }
+          taskInput.value = "";
+          localStorage.setItem("todo-list", JSON.stringify(todos));
+          showTodo(document.querySelector("span.active").id);
+        }
+      });
+
+      addBtn.onclick = () => {
+        let userTask = taskInput.value.trim();
+        if (userTask) {
+          if (!isEditTask) {
+            todos = !todos ? [] : todos;
+            let taskInfo = { name: userTask, status: "pending" };
+            todos.push(taskInfo);
+          } else {
+            isEditTask = false;
+            todos[editId].name = userTask;
+          }
+          taskInput.value = "";
+          localStorage.setItem("todo-list", JSON.stringify(todos));
+          showTodo(document.querySelector("span.active").id);
+        }
+      };
+    </script>
+  </body>
+</html>
