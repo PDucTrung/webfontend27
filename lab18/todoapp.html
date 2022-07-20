@@ -181,6 +181,9 @@
       .task-box li:hover .settings {
         right: 0px;
       }
+      .task-box li:hover {
+        opacity: 0.6;
+      }
       .task-box li {
         overflow: hidden;
       }
@@ -331,9 +334,9 @@
       });
 
       function showTodo(filter) {
-        const pendingTasksNumb = document.querySelector(".pendingTasks");
-        pendingTasksNumb.textContent = todos.length;
         let liTag = "";
+        const pendingTasksNumb = document.querySelector(".pendingTasks");
+        if (todos.length !== null) pendingTasksNumb.textContent = todos.length;
         if (todos) {
           todos.forEach((todo, id) => {
             let completed = todo.status == "completed" ? "checked" : "";
