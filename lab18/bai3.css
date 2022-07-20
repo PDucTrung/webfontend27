@@ -146,3 +146,35 @@ body {
   font-size: 15px;
   font: bold;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.j-end {
+  justify-content: end;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.form-check-input {
+  cursor: pointer;
+  width: 19px;
+  height: 19px;
+  margin: -2px 4px 0 0;
+  vertical-align: middle;
+}
+
+.todo-checkbox {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  margin: -2px 4px 0 0;
+  vertical-align: middle;
+}
