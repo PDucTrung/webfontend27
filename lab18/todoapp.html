@@ -336,8 +336,8 @@
       });
 
       function showTodo(filter) {
-//         const pendingTasksNumb = document.querySelector(".pendingTasks");
-//         pendingTasksNumb.textContent = todos.length;
+        const pendingTasksNumb = document.querySelector(".pendingTasks");
+        if (todos.length !== null) pendingTasksNumb.textContent = todos.length;
         let liTag = "";
         if (todos) {
           todos.forEach((todo, id) => {
