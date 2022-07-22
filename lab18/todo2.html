@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .todo-item.completed {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="heading">Simple todo app</h1>
+      </header>
+
+      <main class="main">
+        <form action="" class="todo" name="todo">
+          <input type="text" name="title" />
+          <button class="btn-create">Create</button>
+        </form>
+
+        <div class="actions">
+          <div class="action">
+            <label for="sort">Sort by</label>
+            <select name="sort" id="sort">
+              <option>Default</option>
+              <option value="asc">A-Z</option>
+              <option value="desc">Z-A</option>
+            </select>
+          </div>
+
+          <div class="action">
+            <label for="filter">Filter by</label>
+            <select name="filter" id="filter">
+              <option>Default</option>
+              <option value="active">Active</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="todo-list">
+          <div class="todo-item">
+            <input type="checkbox" />
+            <span>Tieu de</span>
+            <button class="btn-delete">Delete</button>
+          </div>
+
+          <div class="todo-item completed">
+            <input type="checkbox" checked />
+            <span>Tieu de</span>
+            <button class="btn-delete">Delete</button>
+          </div>
+        </div>
+
+        <div class="todo-summary">
+          <div class="pending"></div>
+          <button class="btn-clear">Clear all</button>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const todos = [
+        { id: 1, title: "Create todo app", completed: false },
+        { id: 2, title: "Learn jQuery", completed: true },
+      ];
+
+      const list = document.querySelector(".todo-list"); // div.todo-list
+      const form = document.forms.todo; // form
+      const sort = document.getElementById("sort"); // select#sort
+      const filter = document.getElementById("filter"); // select#filter
+
+      // Render todo list
+      function renderTodoList() {
+        const filterBy = filter.value;
+        const sortBy = sort.value;
+
+        const clone = filterTodo(filterBy);
+
+        sortTodo(clone, sortBy);
+
+        const items = clone.map(function (todo) {
+          return `
+                      <div class="${
+                        !todo.completed ? "todo-item" : "todo-item completed"
+                      }">
+                            <input onchange="completeTodo(${
+                              todo.id
+                            })" type="checkbox" ${todo.completed ? "checked" : ""} />
+                            <span class="title">${todo.title}</span>
+                            <button onclick="editTodo(${
+                              todo.id
+                            })" class="btn-edit">Edit</button>
+                            <button onclick="deleteTodo(${
+                              todo.id
+                            })" class="btn-delete">Delete</button>
+                      </div>
+                    `;
+        });
+
+        list.innerHTML = items.join("");
+      }
+
+      renderTodoList();
+
+      // Delete
+      function deleteTodo(id) {
+        if (confirm("Delete todo " + id)) {
+          const index = todos.findIndex(function (todo) {
+            return todo.id === id;
+          });
+
+          todos.splice(index, 1);
+
+          renderTodoList();
+        }
+      }
+
+      // Create
+      function createTodo(title) {
+        const newTodo = {
+          id: Math.floor(Math.random() * 1000000),
+          title,
+          completed: false,
+        };
+
+        todos.push(newTodo);
+
+        renderTodoList();
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const title = this.elements.title.value;
+
+        createTodo(title);
+        this.elements.title.value = "";
+      });
+
+      // Clear
+      function clear() {
+        if (confirm("Delete all todos")) {
+          todos.length = 0;
+
+          renderTodoList();
+        }
+      }
+
+      document.querySelector(".btn-clear").onclick = clear;
+
+      // Update
+      function completeTodo(id) {
+        const todo = todos.find(function (todo) {
+          return todo.id === id;
+        });
+
+        todo.completed = !todo.completed;
+
+        renderTodoList();
+      }
+
+      // Edit
+      function editTodo(id) {
+        const todo = todos.find(function (todo) {
+          return todo.id === id;
+        });
+
+        const title = prompt("Enter new title", todo.title);
+
+        todo.title = title;
+
+        renderTodoList();
+      }
+
+      // Sort by alphabe
+      function sortTodo(todos, sortBy) {
+        if (sortBy === "asc") {
+          todos.sort(function (a, b) {
+            if (a.title >= b.title) return 1;
+            else return -1;
+          });
+        } else if (sortBy === "desc") {
+          todos
+            .sort(function (a, b) {
+              if (a.title >= b.title) return 1;
+              else return -1;
+            })
+            .reverse();
+        }
+      }
+
+      sort.onchange = renderTodoList;
+      // Deadline
+
+      // Filter
+      function filterTodo(filterBy) {
+        if (filterBy === "active") {
+          return todos.filter(function (todo) {
+            return !todo.completed;
+          });
+        } else if (filterBy === "completed") {
+          return todos.filter(function (todo) {
+            return todo.completed;
+          });
+        } else {
+          return todos.slice();
+        }
+      }
+
+      filter.onchange = renderTodoList;
+    </script>
+  </body>
+</html>
