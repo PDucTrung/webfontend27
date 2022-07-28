@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="bmiForm">
+      <h2>Body Mass Index</h2>
+      <input type="text" name="weight" size="10" />
+      <input type="text" name="height" size="10" />
+      <br />
+      <input type="button" value="Calculate" onClick="calculateBmi()" /><br />
+      <input type="text" name="bmi" /><br />
+      <input type="text" name="meaning" /><br />
+    </form>
+    <script>
+      function calculateBmi() {
+        let weight = document.bmiForm.weight.value;
+        let height = document.bmiForm.height.value;
+        if (weight > 0 && height > 0) {
+          let finalBmi = weight / (height * 2);
+          document.bmiForm.bmi.value = finalBmi;
+          if (finalBmi < 18.5) {
+            document.bmiForm.meaning.value = "That you are too thin.";
+          }
+          if (finalBmi > 18.5 && finalBmi < 25) {
+            document.bmiForm.meaning.value = "That you are healthy.";
+          }
+          if (finalBmi > 25) {
+            document.bmiForm.meaning.value = "That you have overweight.";
+          }
+        } else {
+          alert("Please Fill in everything correctly");
+        }
+      }
+    </script>
+  </body>
+</html>
