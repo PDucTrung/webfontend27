@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        background: rgb(244, 63, 94);
+        background: linear-gradient(
+          54deg,
+          rgba(244, 63, 94, 1) 0%,
+          rgba(14, 163, 233, 1) 100%,
+          rgba(0, 212, 255, 1) 100%
+        );
+        height: 100vh;
+      }
+
+      .container {
+        margin: 10px auto;
+        width: 310px;
+        overflow: hidden;
+        background: black;
+        border-radius: 10px;
+      }
+
+      .screen {
+        color: #fff;
+        width: 100%;
+        height: 200px;
+        position: relative;
+      }
+
+      .keyboard {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .item {
+        height: 68px;
+        width: 68px;
+        outline: none;
+        font-size: 30px;
+        border-radius: 50%;
+        margin-top: 7px;
+        color: #fff;
+        background: #333333;
+        cursor: pointer;
+      }
+
+      .item1,
+      .item2,
+      .item3 {
+        background: #cccccc;
+        color: black;
+      }
+
+      .item4,
+      .item8,
+      .item12,
+      .item19,
+      .item16 {
+        background: #00cc00;
+      }
+
+      .screen .input {
+        position: absolute;
+
+        right: 5px;
+        font-size: 80px;
+        z-index: 100;
+        bottom: 0;
+        font-weight: 300;
+      }
+
+      .item17 {
+        width: 140px;
+        border-radius: 50px;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Calculator</h1>
+    <div class="container">
+      <div class="screen">
+        <span class="input">0</span>
+      </div>
+      <div class="keyboard">
+        <button class="item item1">AC</button>
+        <button class="item item2">Del</button>
+        <button class="item item3">%</button>
+        <button class="item item4">/</button>
+        <button class="item item5">7</button>
+        <button class="item item6">8</button>
+        <button class="item item7">9</button>
+        <button class="item item8">*</button>
+        <button class="item item9">4</button>
+        <button class="item item10">5</button>
+        <button class="item item11">6</button>
+        <button class="item item12">-</button>
+        <button class="item item13">1</button>
+        <button class="item item14">2</button>
+        <button class="item item15">3</button>
+        <button class="item item16">+</button>
+        <button class="item item17">0</button>
+        <button class="item item18">.</button>
+        <button class="item item19">=</button>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+    <script>
+      var input = document.querySelector(".input");
+      var items = Array.from(document.querySelectorAll(".item"));
+      items.forEach((item) => {
+        item.addEventListener("click", function () {
+          if (input.innerText == "0") input.innerText = " ";
+          if (item.innerText == "AC") input.innerText = "0";
+          else if (item.innerText == "Del") {
+            var arrtext = Array.from(input.innerText);
+            console.log(arrtext);
+            arrtext.splice(arrtext.length - 1, 1);
+            if (arrtext.length != 0) input.innerText = arrtext.join("");
+            else input.innerText = "0";
+          } else if (item.innerText == "=") {
+            input.innerText = eval(input.innerText);
+          } else input.innerText += item.innerText;
+        });
+      });
+    </script>
+  </body>
+</html>
