@@ -5,6 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <h1 class="heading"></h1>
+    </div>
+
+    <div class="single-item">
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
+      <div><h3>5</h3></div>
+      <div><h3>6</h3></div>
+    </div>
+    <!-- jquery cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- <script>
+      const h1 = document.querySelector(".heading");
+      console.log(h1.textContent);
+      h1.addEventListener("click", function () {});
+      h1.removeEventListener("click", func);
+      const div = document.createComment("div");
+      div.classList.add("");
+      //
+      const $h1 = $(".heading");
+      console.log($h1.text());
+      $h1.text("dasdasf");
+      $h1.html("<u>hihi</u>");
+      $h1.on("click", function () {});
+      $h1.off("click", func);
+    </script> -->
+    <script>
+      $(".single-item").slick();
+    </script>
+  </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab23</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      a {
+        text-decoration: none;
+        margin-right: 10px;
+        color: rgba(0, 0, 255, 0.574);
+        padding: 10px;
+        background-color: pink;
+        border-radius: 5px;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background: rgb(238, 174, 202);
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+      }
+      a:hover {
+        opacity: 0.7;
+      }
+      .next {
+        margin-top: 20px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        text-shadow: 5px 5px 4px rgba(255, 0, 0, 0.664);
+      }
+      table {
+        text-align: center;
+        border-collapse: collapse;
+        border: 1px solid brown;
+        color: rgba(0, 0, 0, 0.81);
+      }
+      th,
+      td {
+        border: 1px solid brown;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="next">
+      <a href="comments.html" target="_blank">Comments</a>
+      <a href="albums.html" target="_blank">Albums</a>
+      <a href="photos.html" target="_blank">Photos</a>
+      <a href="todos.html" target="_blank">Todos</a>
+    </div>
+    <h2>Post list</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
+      </thead>
+      <tbody class="post-list"></tbody>
+    </table>
+    <div class="post-list"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

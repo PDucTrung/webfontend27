@@ -58,6 +58,9 @@ const graduate = (point) =>
     : "A";
 
 console.log(graduate(4));
+//toan tu 3 ngoi la 1 bieu thuc, nen co the su dung trong template string
+let age = 18;
+let msg = `{age >= 18 ? "Elegible" : "Not Elegible"} for...`;
 
 //tim hieu tiep va cac cu phap moi hon
 //Destructuring
