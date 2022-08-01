@@ -127,7 +127,7 @@ const rendertodosList = async () => {
           return `
         <tr class="todos">
             <td class="todos-title">${todos.title}</td>
-            <td class="todos-check"><div class="icon-red"><i class="bi bi-bookmark-x"></div></i></td>
+            <td class="todos-check"><div class="icon-red"><i class="bi bi-x-square"></i></div></i></td>
         </tr>`;
         }
       })
