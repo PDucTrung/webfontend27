@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 80%;
+  vertical-align: middle;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* row -> column */
+.row > * {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 10px;
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: end;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* mac dinh cho man hinh be truoc (base - xs) */
+.box {
+  height: 200px;
+  background-color: red;
+  color: white;
+}
+
+/* Desktop first - uu tien man hinh desktop truoc */
+/* mobile first - uu tien man hinh mobile truoc */
+
+/* @key frame */
+/* kich thuoc man hinh vuot qua 576px - sm */
+/* @media screen and (min-width: 576px) {
+  .box {
+    background-color: green;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .post {
+    flex-direction: column;
+    width: 50%;
+  }
+  .container {
+    width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  img{
+    width: 50%;
+  }
+
+} */
+
+/* kich thuoc man hinh vuot qua 768px - md */
+/* @media screen and (min-width: 768px) {
+  .box {
+    background-color: blue;
+    max-width: 720px;
+  }
+  .post {
+    flex-direction: column;
+    width: 33%;
+  }
+  .container {
+    width: 990px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  img{
+    width: 50%;
+  }
+} */
+
+/* kich thuoc man hinh vuot qua 992px - lg
+@media screen and (min-width: 992px) {
+  .box {
+    background-color: yellowgreen;
+    max-width: 960px;
+  }
+  .post {
+    flex-direction: column;
+    width: 25%;
+  }
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  img{
+    width: 50%;
+  }
+} */
+
+/* kich thuoc man hinh vuot qua 1200px - xl */
+/* @media screen and (min-width: 1200px) {
+  .box {
+    background-color: orange;
+    max-width: 1160px;
+  }
+  .post {
+    flex-direction: column;
+    width: 20%;
+  }
+  .container {
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  img{
+    width: 50%;
+  }
+} */
+
+/* kich thuoc man hinh vuot qua 1440px - xxl */
+/* @media screen and (min-width: 1440px) {
+  .box {
+    background-color: brown;
+    max-width: 1400px;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+} */
+
+/* kich thuoc man hinh wm */
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    width: 8.333333%;
+  }
+
+  .col-sm-2 {
+    width: 16.666667%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.333333%;
+  }
+
+  .col-sm-5 {
+    width: 41.666667%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.333333%;
+  }
+
+  .col-sm-8 {
+    width: 66.666667%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.333333%;
+  }
+
+  .col-sm-11 {
+    width: 91.666667%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  .d-sm-flex {
+    display: flex;
+  }
+
+  .j-sm-center {
+    justify-content: center;
+  }
+
+  .j-sm-end {
+    justify-content: end;
+  }
+
+  .j-sm-between {
+    justify-content: space-between;
+  }
+
+  .a-sm-center {
+    align-items: center;
+  }
+
+  .flex-sm-column {
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}
+
+/* kich thuoc man hinh md */
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 8.333333%;
+  }
+
+  .col-md-2 {
+    width: 16.666667%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.333333%;
+  }
+
+  .col-md-5 {
+    width: 41.666667%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.333333%;
+  }
+
+  .col-md-8 {
+    width: 66.666667%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.333333%;
+  }
+
+  .col-md-11 {
+    width: 91.666667%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+
+  .d-md-flex {
+    display: flex;
+  }
+
+  .j-md-center {
+    justify-content: center;
+  }
+
+  .j-md-end {
+    justify-content: end;
+  }
+
+  .j-md-between {
+    justify-content: space-between;
+  }
+
+  .a-md-center {
+    align-items: center;
+  }
+
+  .flex-md-column {
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
