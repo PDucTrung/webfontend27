@@ -419,6 +419,10 @@ header {
   .navbar-right {
     display: none;
   }
+
+  .seciton-more {
+    margin-left: 20px;
+  }
 }
 
 .day p {
