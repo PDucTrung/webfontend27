@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://divineshop.vn/image/catalog/icon/asset_logo_logo-divine-94375.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="font-roboto">
+    <header>
+      <div class="banner">
+        <div class="container">
+          <div
+            class="banner-content d-flex justify-content-between align-items-center"
+          >
+            <div
+              class="icon-diveshop d-lg-flex align-items-center d-none d-lg-block"
+            >
+              <img
+                src="https://cdn.divineshop.vn/static/b1402e84a947ed36cebe9799e47f61c2.svg"
+                alt="..."
+              />
+              <p>DivineShop</p>
+            </div>
+            <div class="icon-list">
+              <button
+                class="but-list"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="i-list bi bi-list"></i>
+              </button>
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center">
+                      <div
+                        class="tittle-modal d-flex justify-content-between align-items-center"
+                      >
+                        <div class="person">
+                          <i class="i-person bi bi-person-fill"></i>
+                        </div>
+                        <div
+                          class="login-signin d-flex justify-content-between align-items-center"
+                        >
+                          <p class="mr-5">Đăng ký</p>
+                          <p class="mr-5">/</p>
+                          <p>Đăng nhập</p>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        class="btn-close btn"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="item-modal">
+                        <span><i class="bi bi-house-fill"></i></span> Trang chủ
+                      </div>
+                      <div class="item-modal">
+                        <span><i class="bi bi-plus-circle"></i></span> Nạp tiền
+                        vào tài khoản
+                      </div>
+                      <div class="item-modal">
+                        <span><i class="bi bi-controller"></i></span> Giải trí
+                      </div>
+                      <div class="item-modal">
+                        <span><i class="bi bi-person-workspace"></i></span> làm
+                        việc
+                      </div>
+                      <div class="item-modal">
+                        <span><i class="bi bi-book-fill"></i></span> Học tập
+                      </div>
+                      <div class="item-modal">
+                        <span><i class="bi bi-journal-text"></i></span> Hướng
+                        dẫn mua hàng
+                      </div>
+                      <div class="item-modal">
+                        <span><i class="bi bi-percent"></i></span> Ưu đãi khách
+                        hàng
+                      </div>
+                      <div class="item-modal">
+                        <span><i class="bi bi-telephone-fill"></i></span> Thông
+                        tin liên hệ
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="search d-flex">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Tìm kiếm sản phẩm"
+              />
+              <div class="icon-search">
+                <i class="i-search bi bi-search"></i>
+              </div>
+            </div>
+
+            <div class="form-login d-md-block d-none">
+              <div class="d-flex">
+                <div class="person">
+                  <i class="i-person bi bi-person-fill"></i>
+                </div>
+                <div
+                  class="login-signin d-flex justify-content-between align-items-center"
+                >
+                  <p class="mr-5">Đăng ký</p>
+                  <p class="mr-5">/</p>
+                  <p>Đăng nhập</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart d-flex align-items-center justify-content-between">
+              <i class="i-cart bi bi-cart3"></i>
+              <div class="name-cart"></div>
+              <div class="number">0</div>
+            </div>
+          </div>
+          <div class="after-content d-none d-lg-block">
+            <div class="container">
+              <div
+                class="list-after d-flex align-items-center justify-content-between"
+              >
+                <div class="item-affter">
+                  <span><i class="bi bi-eye-fill"></i></span>
+                  Sản phẩm bạn vừa xem
+                </div>
+                <div class="item-affter">
+                  <span><i class="bi bi-eye-fill"></i></span>
+                  Sản phẩm mua nhiều
+                </div>
+                <div class="item-affter">
+                  <span><i class="bi bi-eye-fill"></i></span>
+                  sản phẩm khuyến mãi
+                </div>
+                <div class="item-affter">
+                  <span><i class="bi bi-eye-fill"></i></span>
+                  Đại lý giao dịch
+                </div>
+                <div class="item-affter">
+                  <span><i class="bi bi-eye-fill"></i></span>
+                  Hình thức thanh toán
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <br />
+    <div class="section-slider">
+      <div class="container">
+        <div class="noibat">
+          <div class="row">
+            <div class="list-sp-none d-none d-lg-block col-lg-6">
+              <img
+                src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Adobe/Divine-Shop-Adobe-Creative-Cloud-3-Thang-89461.jpg?hash=1658822621"
+                alt=""
+              />
+            </div>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide col-12 col-lg-6"
+              data-bs-ride="true"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://cdn.divineshop.vn/image/catalog/Anh/Banner/Divine%20Shop%20tuy%E1%BB%83n%20d%E1%BB%A5ng-66809.png?hash=1659769500"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://cdn.divineshop.vn/image/catalog/Banner/banner-wescan-divineshop-95287.jpg?hash=1659446319"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://cdn.divineshop.vn/image/catalog/Banner/banner%20Google%20One%20(3)-10567.png?hash=1658937523"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://cdn.divineshop.vn/image/catalog/Anh/14.03.2022/AutoDesk%20Main%20banner-89472.png?hash=1656637545"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://cdn.divineshop.vn/image/catalog/Kho%20game%20ti%E1%BB%81n%20tri%E1%BB%87u%20ch%E1%BB%89%20v%E1%BB%9Bi%2029k%20t4-44343.png?hash=1648891185"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="col-6 col-lg-2">
+              <div class="item-noibat">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh/14.03.2022/Steam%20(1)-13036.png?hash=1657766037"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-2">
+              <div class="item-noibat">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh/14.03.2022/Adobe%20(1)-26373.png?hash=1657766058"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="item-noibat">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh/14.03.2022/Spotify%20(3)-17078.png?hash=1657766022"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="item-noibat">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh/14.03.2022/Discord%20(1)-70592.png?hash=1657766010"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="item-noibat">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh/14.03.2022/Discord%20(1)-70592.png?hash=1657766010"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="item-noibat">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh/14.03.2022/Microsoft%20Office%20(1)-16160.png?hash=1657766091"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="section-spnb">
+      <div class="container">
+        <div class="header-spnb">
+          <div class="d-flex justify-content-between">
+            <h5><b>Sản phẩm nổi bật</b></h5>
+            <button class="btn-kp">Khám phá</button>
+          </div>
+          <p>Danh sách những sản phẩm theo xu hướng mà có thể bạn sẽ thích</p>
+        </div>
+        <div class="list-item-spnb">
+          <div class="row">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xemthem">
+          <p>Xem thêm</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tukhoanoibat">
+      <div class="container">
+        <div class="title-tukhoanoibat">
+          <h5>Từ khóa nổi bật</h5>
+        </div>
+        <div class="list-tukhoa">
+          <div class="row">
+            <div class="col-4 col-md-2">
+              <div class="tukhoa1">
+                <p>Làm việc</p>
+              </div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="tukhoa2">
+                <p>Giải trí</p>
+              </div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="tukhoa3">
+                <p>Học tập</p>
+              </div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="tukhoa4">
+                <p>wallet</p>
+              </div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="tukhoa5">
+                <p>spotify</p>
+              </div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="tukhoa6">
+                <p>Youtube</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="section-game">
+      <div class="container">
+        <div class="header-spnb">
+          <div class="d-flex justify-content-between">
+            <h5><b>Game trên steam</b></h5>
+            <button class="btn-kp">Khám phá</button>
+          </div>
+          <p>
+            Những trò chơi được đánh giá tốt, nội dung hấp dẫn thu hút đang chờ
+            bạn
+          </p>
+        </div>
+        <div class="list-item-spnb">
+          <div class="row">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xemthem">
+          <p>Xem thêm</p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="section-wallet">
+      <div class="container">
+        <div class="header-spnb">
+          <div class="d-flex justify-content-between">
+            <h5><b>Wallet</b></h5>
+            <button class="btn-kp">Khám phá</button>
+          </div>
+        </div>
+        <div class="list-item-spnb">
+          <div class="row">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="item-spnb">
+                <img
+                  src="https://cdn.divineshop.vn/image/catalog/Anh-SP/Netflix/Divine-Shop-NETFLIX-1-thang-23298.jpg?hash=1658829694"
+                  alt="..."
+                />
+                <div class="til-sp">
+                  <p>Tài khoản Netflix Premium for 1 User (1 Tháng)</p>
+                </div>
+                <div class="content-sp d-flex justify-content-between">
+                  <p>79.000 đ</p>
+                  <p class="p-sale">260.000đ</p>
+                  <button>-49%</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xemthem">
+          <p>Xem thêm</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer>
+      <div class="container">
+        <div class="footer1">
+          <img
+            src="https://cdn.divineshop.vn/static/b77a2122717d76696bd2b87d7125fd47.svg"
+            alt=".."
+          />
+          <img
+            src="https://cdn.divineshop.vn/static/72a3a36fc7c66085b3f442940ba45fde.svg"
+            alt=".."
+          />
+          <img
+            src="https://cdn.divineshop.vn/static/464c7c79044dea88e86adf0e1b9c064c.svg"
+            alt=".."
+          />
+          <img
+            src="https://cdn.divineshop.vn/static/ddb866eb1214c914ea62417879046b99.svg"
+            alt=".."
+          />
+        </div>
+        <br />
+        <div class="footer3">
+          <img
+            src="https://cdn.divineshop.vn/static/4ba68c7a47305b454732e1a9e9beb8a1.svg"
+            alt="..."
+          />
+          <img
+            src="https://cdn.divineshop.vn/static/20334129395885adefc2e5217043f670.svg"
+            alt="..."
+          />
+          <img
+            src="https://cdn.divineshop.vn/static/4ae438165f9d5ea0fc6ff3da6051f938.svg"
+            alt="..."
+          />
+        </div>
+        <br />
+        <div class="footer2">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <p><b>GIỚI THIỆU</b></p>
+              <p>Game bản quyền là gì ?</p>
+              <p>Giới thiệu Diveshop</p>
+              <p>Điều khỏa dịch vụ</p>
+              <p>Chính sách bảo mật</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <p><b>TÀI KHOẢN</b></p>
+              <p>Đăng nhập</p>
+              <p>Đăng ký</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <p><b>LIÊN HỆ</b></p>
+              <p>Hotline <span>1900 633 305</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
