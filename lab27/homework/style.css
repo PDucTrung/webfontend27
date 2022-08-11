@@ -582,7 +582,7 @@ header {
 }
 
 .list-btn-ovan {
-  margin-left: -800px;
+  margin-left: -750px;
   margin-bottom: -40px;
 }
 
@@ -867,7 +867,8 @@ header {
 
 .number-del1,
 .number-del2,
-.number-del3 {
+.number-del3,
+.number-del4 {
   font-family: "Lato";
   font-style: normal;
   font-weight: 700;

@@ -1,16 +1,17 @@
 // countdown
-var countDownDate = new Date("Nov 8, 2022 5:32:00").getTime();
+var countDownDate = new Date("Sep 1 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function () {
+let x = setInterval(function () {
   // Get today's date and time
-  var now = new Date().getTime();
+  let now = new Date().getTime();
 
-  var distance = countDownDate - now;
+  let distance = countDownDate - now;
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.querySelector(".number-del1").innerHTML = days;
 
@@ -18,13 +19,17 @@ var x = setInterval(function () {
 
   document.querySelector(".number-del3").innerHTML = minutes;
 
+  document.querySelector(".number-del4").innerHTML = seconds;
+
   if (distance < 0) {
     clearInterval(x);
-    document.querySelector(".number-del1").innerHTML = "Ba ga";
+    document.querySelector(".number-del1").innerHTML = "00";
 
-    document.querySelector(".number-del2").innerHTML = "Ba ga";
+    document.querySelector(".number-del2").innerHTML = "00";
 
-    document.querySelector(".number-del3").innerHTML = "Ba ga";
+    document.querySelector(".number-del3").innerHTML = "00";
+
+    document.querySelector(".number-del4").innerHTML = "00";
   }
 }, 1000);
 
