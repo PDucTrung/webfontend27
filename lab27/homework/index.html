@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FIFASH</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -12,6 +12,898 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="relative">
+      <div class="container">
+        <div class="nav d-flex justify-content-between align-items-center">
+          <button
+            class="btn btn-primary btn-menu font-lato d-lg-none"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Menu
+          </button>
+          <!-- Modal -->
+          <div
+            class="modal fade font-lato"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog d-lg-none">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    <b>MENU</b>
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body d-flex flex-column flex-md-row">
+                  <a href="#">MEN</a>
+                  <a href="#">WOMEN</a>
+                  <a href="#">KIDS</a>
+                  <a href="#">COLLECTION</a>
+                  <a href="#">TRENDS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="logo font-lato d-none d-lg-block">
+            <a href="#">FIFASH</a>
+          </div>
+
+          <div
+            class="list-item-menu d-flex justify-content-between align-items-center d-none d-lg-block font-lato"
+          >
+            <a class="mr-40" href="#">MEN</a>
+            <a class="mr-40" href="#">WOMEN</a>
+            <a class="mr-40" href="#">KIDS</a>
+            <a class="mr-40" href="#">COLLECTION</a>
+            <a href="#">TRENDS</a>
+          </div>
+
+          <div
+            class="list-cart d-flex justify-content-between align-items-center"
+          >
+            <div class="cart relative">
+              <div class="icon-cart absolute">
+                <img src="./image/icon-cart.png" alt="..." />
+              </div>
+              <div class="number-cart absolute">1</div>
+            </div>
+            <button class="btn-login font-lato">LOGIN</button>
+          </div>
+        </div>
+        <div class="content-header font-frank">
+          <div class="title-heading">Find The Best Fashion Style For You</div>
+          <div class="content-heading">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit.
+          </div>
+        </div>
+        <div class="btn-shop-now font-lato absolute" role="button">
+          <p>SHOP NOW</p>
+        </div>
+      </div>
+      <div class="rectangle absolute"></div>
+      <div class="rectangle1 absolute"></div>
+      <div class="vt-1 absolute d-none d-lg-block">
+        <img src="./image/Vector1.png" alt="..." />
+      </div>
+      <div class="vt-2 absolute d-none d-lg-block">
+        <img src="./image/Vector2.png" alt="..." />
+      </div>
+      <div class="vt-3 absolute d-none d-lg-block">
+        <img src="./image/Vector2.png" alt="..." />
+      </div>
+      <div class="list-path absolute">
+        <div class="path mb-16"><img src="./image/path.png" alt="..." /></div>
+        <div class="path mb-16"><img src="./image/path.png" alt="..." /></div>
+        <div class="path mb-16"><img src="./image/path.png" alt="..." /></div>
+        <div class="path mb-16"><img src="./image/path.png" alt="..." /></div>
+        <div class="path mb-16"><img src="./image/path.png" alt="..." /></div>
+        <div class="path mb-16"><img src="./image/path.png" alt="..." /></div>
+        <div class="path"><img src="./image/path.png" alt="..." /></div>
+      </div>
+      <div class="img-thumbnail-header absolute d-none d-xxl-block">
+        <img src="./image/girl1.png" alt="..." />
+      </div>
+    </header>
+    <div class="section-collection relative">
+      <div class="ovan"></div>
+      <div class="container">
+        <div class="title-collection font-frank">
+          <div class="heading-collection">New Collection</div>
+          <div class="content-collection">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </div>
+        </div>
+        <div
+          class="list-collection d-flex flex-column flex-sm-row flex-sm-wrap flex-md-row"
+        >
+          <div class="item-collection relative mb-16">
+            <img src="./image/girl2.png" alt="..." />
+            <div class="btn-collection">SWEATER</div>
+          </div>
+          <div class="item-collection relative mb-16">
+            <img src="./image/girl3.png" alt="..." />
+            <div class="btn-collection">SWEATER</div>
+          </div>
+          <div class="item-collection relative mb-16">
+            <img src="./image/girl4.png" alt="..." />
+            <div class="btn-collection">SWEATER</div>
+          </div>
+        </div>
+
+        <div class="fashion d-flex">
+          <div class="img-fashion d-none d-lg-block">
+            <img src="./image/girl5.png" alt="..." />
+          </div>
+          <div class="content-fashion">
+            <div class="title-fashion">Best Fashion Since 2014</div>
+            <div class="content-fa">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.duis enim velit
+              mollit. Exercitation veniam consequat sunt nostrud amet.duis enim
+              velit mollit. Exercitation veniam consequat sunt nostrud amet.duis
+              enim velit mollit. Exercitation veniam consequat sunt nostrud
+              amet.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-xl-block">
+        <div
+          class="list-year d-flex justify-content-between align-items-center"
+        >
+          <div class="year-item text-center">
+            <div class="title-year font-frank">2014</div>
+            <div class="content-year font-lato">Fifash Founded</div>
+          </div>
+          <div class="line"></div>
+          <div class="year-item">
+            <div class="title-year font-frank text-center">8900+</div>
+            <div class="content-year font-lato">Product Sold</div>
+          </div>
+          <div class="line"></div>
+          <div class="year-item font-frank text-center">
+            <div class="title-year">3100+</div>
+            <div class="content-year font-lato">Best Reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="ovan2"></div>
+      <div class="rectangle-collection1 d-none d-xl-block"></div>
+      <img
+        class="vector-collection1 absolute d-none d-xl-block"
+        src="./image/Vector2.png"
+        alt="..."
+      />
+      <img
+        class="vector-collection2 absolute d-none d-xl-block"
+        src="./image/Vector2.png"
+        alt="..."
+      />
+      <div class="rectangle-collection2 d-none d-xl-block"></div>
+    </div>
+
+    <div class="section-seller relative">
+      <div class="ovan3"></div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-none d-lg-block heading-seller">
+          <div class="title-seller font-frank">Best Seller Product</div>
+          <div class="content-seller font-lato">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim veli amet.duis enim velit
+            mollit. Exercitation veniam consequat sunt nostrud amet.duis enim
+            velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </div>
+          <button class="btn-login-seller">LOGIN</button>
+        </div>
+        <div class="slider-seller">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="true"
+          >
+            <div class="carousel-indicators list-btn-ovan gap-1">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active btn-ovan"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                class="btn-ovan"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                class="btn-ovan"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex gap-5">
+                  <div class="item-slider m-left">
+                    <img
+                      src="./image/girl6.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                  <div class="item-slider">
+                    <img
+                      src="./image/girl7.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                  <div class="item-slider">
+                    <img
+                      src="./image/girl6.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="d-flex gap-5">
+                  <div class="item-slider m-left">
+                    <img
+                      src="./image/girl7.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                  <div class="item-slider">
+                    <img
+                      src="./image/girl6.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                  <div class="item-slider">
+                    <img
+                      src="./image/girl7.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="d-flex gap-5">
+                  <div class="item-slider m-left">
+                    <img
+                      src="./image/girl7.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                  <div class="item-slider">
+                    <img
+                      src="./image/girl7.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                  <div class="item-slider">
+                    <img
+                      src="./image/girl6.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="icon-star">
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                      <img src="./image/star.png" alt="..." />
+                    </div>
+                    <div class="title-item-sldier">Pastel Langue Sleeve</div>
+                    <div class="cost d-flex align-items-center">
+                      <div class="cost1">$220</div>
+                      <div class="cost2">$180</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-product relative">
+      <div class="rectangle-pr"></div>
+      <div class="line5 d-none d-lg-block"></div>
+      <div class="line6 d-none d-lg-block"></div>
+      <div class="vecter-product1 absolute d-none d-lg-block">
+        <img src="./image/Vector2.png" alt="..." />
+      </div>
+      <div class="vecter-product2 absolute d-none d-lg-block">
+        <img src="./image/Vector2.png" alt="..." />
+      </div>
+      <div class="ovan-pr1 d-none d-lg-block"></div>
+      <div class="ovan-pr2 d-none d-lg-block"></div>
+      <div class="container">
+        <div class="title-pr">Our Product</div>
+        <div
+          class="list-menu-pr d-flex justify-content-between align-items-center"
+        >
+          <div class="item-menu-pr">HOT</div>
+          <div class="item-menu-pr">ON SALE</div>
+          <div class="item-menu-pr">TRENDING NOW</div>
+          <div class="item-menu-pr">NEW ARRIVAL</div>
+        </div>
+
+        <div class="list-pr">
+          <div class="row">
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr1.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr2.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr3.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr4.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr5.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr6.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr7.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <div class="pr text-center mt-65">
+                <img src="./image/girl-pr8.png" alt="..." />
+                <div
+                  class="icon-star-pr d-flex justify-content-center gap-2 mt-3"
+                >
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                  <img src="./image/star.png" alt="..." />
+                </div>
+                <div class="title-item-pr mt-1">Pastel Langue Sleeve</div>
+                <div class="cost-pr d-flex justify-content-center mt-3">
+                  <div class="cost1">$220</div>
+                  <div class="cost2">$180</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-deal relative">
+      <div class="container">
+        <div class="d-flex">
+          <div class="content-deal">
+            <div class="title-deal">Deal of the Day</div>
+            <div class="text-deal">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </div>
+            <div class="countdow d-flex gap-3">
+              <div class="box-deal">
+                <div class="number-del1"></div>
+                <div class="title-box">day</div>
+              </div>
+              <div class="box-deal">
+                <div class="number-del2"></div>
+                <div class="title-box">Hour</div>
+              </div>
+              <div class="box-deal">
+                <div class="number-del3"></div>
+                <div class="title-box">Minute</div>
+              </div>
+            </div>
+            <div class="btn-deal">SHOP NOW</div>
+          </div>
+          <div class="img-deal d-none d-lg-block absolute">
+            <img src="./image/girl-deal.png" alt="..." />
+          </div>
+        </div>
+      </div>
+      <div class="ovan-deal"></div>
+    </div>
+
+    <div class="people">
+      <div class="title-people">What People say about Us</div>
+      <div class="slider-people relative">
+        <div
+          id="carouselExampleIndicators1"
+          class="carousel slide"
+          data-bs-ride="true"
+        >
+          <div class="carousel-indicators">
+            <div class="list-btn-peo">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators1"
+                data-bs-slide-to="0"
+                class="active btn-peo"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators1"
+                data-bs-slide-to="1"
+                class="btn-peo"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators1"
+                data-bs-slide-to="2"
+                class="btn-peo"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="list-people d-flex justify-content-between align-items-center gap-4"
+              >
+                <div class="people-item text-center ml-10">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo1.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo2.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo3.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo">
+                    <img src="./image/peo1.png" alt="..." />
+                  </div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="list-people d-flex justify-content-between align-items-center gap-4"
+              >
+                <div class="people-item text-center ml-10">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo1.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo2.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo3.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo">
+                    <img src="./image/peo1.png" alt="..." />
+                  </div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="list-people d-flex justify-content-between align-items-center gap-4"
+              >
+                <div class="people-item text-center ml-10">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo1.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo2.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo"><img src="./image/peo3.png" /></div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+
+                <div class="people-item text-center">
+                  <div class="title-peoples">
+                    Amet minim mollit non deserunt ullamco
+                  </div>
+                  <div class="content-people">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </div>
+                  <div class="img-peo">
+                    <img src="./image/peo1.png" alt="..." />
+                  </div>
+                  <div class="name">Anisa zahra</div>
+                  <div class="customer">Custumer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="relative">
+      <div class="list-img-fo d-flex align-items-center">
+        <img src="./image/girl-fo1.png" alt="..." />
+        <img src="./image/girl-fo2.png" alt="..." />
+        <img src="./image/girl-fo3.png" alt="..." />
+        <img src="./image/girl-fo4.png" alt="..." />
+        <img src="./image/girl-fo5.png" alt="..." />
+      </div>
+      <div class="fo-end">
+        <div class="list-item-fo d-flex justify-content-center gap-5">
+          <a href="#">MEN</a>
+          <a href="#">WOMEN</a>
+          <a href="#">KIDS</a>
+          <a href="#">COLLECTION</a>
+          <a href="#">TRENDS</a>
+        </div>
+        <div class="copyright">Copy right Fifash. All rights reserved.</div>
+      </div>
+      <div class="follow absolute d-none d-lg-block">
+        <a href="#">Follow out instgram : @Fifash_trends</a>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

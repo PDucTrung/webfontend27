@@ -20,3 +20,1293 @@ img {
 .font-lato {
   font-family: "Lato", sans-serif;
 }
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  height: 1000px;
+  background: #eeddcc;
+}
+
+.rectangle {
+  width: 425px;
+  height: 529px;
+  right: 0px;
+  top: 0px;
+  background: linear-gradient(
+    360deg,
+    #d3a17e -21.17%,
+    rgba(211, 161, 126, 0) 115.88%
+  );
+  opacity: 0.34;
+}
+
+.rectangle1 {
+  width: 263px;
+  height: 249px;
+  left: 0px;
+  bottom: 0px;
+  background: linear-gradient(
+    360deg,
+    #d3a17e -21.17%,
+    rgba(211, 161, 126, 0) 115.88%
+  );
+  opacity: 0.34;
+}
+
+.nav {
+  padding-top: 20px;
+}
+
+.btn-menu {
+  border: none;
+  background-color: #d3a17e !important;
+  font-weight: 900;
+  line-height: 43px;
+  letter-spacing: 0.15em;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn-menu:hover {
+  opacity: 0.6;
+}
+
+.cart {
+  width: 35.75px;
+  height: 35.17px;
+  margin-right: 25.25px;
+}
+
+.number-cart {
+  width: 16px;
+  height: 16px;
+  top: 0;
+  right: 0;
+  background: #c20a0a;
+  border-radius: 50%;
+  color: aliceblue;
+  padding-left: 5px;
+  font-size: 10px;
+}
+
+.icon-cart {
+  left: 0;
+  bottom: 0;
+}
+
+.btn-login {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #34251f;
+  width: 128px;
+  height: 42px;
+  border: 1px solid #34251f;
+  border-radius: 4px;
+  background-color: #eeddcc;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  text-decoration: underline;
+  background-color: #d3a17e;
+}
+
+.logo {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: 0.15em;
+  color: #34251f;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #34251f;
+}
+
+.modal-title {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.modal-body a {
+  text-decoration: none;
+  color: #34251f;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+
+.modal-dialog {
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.modal-content {
+  border-radius: 0px;
+  height: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.modal-body a:hover {
+  text-decoration: underline;
+}
+
+.list-item-menu a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #34251f;
+}
+
+.list-item-menu a:hover {
+  text-decoration: underline;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.vt-1 {
+  top: 175px;
+  left: 0px;
+}
+
+.vt-2 {
+  top: 172px;
+  right: 110px;
+}
+
+.vt-3 {
+  left: 717px;
+  bottom: 151px;
+}
+
+.list-path {
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 20px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.img-thumbnail-header {
+  top: 212px;
+  right: 142px;
+}
+
+.title-heading {
+  position: absolute;
+  width: 432px;
+  height: 249px;
+  left: 40px;
+  top: 200px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  text-transform: capitalize;
+
+  color: #34251f;
+}
+
+.content-heading {
+  position: absolute;
+  width: 410px;
+  height: 87px;
+  left: 40px;
+  top: 485px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: capitalize;
+
+  color: #34251f;
+}
+
+.btn-shop-now {
+  box-sizing: border-box;
+  padding-top: 15px;
+  width: 200px;
+  height: 57.42px;
+  left: 169px;
+  top: 661px;
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3));
+  background: #0a0908;
+  border: 1.36719px solid #34251f;
+  border-radius: 4px;
+}
+
+.btn-shop-now p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21.875px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn-shop-now:hover p {
+  color: #0a0908;
+}
+
+.btn-shop-now:hover {
+  background-color: white;
+}
+
+/* section colletion */
+
+.ovan {
+  position: absolute;
+  width: 564.76px;
+  height: 537.25px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -200px;
+  margin-left: -252px;
+  background: #d3a17e;
+  opacity: 0.3;
+  border: 1px solid #eeddcc;
+  filter: blur(69px);
+  transform: rotate(0.1deg);
+}
+
+.heading-collection {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+  margin-top: 62px;
+}
+
+.section-collection {
+  overflow: hidden;
+}
+
+.content-collection {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #000000;
+}
+
+.list-collection {
+  padding: 0px;
+  gap: 32px;
+  border-radius: 5px;
+  margin: 82px auto;
+  width: fit-content;
+}
+
+.btn-collection {
+  cursor: pointer;
+  position: absolute;
+  width: 246px;
+  height: 58px;
+  left: 60px;
+  bottom: 22px;
+  color: white;
+  background: #090b09;
+  border-radius: 4px;
+  padding-top: 8px;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 41px;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #dedede;
+}
+
+.btn-collection:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.fashion {
+  padding-top: 30px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.content-fashion {
+  padding-left: 43px;
+  padding-top: 40px;
+}
+
+.title-fashion {
+  width: 402px;
+  height: 166px;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.content-fa {
+  width: 380px;
+  height: 292px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.list-year {
+  position: absolute;
+  width: 675px;
+  height: 122px;
+  left: 377px;
+  bottom: 94px;
+  background: #d2b79e;
+  box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.3);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.ovan2 {
+  position: absolute;
+  width: 564.76px;
+  height: 537.25px;
+  right: -90px;
+  bottom: -200px;
+  border-radius: 50%;
+  background: #d3a17e;
+  opacity: 0.3;
+  /* Color/Primary/LightBrown */
+
+  border: 1px solid #eeddcc;
+  filter: blur(69px);
+  transform: rotate(0.1deg);
+}
+
+.line {
+  width: 57px;
+  height: 0px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  transform: rotate(90deg);
+}
+
+.title-year {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 62px;
+  align-items: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.content-year {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.rectangle-collection1 {
+  position: absolute;
+  width: 327px;
+  height: 321px;
+  right: 54px;
+  top: 357px;
+
+  background: linear-gradient(
+    360deg,
+    rgba(211, 161, 126, 0.4) -21.17%,
+    rgba(211, 161, 126, 0) 115.88%
+  );
+  opacity: 0.34;
+}
+
+.rectangle-collection2 {
+  position: absolute;
+  width: 327px;
+  height: 321px;
+  left: 469px;
+  top: 571px;
+
+  background: linear-gradient(
+    360deg,
+    rgba(211, 161, 126, 0.4) -21.17%,
+    rgba(211, 161, 126, 0) 115.88%
+  );
+  opacity: 0.34;
+  z-index: -1;
+}
+
+.vector-collection1 {
+  top: 518px;
+  right: 81px;
+  z-index: -1;
+}
+
+.vector-collection2 {
+  top: 670px;
+  left: 605px;
+  z-index: -1;
+}
+
+.section-seller {
+  width: 100%;
+  height: fit-content;
+  padding-top: 48px;
+  background: #2c1915;
+  padding-bottom: 58px;
+}
+
+.ovan3 {
+  position: absolute;
+  width: 564.76px;
+  height: 537.25px;
+  left: 86.04px;
+  top: 59.86px;
+  background: #c7ad94;
+  opacity: 0.3;
+  /* Color/Primary/LightBrown */
+  border-radius: 50%;
+  border: 1px solid #eeddcc;
+  filter: blur(69px);
+  transform: rotate(0.1deg);
+}
+
+.heading-seller {
+  padding-top: 41px;
+  margin-left: 169px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.btn-login-seller {
+  width: 220px;
+  height: 63px;
+  border: 1px solid #dfdfdf;
+  background: #2c1915;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #dfdfdf;
+  cursor: pointer;
+}
+
+.title-seller {
+  width: 402px;
+  height: 158px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  text-transform: capitalize;
+  color: #d0d0d0;
+  margin-bottom: 28px;
+}
+
+.content-seller {
+  width: 503px;
+  height: 143px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: capitalize;
+  color: #f1f1f1;
+  margin-bottom: 54px;
+}
+
+.btn-login-seller:hover {
+  background-color: #dfdfdf;
+  color: #2c1915;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.item-slider {
+  width: 325px;
+  height: 460px;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-ovan {
+  border-radius: 50%;
+  width: 14px !important;
+  height: 14px !important;
+  background: #c7ad94;
+}
+
+.list-btn-ovan {
+  margin-left: -800px;
+  margin-bottom: -40px;
+}
+
+.icon-star {
+  padding-left: 20.31px;
+}
+
+.icon-star img {
+  margin-right: 3px;
+}
+
+.title-item-sldier {
+  width: 300px;
+  height: 12px;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  padding-left: 20.31px;
+  padding-top: 10px;
+}
+
+.cost {
+  padding-left: 20.31px;
+  padding-top: 25px;
+}
+
+.cost1 {
+  margin-right: 10px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.39);
+}
+
+.cost2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+/* secton product */
+
+.section-product {
+  width: 100%;
+  height: fit-content;
+  padding-top: 128px;
+  padding-bottom: 162px;
+  overflow: hidden;
+}
+
+.line5 {
+  position: absolute;
+  width: 564px;
+  height: 0px;
+  left: 86px;
+  top: 83px;
+  border: 2px solid #000000;
+  transform: rotate(180deg);
+  background-color: #000000;
+}
+
+.line6 {
+  position: absolute;
+  width: 645px;
+  height: 0px;
+  margin-top: 276px;
+  margin-left: -234px;
+  border: 2px solid #000000;
+  transform: rotate(90deg);
+  background-color: #000000;
+}
+
+.vecter-product1 {
+  left: 42px;
+  top: 424px;
+  z-index: -1;
+}
+
+.vecter-product2 {
+  right: 374px;
+  top: 1111px;
+}
+
+.ovan-pr1 {
+  position: absolute;
+  width: 564.76px;
+  height: 537.25px;
+  right: -250px;
+  top: -250px;
+  overflow: hidden;
+  background: #d3a17e;
+  opacity: 0.3;
+  /* Color/Primary/LightBrown */
+  border-radius: 50%;
+  border: 1px solid #eeddcc;
+  filter: blur(89px);
+  transform: rotate(0.1deg);
+}
+
+.ovan-pr2 {
+  position: absolute;
+  width: 564.76px;
+  height: 760.98px;
+  left: -386.72px;
+  top: 455px;
+
+  background: #d3a17e;
+  opacity: 0.3;
+  /* Color/Primary/LightBrown */
+
+  border: 1px solid #eeddcc;
+  filter: blur(69px);
+  transform: rotate(0.1deg);
+}
+
+.mt-65 {
+  margin-top: 65px;
+}
+
+.title-pr {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.list-menu-pr {
+  margin-top: 20px;
+}
+
+.item-menu-pr {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: #000000;
+  border-bottom: 2px solid white;
+}
+
+.item-menu-pr:hover {
+  border-bottom: 2px solid black;
+}
+
+.rectangle-pr {
+  position: absolute;
+  width: 327px;
+  height: 321px;
+  left: 760px;
+  top: 361px;
+
+  background: linear-gradient(
+    360deg,
+    rgba(211, 161, 126, 0.4) -21.17%,
+    rgba(211, 161, 126, 0) 115.88%
+  );
+  opacity: 0.34;
+}
+
+.title-item-pr {
+  margin: 0 auto;
+  width: 197px;
+  height: 12px;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* section deal */
+
+.section-deal {
+  width: 100%;
+  height: 568px;
+  background: #8b6e5a;
+}
+
+.ovan-deal {
+  position: absolute;
+  width: 565.45px;
+  height: 491.04px;
+  left: 87.34px;
+  top: 11.18px;
+  z-index: 0;
+  background: #fdfdfd;
+  opacity: 0.3;
+  /* Color/Primary/LightBrown */
+  border-radius: 50%;
+  border: 1px solid #eeddcc;
+  filter: blur(69px);
+  transform: rotate(0.1deg);
+}
+
+.content-deal {
+  padding-top: 77px;
+}
+
+.title-deal {
+  width: 487px;
+  height: 83px;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 83px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.text-deal {
+  width: 449px;
+  height: 90px;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 31px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.btn-deal {
+  width: 200px;
+  height: 59.41px;
+  background: black;
+  border: 1.36719px solid #000000;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
+  padding-top: 15px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 21.875px;
+  line-height: 26px;
+  text-align: center;
+  color: #d9d5d5;
+  cursor: pointer;
+}
+
+.btn-deal:hover {
+  background-color: #d9d5d5;
+  color: #090b09;
+}
+
+.countdow {
+  padding-bottom: 59px;
+}
+
+.box-deal {
+  width: 95px;
+  height: 85px;
+  background: #884f42;
+  border: 2px solid #000000;
+  box-shadow: 10px 5px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.number-del1,
+.number-del2,
+.number-del3 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.title-box {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 14px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.img-deal {
+  right: 136px;
+  top: -95px;
+}
+
+.customer {
+  padding-top: 20px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+/* section people */
+
+.people {
+  padding-top: 117px;
+  width: 100%;
+}
+
+.title-people {
+  text-align: center;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  text-transform: capitalize;
+  color: #000000;
+  padding-bottom: 88px;
+}
+
+.people-item {
+  width: 476px;
+  height: 465px;
+  background: rgba(219, 204, 191, 0.5);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 45px 16px 0px 16px;
+  border-radius: 10px;
+}
+
+.title-peoples {
+  width: 445px;
+  height: 72px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.content-people {
+  width: 444px;
+  height: 90px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: capitalize;
+  color: #000000;
+  padding-top: 44px;
+  padding-bottom: 17px;
+}
+
+.img-peo {
+  padding-top: 60px;
+}
+
+.name {
+  padding-top: 10px;
+  width: 445px;
+  height: 31px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.ml-10 {
+  margin-left: 5px;
+}
+
+.btn-peo {
+  border-radius: 50%;
+  width: 14px !important;
+  height: 14px !important;
+  border: 2px solid black !important;
+}
+
+.btn-peo:focus {
+  background-color: #000000;
+}
+
+.list-btn-peo {
+  position: absolute;
+  bottom: -63px;
+}
+
+footer {
+  margin-top: 170px;
+}
+
+.list-img-fo {
+  width: 100%;
+}
+
+.fo-end {
+  padding-top: 115px;
+  width: 100%;
+  height: 292px;
+  background: #412f28;
+}
+
+.fo-end a {
+  text-decoration: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.fo-end a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 100px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.follow {
+  width: 478px;
+  height: 87px;
+  background: #ac8e8e;
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  top: 288px;
+  left: 517px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.follow a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.m-left {
+  margin-left: 30px;
+}
+
+/* man hinh tablet */
+
+@media screen and (min-width: 768px) {
+  .nav {
+    padding-top: 40px;
+  }
+
+  .content-fa {
+    width: 380px;
+    height: 192px;
+
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #000000;
+  }
+
+  .fo-end a {
+    text-decoration: none;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+  }
+
+  .modal-content {
+    height: 50%;
+  }
+
+  .title-heading {
+    position: absolute;
+    width: 432px;
+    height: 249px;
+    left: 80px;
+    top: 200px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 83px;
+    text-transform: capitalize;
+
+    color: #34251f;
+  }
+
+  .content-heading {
+    position: absolute;
+    width: 505px;
+    height: 87px;
+    left: 80px;
+    top: 485px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-transform: capitalize;
+
+    color: #34251f;
+  }
+
+  .content-fa {
+    width: 600px;
+    height: 192px;
+
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #000000;
+  }
+
+  .list-year {
+    position: absolute;
+    width: 675px;
+    height: 122px;
+    left: 377px;
+    bottom: 94px;
+    background: #d2b79e;
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.3);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .item-menu-pr {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #000000;
+    border-bottom: 2px solid white;
+  }
+
+  .title-deal {
+    width: 487px;
+    height: 83px;
+    font-family: "Frank Ruhl Libre";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 83px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+
+  .text-deal {
+    width: 649px;
+    height: 90px;
+    font-family: "Frank Ruhl Libre";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+}
+
+/* man hinh laptop */
+
+@media screen and (min-width: 992px) {
+  .nav {
+    padding-top: 60px;
+  }
+
+  .m-left {
+    margin-left: none;
+  }
+
+  .content-fa {
+    width: 380px;
+    height: 192px;
+
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #000000;
+  }
+
+  .ml-10 {
+    margin-left: -240px;
+  }
+
+  .title-heading {
+    position: absolute;
+    width: 432px;
+    height: 249px;
+    left: 169px;
+    top: 248px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 83px;
+    text-transform: capitalize;
+
+    color: #34251f;
+  }
+
+  .content-heading {
+    position: absolute;
+    width: 475px;
+    height: 87px;
+    left: 171px;
+    top: 505px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-transform: capitalize;
+
+    color: #34251f;
+  }
+
+  .btn-shop-now:hover p {
+    color: #0a0908;
+  }
+
+  .btn-shop-now:hover {
+    background-color: white;
+  }
+
+  .content-fa {
+    width: 519px;
+    height: 192px;
+
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #000000;
+  }
+
+  .list-year {
+    position: absolute;
+    width: 675px;
+    height: 122px;
+    left: 377px;
+    bottom: 94px;
+    background: #d2b79e;
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.3);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .list-menu-pr {
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
+  .item-menu-pr {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #000000;
+    border-bottom: 2px solid white;
+  }
+}
