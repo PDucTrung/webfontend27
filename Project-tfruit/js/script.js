@@ -66,13 +66,41 @@ let modal3 = document.getElementById("searchModal");
 
 let btn3 = document.getElementById("searchBtn");
 
+let span3 = document.getElementsByClassName("close3")[0];
+
 btn3.onclick = function () {
   modal3.style.display = "block";
+};
+
+span3.onclick = function () {
+  modal3.style.display = "none";
 };
 
 window.onclick = function (event) {
   if (event.target == modal3) {
     modal3.style.display = "none";
+  }
+};
+
+// modal4 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let modal4 = document.getElementById("menuModal");
+
+let btn4 = document.getElementById("menuBtn");
+
+let span4 = document.getElementsByClassName("close4")[0];
+
+btn4.onclick = function () {
+  modal4.style.display = "block";
+};
+
+span4.onclick = function () {
+  modal4.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
   }
 };
 
@@ -97,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ),
     ],
     onSubmit: function (data) {
-      
       console.log(data);
     },
   });
@@ -108,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
     errorSelector: ".form-message",
     rules: [Validator.isEmail("#email"), Validator.minLength("#password", 6)],
     onSubmit: function (data) {
-      
       console.log(data);
     },
   });
@@ -191,3 +217,35 @@ $slider_ini.on("afterChange", function (event, slick, currentSlide) {
   $("button.slick-next .thumb").append('<img src="' + next_img + '">');
   $("button.slick-prev .thumb").append('<img src="' + prev_img + '">');
 });
+
+// timedown ///////////////////////////////////////////////////////////////////////////////////////////////
+var countDownDate = new Date("Jan 5, 2023 15:37:25").getTime();
+
+var x = setInterval(function () {
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("timedown").innerHTML =
+    days +
+    "d " +
+    " : " +
+    hours +
+    "h " +
+    " : " +
+    minutes +
+    "m " +
+    " : " +
+    seconds +
+    "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);

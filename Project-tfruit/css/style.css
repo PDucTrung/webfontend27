@@ -81,6 +81,16 @@ img {
 }
 
 /* heading header */
+.rd-navbar-brand .icon {
+  font-size: 30px;
+  color: black;
+}
+
+.rd-navbar-brand .icon:hover {
+  color: #dc143c;
+  cursor: pointer;
+}
+
 .heading-header select {
   color: white;
   border-radius: 5px;
@@ -96,7 +106,7 @@ img {
 .heading-header {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   width: 100%;
 }
 
@@ -252,7 +262,7 @@ header {
   margin: auto;
   padding: 10px;
   border: 1px solid #888;
-  width: 40%;
+  width: 350px;
   border-radius: 10px;
 }
 
@@ -261,16 +271,12 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   gap: 10px;
-
   width: 50px;
   height: 50px;
-
   background: #f5ab1e;
   border: 1px solid #f5ab1e;
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -281,6 +287,10 @@ header {
   color: white;
 }
 
+.search-icon i:hover {
+  color: #000;
+}
+
 .search-text {
   display: flex;
   flex-direction: column;
@@ -289,19 +299,70 @@ header {
   padding: 0px;
   gap: 50px;
   padding-left: 20px;
-  width: 515px;
+  width: 100%;
   height: 50px;
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
   border: 1px solid #f5ab1e;
 }
 
-.search-box{
+.search-box {
   margin: 0 auto;
   max-width: fit-content;
+}
+
+.close3 {
+  color: #aaaaaa;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* modal menu */
+
+/* The Modal (background) */
+.modal4 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content 4 */
+.modal-content4 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  height: 100%;
+}
+
+/* The Close Button */
+.close4 {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close4:hover,
+.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* form validate sign in/sign up */
@@ -424,10 +485,6 @@ header {
 
 /* narbar */
 
-.brand {
-  display: inline-block;
-}
-
 .navigation {
   background-color: white;
 }
@@ -534,7 +591,6 @@ header {
   height: 17px;
   left: 22px;
   top: 0px;
-
   border: 1.5px solid #dc143c;
   border-radius: 10px;
 }
@@ -561,11 +617,11 @@ header {
   float: left;
   width: 100%;
   overflow: hidden;
-  height: fit-content;
-  margin-top: 141px;
+  height: 636px;
+  margin-top: 89px;
 }
 
-.Advance-Slider .info{
+.Advance-Slider .info {
   padding-left: 108px;
   padding-right: 108px;
 }
@@ -623,6 +679,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
+  background: #151515;
   opacity: 0.5;
 }
 
@@ -787,23 +844,24 @@ header {
 .Advance-Slider .item h3 {
   margin: 0px;
   color: #fff;
-  font-size: 84px;
   font-weight: 600;
   text-transform: capitalize;
-  text-align: left;
+  font-size: 48px;
+  text-align: center;
 }
 .Advance-Slider .item {
   color: #fff;
 }
 .Advance-Slider .item h5 {
-  font-size: 20px;
   font-weight: 300;
   padding: 10px 0 0;
   margin-top: 16px;
   text-transform: capitalize;
   text-align: left;
-  width: 900px;
+  width: 300px;
   line-height: 1.5;
+  font-size: 16px;
+  text-align: center;
 }
 .Advance-Slider .item .contain-wrapper .info {
   max-width: 1200px;
@@ -904,8 +962,8 @@ header {
 
 .btn-style1 {
   position: relative;
-  border-color: red;
-  color: 	red;
+  border-color: #ff4500;
+  color: #ff4500;
   overflow: hidden;
 }
 .btn-style1::before {
@@ -914,7 +972,7 @@ header {
   position: absolute;
   top: 50%;
   left: 0;
-  background-color: 	red;
+  background-color: #ff4500;
   transform: rotateZ(-45deg) translate(-50%, -50%);
   transition: all 0.3s;
   content: "";
@@ -943,14 +1001,13 @@ header {
   border-radius: 5px;
   text-align: center;
   font-size: 16px;
-  color: red;
+  color: #ff4500;
   text-decoration: none;
   transition: all 0.35s;
 }
 
-
 .Advance-Slider .item .btn-slider {
-  padding-top: 64px;
+  padding-top: 32px;
   animation: fadeInDown 1s both 1s;
 }
 
@@ -958,3 +1015,124 @@ header {
   animation: fadeInUp 1s both 1.5s;
 }
 
+@media screen and (max-width: 576px) {
+  .Advance-Slider button.slick-prev {
+    display: none;
+  }
+
+  .Advance-Slider button.slick-next {
+    display: none;
+  }
+}
+
+/* reponsive */
+
+@media screen and (min-width: 576px) {
+  /* slider */
+  .Advance-Slider button.slick-prev {
+    display: none;
+  }
+
+  .Advance-Slider button.slick-next {
+    display: none;
+  }
+
+  .Advance-Slider .item h3 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .Advance-Slider .item h5 {
+    font-size: 16px;
+    text-align: center;
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  /* slider */
+  .Advance-Slider button.slick-prev {
+    display: none;
+  }
+
+  .Advance-Slider button.slick-next {
+    display: none;
+  }
+
+  .Advance-Slider .item h3 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .Advance-Slider .item h5 {
+    font-size: 16px;
+    text-align: center;
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  /* slider */
+  .Advance-Slider button.slick-prev {
+    display: block;
+  }
+
+  .Advance-Slider button.slick-next {
+    display: block;
+  }
+
+  .Advance-Slider .item h3 {
+    font-size: 64px;
+    text-align: center;
+  }
+
+  .Advance-Slider .item h5 {
+    font-size: 20px;
+    text-align: center;
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  /* slider */
+  .Advance-Slider button.slick-prev {
+    display: block;
+  }
+
+  .Advance-Slider button.slick-next {
+    display: block;
+  }
+
+  .Advance-Slider .item h3 {
+    font-size: 84px;
+    text-align: left;
+  }
+
+  .Advance-Slider .item h5 {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+
+/* offer */
+
+.timeDown {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 19px;
+  gap: 8px;
+  width: 206px;
+  height: 52px;
+  border: 2px solid #006400;
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 36px;
+  color: #006400;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

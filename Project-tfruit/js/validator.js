@@ -1,4 +1,3 @@
-// Đối tượng `Validator`
 function Validator(options) {
   function getParent(element, selector) {
     while (element.parentElement) {
@@ -50,7 +49,7 @@ function Validator(options) {
     return !errorMessage;
   }
 
-  // Lấy element của form cần validate
+  // element validate
   var formElement = document.querySelector(options.form);
   if (formElement) {
     formElement.onsubmit = function (e) {
@@ -135,9 +134,8 @@ function Validator(options) {
   }
 }
 
-// Định nghĩa rules
-// 1. Khi có lỗi => Trả ra message lỗi
-// 2. Khi hợp lệ => Không trả ra cái gì cả (undefined)
+// 1. lỗi =>  message lỗi
+// 2. hợp lệ => undefined
 Validator.isRequired = function (selector, message) {
   return {
     selector: selector,

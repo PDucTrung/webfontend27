@@ -49,7 +49,7 @@
                   081-953-791
                 </div>
                 <div
-                  class="address m-lg-2 animate__animated animate__pulse animate__delay-2s"
+                  class="address m-lg-2 animate__animated animate__pulse animate__delay-2s d-none d-md-block"
                 >
                   <span class="icon bi bi-geo-alt-fill"></span> 298 Đ. Cầu Diễn,
                   Minh Khai, Bắc Từ Liêm, Hà Nội
@@ -209,7 +209,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="select m-lg-2">
+                <div class="select m-2">
                   <select name="language" class="bg-dark">
                     <option>VN</option>
                     <option>EN</option>
@@ -227,15 +227,51 @@
             <div class="container">
               <div class="rd-navbar-main">
                 <div class="row d-flex align-items-center">
-                  <div class="col-3">
-                    <!-- RD Navbar Brand-->
+                  <div class="col-6 col-xl-3">
+                    <!-- RD Navbar -->
                     <div class="rd-navbar-brand">
-                      <a class="brand" href="index.html"
+                      <a class="brand d-none d-xl-block" href="index.html"
                         ><img src="images/logo.png" alt="ss"
                       /></a>
+                      <div>
+                        <i
+                          id="menuBtn"
+                          class="icon bi bi-list d-xl-none hvr-grow-rotate"
+                        ></i>
+                        <!-- The Modal -->
+                        <div id="menuModal" class="modal4 d-lg-none">
+                          <!-- Modal content -->
+                          <div class="modal-content4">
+                            <div class="close4">
+                              <i class="bi bi-x-circle float-end"></i>
+                            </div>
+                            <br />
+                            <div class="text-black">
+                              <!-- RD Navbar Nav-->
+                              <ul class="rd-navbar-nav d-flex flex-column">
+                                <li class="rd-nav-item active">
+                                  <a class="rd-nav-link">Home</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">Shop</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">About</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">Blog</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">Contact</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xl-6 d-none d-xl-block">
                     <div class="text-center">
                       <!-- RD Navbar Nav-->
                       <ul class="rd-navbar-nav d-flex">
@@ -258,7 +294,7 @@
                     </div>
                   </div>
 
-                  <div class="col-3">
+                  <div class="col-6 col-xl-3">
                     <div
                       class="d-flex justify-content-end align-items-center gap-4"
                     >
@@ -277,8 +313,11 @@
                           <div
                             class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s"
                           >
+                            <div class="close3">
+                              <i class="bi bi-x-circle float-end"></i>
+                            </div>
                             <div
-                              class="searchBox d-lg-flex align-content-lg-center"
+                              class="searchBox d-flex align-content-lg-center"
                             >
                               <div>
                                 <input
@@ -310,16 +349,16 @@
         <!-- Item -->
         <div class="item">
           <div class="img-fill">
-            <img src="./images/slide-4.jpg" alt="" />
+            <img src="./images/slide-1.jpg" alt="" />
             <div class="contain-wrapper">
               <div class="dots-contain">
-                <img class="dots-img" src="./images/slide-4.jpg" alt="" />
+                <img class="dots-img" src="./images/slide-1.jpg" alt="" />
               </div>
               <div class="info">
                 <div>
                   <h3 class="font-mali">Organic Food</h3>
                   <h5 class="font-poppins">
-                    Herber provides local citizens and guests of our town with
+                    Tfruit provides local citizens and guests of our town with
                     quality organic fruits, vegetables, and other products.
                   </h5>
                   <div class="btn-slider font-poppins">
@@ -342,17 +381,17 @@
         <!-- Item -->
         <div class="item">
           <div class="img-fill">
-            <img src="./images/slide-5.jpg" alt="" />
+            <img src="./images/slide-2.jpg" alt="" />
             <div class="contain-wrapper">
               <div class="dots-contain">
-                <img class="dots-img" src="./images/slide-5.jpg" alt="" />
+                <img class="dots-img" src="./images/slide-2.jpg" alt="" />
               </div>
               <div class="info">
                 <div>
-                  <h3 class="font-mali">Organic Food</h3>
+                  <h3 class="font-mali">Quality Control</h3>
                   <h5 class="font-poppins">
-                    Herber provides local citizens and guests of our town with
-                    quality organic fruits, vegetables, and other products.
+                    We control the process of farming at Herber to deliver the
+                    best organic products to our customers throughout the state.
                   </h5>
                   <div class="btn-slider font-poppins">
                     <div>
@@ -381,10 +420,11 @@
               </div>
               <div class="info">
                 <div>
-                  <h3 class="font-mali">Organic food</h3>
+                  <h3 class="font-mali">Eco-Friendly</h3>
                   <h5 class="font-poppins">
-                    Herber provides local citizens and guests of our town with
-                    quality organic fruits, vegetables, and other products.
+                    As the leading organic farm, we maintain an eco-friendly
+                    policy of growing and selling healthy food without any
+                    additives.
                   </h5>
                 </div>
                 <div class="btn-slider font-poppins">
@@ -404,7 +444,22 @@
         <!-- // Item -->
       </div>
     </div>
-    dsadsa
+
+    <!-- offer -->
+    <section class="section-offer font-poppins">
+      <div class="container">
+        <div class="list-offer">
+          <div class="offer">
+            <div></div>
+            <div class="timeDown" id="timedown"></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="offer"></div>
+        </div>
+      </div>
+    </section>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
