@@ -53,7 +53,6 @@ function Validator(options) {
   // Lấy element của form cần validate
   var formElement = document.querySelector(options.form);
   if (formElement) {
- 
     formElement.onsubmit = function (e) {
       e.preventDefault();
 
@@ -68,7 +67,6 @@ function Validator(options) {
       });
 
       if (isFormValid) {
-        
         if (typeof options.onSubmit === "function") {
           var enableInputs = formElement.querySelectorAll("[name]");
           var formValues = Array.from(enableInputs).reduce(function (
@@ -102,16 +100,13 @@ function Validator(options) {
           },
           {});
           options.onSubmit(formValues);
-        }
-        
-        else {
+        } else {
           formElement.submit();
         }
       }
     };
 
     options.rules.forEach(function (rule) {
-      
       if (Array.isArray(selectorRules[rule.selector])) {
         selectorRules[rule.selector].push(rule.test);
       } else {
@@ -121,7 +116,6 @@ function Validator(options) {
       var inputElements = formElement.querySelectorAll(rule.selector);
 
       Array.from(inputElements).forEach(function (inputElement) {
-
         inputElement.onblur = function () {
           validate(inputElement, rule);
         };
@@ -148,7 +142,7 @@ Validator.isRequired = function (selector, message) {
   return {
     selector: selector,
     test: function (value) {
-      return value ? undefined : message || "Vui lòng nhập trường này";
+      return value ? undefined : message || "Please enter this field";
     },
   };
 };
@@ -160,7 +154,7 @@ Validator.isEmail = function (selector, message) {
       var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       return regex.test(value)
         ? undefined
-        : message || "Trường này phải là email";
+        : message || "This field must be email";
     },
   };
 };
@@ -171,7 +165,7 @@ Validator.minLength = function (selector, min, message) {
     test: function (value) {
       return value.length >= min
         ? undefined
-        : message || `Vui lòng nhập tối thiểu ${min} kí tự`;
+        : message || `Please enter at least ${min} characters`;
     },
   };
 };
@@ -182,8 +176,7 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
     test: function (value) {
       return value === getConfirmValue()
         ? undefined
-        : message || "Giá trị nhập vào không chính xác";
+        : message || `Input value is incorrect`;
     },
   };
 };
-

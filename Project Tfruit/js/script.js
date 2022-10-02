@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     formGroupSelector: ".form-group",
     errorSelector: ".form-message",
     rules: [
-      Validator.isRequired("#fullname", "Vui lòng nhập tên đầy đủ của bạn"),
+      Validator.isRequired("#fullname", "Please enter your full name"),
       Validator.isEmail("#email"),
       Validator.minLength("#password", 6),
       Validator.isRequired("#password_confirmation"),
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function () {
           return document.querySelector("#form-1 #password").value;
         },
-        "Mật khẩu nhập lại không chính xác"
+        "Re-enter unknown password correctly"
       ),
     ],
     onSubmit: function (data) {

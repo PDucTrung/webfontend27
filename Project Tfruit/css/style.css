@@ -328,3 +328,9 @@ header {
 .reg:hover {
   text-decoration: underline;
 }
+
+.loginWith .icon {
+  font-size: 25px;
+  color: orange;
+  cursor: pointer;
+}
