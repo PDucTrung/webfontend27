@@ -51,7 +51,137 @@
               </div>
               <div class="d-flex align-items-center">
                 <div class="user">
-                  <span class="i-per bi bi-person-circle hvr-bounce-in"></span>
+                  <span
+                    id="userBtn"
+                    class="i-per bi bi-person-circle hvr-bounce-in"
+                  ></span>
+                  <!-- The Modal user -->
+                  <div id="userModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content text-black">
+                      <div class="close">
+                        <i class="bi bi-x-circle float-lg-end"></i>
+                      </div>
+                      <br />
+                      <img src="./images/logo.png" alt="lg" />
+
+                      <!-- form sign in -->
+
+                      <form action="" method="POST" class="form" id="form-2">
+                        <p class="heading font-mali">SIGN IN</p>
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <a href="#" class="link">Forward your password ?</a>
+
+                        <button class="form-submit">Sign in</button>
+
+                        <p>
+                          Do you have an account?
+                          <span class="reg" id="regBtn">Register now </span>
+                        </p>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- The Modal reg -->
+                  <div id="regModal" class="modal2">
+                    <!-- Modal content -->
+                    <div class="modal-content2 text-black">
+                      <div class="close2">
+                        <i class="bi bi-x-circle float-lg-end"></i>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <!-- form sign up -->
+                      <form action="" method="POST" class="form" id="form-1">
+                        <h3 class="heading font-mali">Sign up</h3>
+
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="fullname" class="form-label font-poppins"
+                            >Full name</label
+                          >
+                          <input
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="VD: sunsan"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Mật khẩu</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password_confirmation" class="form-label"
+                            >Nhập lại mật khẩu</label
+                          >
+                          <input
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            placeholder="Confirm password"
+                            type="password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <button class="form-submit">Sign up</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
                 <div class="select m-lg-2">
                   <select name="language" class="bg-dark">
@@ -72,7 +202,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/validator.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/aos.js"></script>
   </body>
 </html>
