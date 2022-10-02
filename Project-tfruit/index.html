@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/hover.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -30,8 +37,7 @@
     <!-- page -->
     <div class="page position-relative">
       <!-- page header -->
-
-      <header class="seaction page-header position-absolute">
+      <header class="seaction page-header position-fixed">
         <div class="heading-header bg-dark text-white">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center">
@@ -58,7 +64,9 @@
                   <!-- The Modal user -->
                   <div id="userModal" class="modal">
                     <!-- Modal content -->
-                    <div class="modal-content text-black">
+                    <div
+                      class="modal-content text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                    >
                       <div class="close">
                         <i class="bi bi-x-circle float-lg-end"></i>
                       </div>
@@ -105,8 +113,10 @@
                           Do you have an account?
                           <span class="reg" id="regBtn">Register now </span>
                         </p>
-                       
-                        <div class="loginWith d-lg-flex justify-content-lg-center gap-5 mb-lg-3">
+
+                        <div
+                          class="loginWith d-lg-flex justify-content-lg-center gap-5 mb-lg-3"
+                        >
                           <i class="icon bi bi-facebook hvr-bob"></i>
                           <i class="icon bi bi-google hvr-bob"></i>
                         </div>
@@ -116,7 +126,9 @@
                   <!-- The Modal reg -->
                   <div id="regModal" class="modal2">
                     <!-- Modal content -->
-                    <div class="modal-content2 text-black">
+                    <div
+                      class="modal-content2 text-black animate__animated animate__fadeInRight animate__delay-0s"
+                    >
                       <div class="close2">
                         <i class="bi bi-x-circle float-lg-end"></i>
                       </div>
@@ -187,7 +199,9 @@
 
                         <p class="text-center text-black">OR</p>
 
-                        <div class="loginWith d-lg-flex justify-content-lg-center gap-5">
+                        <div
+                          class="loginWith d-lg-flex justify-content-lg-center gap-5"
+                        >
                           <i class="icon bi bi-facebook hvr-bob"></i>
                           <i class="icon bi bi-google hvr-bob"></i>
                         </div>
@@ -205,11 +219,192 @@
             </div>
           </div>
         </div>
-        <div class="test" data-aos="fade-right">1</div>
-        <!-- navbar -->
-      </header>
-    </div>
 
+        <!-- navbar -->
+
+        <div class="rd-navbar-wrap navigation shadow-bottom font-poppins">
+          <nav>
+            <div class="container">
+              <div class="rd-navbar-main">
+                <div class="row d-flex align-items-center">
+                  <div class="col-3">
+                    <!-- RD Navbar Brand-->
+                    <div class="rd-navbar-brand">
+                      <a class="brand" href="index.html"
+                        ><img src="images/logo.png" alt="ss"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-center">
+                      <!-- RD Navbar Nav-->
+                      <ul class="rd-navbar-nav d-flex">
+                        <li class="rd-nav-item active">
+                          <a class="rd-nav-link">Home</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">Shop</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">About</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">Blog</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <div
+                      class="d-flex justify-content-end align-items-center gap-4"
+                    >
+                      <div class="cart position-relative">
+                        <div class="number position-absolute">2</div>
+                        <span class="i bi bi-basket hvr-grow-rotate"></span>
+                      </div>
+                      <div class="search wrapper">
+                        <div
+                          class="i bi bi-search hvr-grow-rotate"
+                          id="searchBtn"
+                        ></div>
+                        <!-- The Modal reg -->
+                        <div id="searchModal" class="modal3">
+                          <!-- Modal content -->
+                          <div
+                            class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s"
+                          >
+                            <div
+                              class="searchBox d-lg-flex align-content-lg-center"
+                            >
+                              <div>
+                                <input
+                                  type="search"
+                                  name="search"
+                                  id=""
+                                  placeholder="Search..."
+                                  class="search-text"
+                                />
+                              </div>
+                              <div class="search-icon">
+                                <i class="bi bi-search"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- slider -->
+      <div class="Advance-Slider">
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="./images/slide-4.jpg" alt="" />
+            <div class="contain-wrapper">
+              <div class="dots-contain">
+                <img class="dots-img" src="./images/slide-4.jpg" alt="" />
+              </div>
+              <div class="info">
+                <div>
+                  <h3 class="font-mali">Organic Food</h3>
+                  <h5 class="font-poppins">
+                    Herber provides local citizens and guests of our town with
+                    quality organic fruits, vegetables, and other products.
+                  </h5>
+                  <div class="btn-slider font-poppins">
+                    <div>
+                      <a
+                        class="click-btn btn-style1"
+                        href="#"
+                        data-hover="Click me!"
+                        >Read more</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // Item -->
+
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="./images/slide-5.jpg" alt="" />
+            <div class="contain-wrapper">
+              <div class="dots-contain">
+                <img class="dots-img" src="./images/slide-5.jpg" alt="" />
+              </div>
+              <div class="info">
+                <div>
+                  <h3 class="font-mali">Organic Food</h3>
+                  <h5 class="font-poppins">
+                    Herber provides local citizens and guests of our town with
+                    quality organic fruits, vegetables, and other products.
+                  </h5>
+                  <div class="btn-slider font-poppins">
+                    <div>
+                      <a
+                        class="click-btn btn-style1"
+                        href="#"
+                        data-hover="Click me!"
+                        >Read more</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // Item -->
+
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="./images/slide-6.jpg" alt="" />
+            <div class="contain-wrapper">
+              <div class="dots-contain">
+                <img class="dots-img" src="./images/slide-6.jpg" alt="" />
+              </div>
+              <div class="info">
+                <div>
+                  <h3 class="font-mali">Organic food</h3>
+                  <h5 class="font-poppins">
+                    Herber provides local citizens and guests of our town with
+                    quality organic fruits, vegetables, and other products.
+                  </h5>
+                </div>
+                <div class="btn-slider font-poppins">
+                  <div>
+                    <a
+                      class="click-btn btn-style1"
+                      href="#"
+                      data-hover="Click me!"
+                      >Read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // Item -->
+      </div>
+    </div>
+    dsadsa
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
