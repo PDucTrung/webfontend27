@@ -169,7 +169,7 @@ header {
   margin: auto;
   padding: 10px;
   border: 1px solid #888;
-  width: 40%;
+  width: 360px;
 }
 
 .modal-content img {
@@ -215,7 +215,7 @@ header {
   margin: auto;
   padding: 10px;
   border: 1px solid #888;
-  width: 40%;
+  width: 360px;
   border-radius: 10px;
 }
 
@@ -368,7 +368,7 @@ header {
 /* form validate sign in/sign up */
 
 .form {
-  width: 400px;
+  width: 300px;
   min-height: 100px;
   text-align: center;
   background: #fff;
@@ -475,6 +475,11 @@ header {
 
 .reg:hover {
   text-decoration: underline;
+}
+
+.loginWith{
+  width: 100px;
+  margin: 0 auto;
 }
 
 .loginWith .icon {
@@ -892,10 +897,10 @@ header {
 }
 @keyframes Slick-FastSwipeIn {
   0% {
-    transform: rotate3d(0, 1, 0, 150deg) scale(0) perspective(400px);
+    transform: rotate3d(0, 1, 0, 150deg) scale(0) perspective(300px);
   }
   100% {
-    transform: rotate3d(0, 1, 0, 0deg) scale(1) perspective(400px);
+    transform: rotate3d(0, 1, 0, 0deg) scale(1) perspective(300px);
   }
 }
 
