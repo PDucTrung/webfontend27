@@ -113,7 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
     errorSelector: ".form-message",
     rules: [
       Validator.isRequired("#fullname", "Please enter your full name"),
+      Validator.isRequired("#email"),
       Validator.isEmail("#email"),
+      Validator.isRequired("#password"),
       Validator.minLength("#password", 6),
       Validator.isRequired("#password_confirmation"),
       Validator.isConfirmed(
@@ -133,7 +135,22 @@ document.addEventListener("DOMContentLoaded", function () {
     form: "#form-2",
     formGroupSelector: ".form-group",
     errorSelector: ".form-message",
-    rules: [Validator.isEmail("#email"), Validator.minLength("#password", 6)],
+    rules: [
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+      Validator.isRequired("#password"),
+      Validator.minLength("#password", 6),
+    ],
+    onSubmit: function (data) {
+      console.log(data);
+    },
+  });
+
+  Validator({
+    form: "#form-3",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [Validator.isRequired("#email"), Validator.isEmail("#email")],
     onSubmit: function (data) {
       console.log(data);
     },
@@ -147,8 +164,8 @@ $slider_ini.on("init", function (event, slick, currentSlide, nextSlide) {
   $("button.slick-arrow").append('<div class="thumb"></div>');
   total_slide = slick.slideCount;
   console.log(total_slide);
-  next_img = $(slick.$slides[1]).find("img").attr("src");
-  prev_img = $(slick.$slides[total_slide - 1])
+  let next_img = $(slick.$slides[1]).find("img").attr("src");
+  let prev_img = $(slick.$slides[total_slide - 1])
     .find("img")
     .attr("src");
   $("button.slick-next .thumb").append('<img src="' + next_img + '">');
@@ -156,13 +173,13 @@ $slider_ini.on("init", function (event, slick, currentSlide, nextSlide) {
 });
 $slider_ini.slick({
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 3000,
   speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,
   dots: true,
   pauseOnHover: false,
-  infinite: false,
+  infinite: true,
   customPaging: function (slider, i) {
     var thumb = $(slider.$slides[i]).find(".dots-img").attr("src");
     console.log(thumb);
@@ -172,6 +189,14 @@ $slider_ini.slick({
       '"></a></div></button>'
     );
   },
+  // responsive: [
+  //   {
+  //     breakpoint: 1200,
+  //     settings: {
+  //       dots: true,
+  //     },
+  //   },
+  // ],
 });
 
 $("button.slick-arrow , .Advance-Slider ul.slick-dots li button").hover(
@@ -188,10 +213,10 @@ $("button.slick-arrow , .Advance-Slider ul.slick-dots li button").hover(
 $slider_ini.on("afterChange", function (event, slick, currentSlide) {
   console.log("afterChange: " + currentSlide);
 
-  prev_img = $(slick.$slides[currentSlide - 1])
+  let prev_img = $(slick.$slides[currentSlide - 1])
     .find("img")
     .attr("src");
-  next_img = $(slick.$slides[currentSlide + 1])
+  let next_img = $(slick.$slides[currentSlide + 1])
     .find("img")
     .attr("src");
 
@@ -219,17 +244,17 @@ $slider_ini.on("afterChange", function (event, slick, currentSlide) {
 });
 
 // timedown ///////////////////////////////////////////////////////////////////////////////////////////////
-var countDownDate = new Date("Jan 5, 2023 15:37:25").getTime();
+let countDownDate = new Date("october 30, 2022 23:59:59").getTime();
 
-var x = setInterval(function () {
-  var now = new Date().getTime();
+let x = setInterval(function () {
+  let now = new Date().getTime();
 
-  var distance = countDownDate - now;
+  let distance = countDownDate - now;
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("timedown").innerHTML =
     days +
@@ -246,6 +271,121 @@ var x = setInterval(function () {
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("timedown").innerHTML = "End Deal";
+    document.getElementById("timedown2").innerHTML = "End Deal";
+    document.getElementById("days").innerHTML = "End Deal";
+    document.getElementById("hours").innerHTML = "End Deal";
+    document.getElementById("minutes").innerHTML = "End Deal";
+    document.getElementById("seconds").innerHTML = "End Deal";
   }
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  document.getElementById("timedown2").innerHTML =
+    days +
+    "d " +
+    " : " +
+    hours +
+    "h " +
+    " : " +
+    minutes +
+    "m " +
+    " : " +
+    seconds +
+    "s ";
 }, 1000);
+
+//count
+var a = 0;
+$(window).scroll(function () {
+  var oTop = $("#counter").offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $(".counter").each(function () {
+      var $this = $(this),
+        countTo = $this.attr("number");
+      $({
+        countNum: $this.text(),
+      }).animate(
+        {
+          countNum: countTo,
+        },
+
+        {
+          duration: 2000,
+          easing: "swing",
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+            //alert('finished');
+          },
+        }
+      );
+    });
+    a = 1;
+  }
+});
+
+// aos
+AOS.init({
+  offset: 200,
+  duration: 1000,
+});
+
+// slider about ////////////////////////////////////////////////////////
+$(".slider-home").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 1000,
+  dots: true,
+  fade: true,
+  cssEase: "linear",
+});
+
+// slider partner ////////////////////////////////////////////////////////
+$(".slider-partners").slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 1000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});

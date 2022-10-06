@@ -11,7 +11,20 @@
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/hover.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+      integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -22,20 +35,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- preloader -->
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <div class="logo-load">
-          <img src="./images/logoloading.png" alt="ss" />
-        </div>
-      </div>
-    </div>
-
     <!-- page -->
-    <div class="page position-relative">
+    <div class="page">
       <!-- page header -->
       <header class="seaction page-header position-fixed">
         <div class="heading-header bg-dark text-white">
@@ -71,7 +72,7 @@
                         <i class="bi bi-x-circle float-end"></i>
                       </div>
                       <br />
-                      <img src="./images/logo.png" alt="lg" />
+                      <img src="/img/logo.png" alt="lg" />
 
                       <!-- form sign in -->
 
@@ -116,9 +117,7 @@
 
                         <p class="text-center text-black">OR</p>
 
-                        <div
-                          class="loginWith d-flex justify-content-between"
-                        >
+                        <div class="loginWith d-flex justify-content-between">
                           <i class="icon bi bi-facebook hvr-bob"></i>
                           <i class="icon bi bi-google hvr-bob"></i>
                         </div>
@@ -201,9 +200,7 @@
 
                         <p class="text-center text-black">OR</p>
 
-                        <div
-                          class="loginWith d-flex justify-content-between"
-                        >
+                        <div class="loginWith d-flex justify-content-between">
                           <i class="icon bi bi-facebook hvr-bob"></i>
                           <i class="icon bi bi-google hvr-bob"></i>
                         </div>
@@ -228,12 +225,12 @@
           <nav>
             <div class="container">
               <div class="rd-navbar-main">
-                <div class="row d-flex align-items-center">
-                  <div class="col-6 col-xl-3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="">
                     <!-- RD Navbar -->
                     <div class="rd-navbar-brand">
                       <a class="brand d-none d-xl-block" href="index.html"
-                        ><img src="images/logo.png" alt="ss"
+                        ><img src="/img/logo.png" alt="ss"
                       /></a>
                       <div>
                         <i
@@ -243,19 +240,28 @@
                         <!-- The Modal -->
                         <div id="menuModal" class="modal4 d-xl-none">
                           <!-- Modal content -->
-                          <div class="modal-content4 text-black animate__animated animate__fadeInLeft animate__delay-0s">
+                          <div
+                            class="modal-content4 text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                          >
                             <div class="close4">
                               <i class="bi bi-x-circle float-end"></i>
                             </div>
                             <br />
                             <div class="text-black">
                               <!-- RD Navbar Nav-->
-                              <ul class="rd-navbar-nav d-flex flex-column">
+                              <ul
+                                class="rd-navbar-nav d-flex flex-column align-items-center"
+                              >
                                 <li class="rd-nav-item active">
                                   <a class="rd-nav-link">Home</a>
                                 </li>
                                 <li class="rd-nav-item">
-                                  <a class="rd-nav-link">Shop</a>
+                                  <a
+                                    href="product.html"
+                                    target="_blank"
+                                    class="rd-nav-link"
+                                    >Shop</a
+                                  >
                                 </li>
                                 <li class="rd-nav-item">
                                   <a class="rd-nav-link">About</a>
@@ -273,7 +279,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-xl-6 d-none d-xl-block">
+
+                  <div class="d-none d-xl-block">
                     <div class="text-center">
                       <!-- RD Navbar Nav-->
                       <ul class="rd-navbar-nav d-flex">
@@ -281,7 +288,12 @@
                           <a class="rd-nav-link">Home</a>
                         </li>
                         <li class="rd-nav-item">
-                          <a class="rd-nav-link">Shop</a>
+                          <a
+                            href="product.html"
+                            target="_blank"
+                            class="rd-nav-link"
+                            >Shop</a
+                          >
                         </li>
                         <li class="rd-nav-item">
                           <a class="rd-nav-link">About</a>
@@ -296,7 +308,7 @@
                     </div>
                   </div>
 
-                  <div class="col-6 col-xl-3">
+                  <div class="">
                     <div
                       class="d-flex justify-content-end align-items-center gap-4"
                     >
@@ -351,10 +363,10 @@
         <!-- Item -->
         <div class="item">
           <div class="img-fill">
-            <img src="./images/slide-1.jpg" alt="" />
+            <img src="/img/slide-1.jpg" alt="" />
             <div class="contain-wrapper">
               <div class="dots-contain">
-                <img class="dots-img" src="./images/slide-1.jpg" alt="" />
+                <img class="dots-img" src="/img/slide-1.jpg" alt="" />
               </div>
               <div class="info">
                 <div>
@@ -383,10 +395,10 @@
         <!-- Item -->
         <div class="item">
           <div class="img-fill">
-            <img src="./images/slide-2.jpg" alt="" />
+            <img src="/img//slide-2.jpg" alt="zz" />
             <div class="contain-wrapper">
               <div class="dots-contain">
-                <img class="dots-img" src="./images/slide-2.jpg" alt="" />
+                <img class="dots-img" src="/img/slide-2.jpg" alt="" />
               </div>
               <div class="info">
                 <div>
@@ -415,10 +427,10 @@
         <!-- Item -->
         <div class="item">
           <div class="img-fill">
-            <img src="./images/slide-6.jpg" alt="" />
+            <img src="/img/slide-6.jpg" alt="" />
             <div class="contain-wrapper">
               <div class="dots-contain">
-                <img class="dots-img" src="./images/slide-6.jpg" alt="" />
+                <img class="dots-img" src="/img/slide-6.jpg" alt="" />
               </div>
               <div class="info">
                 <div>
@@ -450,22 +462,740 @@
     <!-- offer -->
     <section class="section-offer font-poppins">
       <div class="container">
-        <div class="list-offer">
-          <div class="offer">
-            <div></div>
-            <div class="timeDown" id="timedown"></div>
-            <div></div>
-            <div></div>
+        <div
+          class="list-offer d-flex flex-column gap-5 flex-lg-row justify-content-center align-items-center"
+        >
+          <div
+            class="offer position-relative d-flex justify-content-between"
+            data-aos="fade-down-right"
+            data-aos-delay="300"
+          >
+            <img src="img/offer1.png" alt="ss" />
+            <div
+              class="content-offer position-absolute d-flex flex-column justify-content-between"
+            >
+              <div class="font-poppins best order-1">Best offer</div>
+              <div class="timeDown order-2" id="timedown">1</div>
+              <div class="font-popins coconut order-3">Coconut Fresh</div>
+              <div class="font-mali shopnow hvr-grow order-4">Shop now</div>
+            </div>
           </div>
-          <div class="offer"></div>
+          <div
+            class="offer position-relative d-flex justify-content-between"
+            data-aos="fade-down-left"
+            data-aos-delay="300"
+          >
+            <img src="img/offer2.png" alt="ss" />
+            <div
+              class="content-offer position-absolute d-flex flex-column justify-content-between"
+            >
+              <div class="font-poppins best order-1">Best offer</div>
+              <div class="timeDown order-2" id="timedown2">1</div>
+              <div class="font-popins coconut2 order-3">
+                Get Garden Fresh Pure Orange
+              </div>
+              <div class="font-mali shopnow hvr-grow order-4">Shop now</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- service -->
+    <section class="section-service font-popins">
+      <div
+        class="service d-flex flex-column gap-5 flex-sm-row flex-sm-wrap justify-content-sm-center gap-sm-5 align-items-md-center"
+      >
+        <div
+          class="list-service-1 d-flex flex-column gap-5 align-items-center order-md-1"
+        >
+          <div
+            class="box-service ml-20"
+            data-aos="fade-down-right"
+            data-aos-delay="200"
+          >
+            <div class="row d-flex box-sr">
+              <div class="col-9 order-2 ct-sr">
+                <div class="title-service font-mali">100% Organic</div>
+                <div class="content-service">
+                  Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend
+                </div>
+              </div>
+              <div class="col-3 order-1 icon-service hvr-buzz-out">
+                <img src="img/service-1.png" alt="ss" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-service"
+            data-aos="fade-down-right"
+            data-aos-delay="300"
+          >
+            <div class="row d-flex box-sr">
+              <div class="col-9 order-2 ct-sr">
+                <div class="title-service font-mali">Support 24/7</div>
+                <div class="content-service">
+                  Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend
+                </div>
+              </div>
+              <div class="col-3 order-1 icon-service hvr-buzz-out">
+                <img src="img/service-2.png" alt="ss" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-service ml-20"
+            data-aos="fade-down-right"
+            data-aos-delay="400"
+          >
+            <div class="row d-flex box-sr">
+              <div class="col-9 order-2 ct-sr">
+                <div class="title-service font-mali">Secure Payment</div>
+                <div class="content-service">
+                  Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend
+                </div>
+              </div>
+              <div class="col-3 order-1 icon-service hvr-buzz-out">
+                <img src="img/service-3.png" alt="ss" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="list-service-2 d-flex flex-column gap-5 align-items-center order-md-3"
+        >
+          <div
+            class="box-service mr-20"
+            data-aos="fade-down-left"
+            data-aos-delay="200"
+          >
+            <div class="row d-flex box-sr">
+              <div class="col-9 order-2 ct-sr order-lg-1">
+                <div class="title-service font-mali">Fresh & Healthy</div>
+                <div class="content-service">
+                  Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend
+                </div>
+              </div>
+              <div class="col-3 order-1 icon-service order-lg-2 hvr-buzz-out">
+                <img src="img/service-4.png" alt="ss" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-service"
+            data-aos="fade-down-left"
+            data-aos-delay="300"
+          >
+            <div class="row d-flex box-sr">
+              <div class="col-9 order-2 ct-sr order-lg-1">
+                <div class="title-service font-mali">Naturally Grown</div>
+                <div class="content-service">
+                  Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend
+                </div>
+              </div>
+              <div class="col-3 order-1 icon-service order-lg-2 hvr-buzz-out">
+                <img src="img/service-5.png" alt="ss" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-service mr-20"
+            data-aos="fade-down-left"
+            data-aos-delay="400"
+          >
+            <div class="row d-flex box-sr">
+              <div class="col-9 order-2 ct-sr order-lg-1">
+                <div class="title-service font-mali">Free Shipping</div>
+                <div class="content-service">
+                  Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend
+                </div>
+              </div>
+              <div class="col-3 order-1 icon-service order-lg-2 hvr-buzz-out">
+                <img src="img/service-6.png" alt="ss" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="img-service order-md-2"
+          data-aos="zoom-in-down"
+          data-aos-delay="400"
+        >
+          <img src="img/iservice.png" alt="zz" />
+        </div>
+      </div>
+    </section>
+
+    <section class="product-list font-poppins">
+      <div class="container">
+        <div class="row gap-5 gap-lg-5 gap-xl-0">
+          <div class="col-12 col-xl-6 col-xxl-6">
+            <div
+              class="big-img-product position-relative"
+              data-aos="zoom-in-down"
+              data-aos-delay="300"
+            >
+              <img class="img-big" src="img/iproduct-1.png" alt="" />
+              <div class="position-absolute text-big-img position-relative">
+                <img class="img-abs" src="img/iproduct-2.png" alt="" />
+                <div
+                  class="title-pig-img text-center font-mali position-absolute"
+                >
+                  <p class="or">Organic</p>
+                  <p class="or2">vegetables</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d-none d-xl-block d-xxl-none"
+              data-aos="zoom-in-down"
+              data-aos-delay="300"
+            >
+              <img class="pr-1" src="img/pr-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 col-xxl-6">
+            <div class="list-product d-flex gap-5 flex-wrap">
+              <div
+                class="product border-pink position-relative"
+                data-aos="fade-down-right"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-3.png" alt="" />
+                <div class="title-product text-center"><p>Red cabbage</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span class="text-decoration-line-through">$ 4.00</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <span>$ 3.25</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+              <div
+                class="product border-green position-relative"
+                data-aos="fade-down-left"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-4.png" alt="" />
+                <div class="title-product text-center"><p>Pea</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span>$ 3.25</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+              <div
+                class="product border-green position-relative"
+                data-aos="fade-up-right"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-5.png" alt="" />
+                <div class="title-product text-center"><p>Lettuce</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span>$ 1.75</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+              <div
+                class="product border-green position-relative"
+                data-aos="fade-up-left"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-6.png" alt="" />
+                <div class="title-product text-center"><p>Cucumber</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span>$ 2.00</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sale -->
+    <section
+      class="section-sale font-poppins"
+      data-aos="zoom-in-down"
+      data-aos-delay="200"
+    >
+      <div class="sale position-relative">
+        <div class="page-fo">
+          <div class="img-fill2"><img src="img/isale.png" alt="dsd" /></div>
+        </div>
+        <div
+          class="content-sale text-center text-white position-absolute d-flex flex-column gap-5"
+        >
+          <p class="p-sale-1" data-aos="fade-down" data-aos-delay="250">
+            We offer a hot deal offer every festival
+          </p>
+          <p class="p-sale-2" data-aos="fade-down" data-aos-delay="300">
+            Deal of the day!
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <div class="box-time">
+              <div id="days">29</div>
+              <div class="text-sale">Days</div>
+            </div>
+            <div class="box-time">
+              <div id="hours">29</div>
+              <div class="text-sale">Hours</div>
+            </div>
+            <div class="box-time">
+              <div id="minutes">29</div>
+              <div class="text-sale">Minutes</div>
+            </div>
+            <div class="box-time">
+              <div id="seconds">29</div>
+              <div class="text-sale">Seconds</div>
+            </div>
+          </div>
+          <div>
+            <div class="button button-2 but-sale">
+              <i class="bi bi-arrow-right-circle"></i> &nbsp; Shop collection
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-list font-poppins">
+      <div class="container">
+        <div class="row gap-5 gap-lg-5 gap-xl-0">
+          <div class="col-12 col-xl-6 col-xxl-6 order-2">
+            <div
+              class="big-img-product position-relative"
+              data-aos="zoom-in-down"
+              data-aos-delay="200"
+            >
+              <img class="img-big" src="img/iproduct-7.png" alt="" />
+              <div class="position-absolute text-big-img position-relative">
+                <img class="img-abs" src="img/iproduct-2.png" alt="" />
+                <div
+                  class="title-pig-img text-center font-mali position-absolute"
+                >
+                  <p class="or">Fresh</p>
+                  <p class="or2">Fruits</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d-none d-xl-block d-xxl-none"
+              data-aos="zoom-in-down"
+              data-aos-delay="200"
+            >
+              <img class="pr-1" src="img/pr-2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 col-xxl-6 order-1">
+            <div class="list-product d-flex gap-5 flex-wrap">
+              <div
+                class="product border-yel position-relative"
+                data-aos="fade-down-right"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-8.png" alt="" />
+                <div class="title-product text-center"><p>Red cabbage</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span class="text-decoration-line-through">$ 4.00</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <span>$ 3.25</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+              <div
+                class="product border-pink-light position-relative"
+                data-aos="fade-down-left"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-9.png" alt="" />
+                <div class="title-product text-center"><p>Pea</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span>$ 3.25</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+              <div
+                class="product border-green position-relative"
+                data-aos="fade-up-right"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-10.png" alt="" />
+                <div class="title-product text-center"><p>Lettuce</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span>$ 1.75</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+              <div
+                class="product border-blur position-relative"
+                data-aos="fade-up-left"
+                data-aos-delay="200"
+              >
+                <img class="img-pr" src="img/iproduct-11.png" alt="" />
+                <div class="title-product text-center"><p>Cucumber</p></div>
+                <div class="price-product text-center">
+                  <p>
+                    <span>$ 2.00</span>
+                  </p>
+                </div>
+                <div class="add-cart position-absolute">
+                  <div class="button button-2">Add to cart</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- parallax -->
+    <section class="section-para font-poppins">
+      <div
+        class="para position-relative parallax-container"
+        data-parallax-img="../img/scroll-1.jpg"
+      >
+        <div class="parallax-content">
+          <div class="container">
+            <div
+              id="counter"
+              class="d-flex flex-column justify-content-between align-items-center gap-5 text-center flex-sm-row flex-sm-wrap justify-content-md-center justify-content-lg-between"
+              data-aos="zoom-in-down"
+              data-aos-delay="300"
+            >
+              <div class="">
+                <div class="counter-creative">
+                  <div
+                    class="counter-creative-number d-flex align-items-center justify-content-center"
+                  >
+                    <span class="counter count" number="1000">0</span
+                    ><span><i class="text-orange bi bi-trophy"></i></span>
+                  </div>
+                  <h6 class="counter-creative-title">Awards</h6>
+                </div>
+              </div>
+              <div class="">
+                <div class="counter-creative">
+                  <div
+                    class="counter-creative-number d-flex align-items-center justify-content-center"
+                  >
+                    <span class="counter count" number="1000">0</span
+                    ><span><i class="text-orange bi bi-house"></i></span>
+                  </div>
+                  <h6 class="counter-creative-title">Products</h6>
+                </div>
+              </div>
+              <div class="">
+                <div class="counter-creative">
+                  <div
+                    class="counter-creative-number d-flex align-items-center justify-content-center"
+                  >
+                    <span class="counter count" number="1000">0</span
+                    ><span
+                      ><i class="text-orange bi bi-brightness-high"></i
+                    ></span>
+                  </div>
+                  <h6 class="counter-creative-title">Happy Clients</h6>
+                </div>
+              </div>
+              <div class="">
+                <div class="counter-creative">
+                  <div
+                    class="counter-creative-number d-flex align-items-center justify-content-center"
+                  >
+                    <span class="counter count" number="1000">0</span
+                    ><span
+                      ><i class="text-orange bi bi-person-lines-fill"></i
+                    ></span>
+                  </div>
+                  <h6 class="counter-creative-title">Farmers</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about home -->
+    <section class="section-abouthome font-poppins">
+      <div class="container">
+        <div class="abouthome row">
+          <div
+            class="img-abouthome col-12 col-xl-6"
+            data-aos="zoom-in-down"
+            data-aos-delay="200"
+          >
+            <img src="img/iabouthome.png" alt="ss" />
+          </div>
+          <div
+            class="content-abouthome col-12 text-center col-xl-6 d-flex flex-column justify-content-center gap-3"
+            data-aos="zoom-in-down"
+            data-aos-delay="200"
+          >
+            <p
+              class="text-content-ab-1 order-1 text-left"
+              data-aos="fade-down-left"
+              data-aos-delay="250"
+            >
+              A Few Words About Our Store
+            </p>
+            <p
+              class="text-content-ab-2 order-2 text-left"
+              data-aos="fade-down-left"
+              data-aos-delay="300"
+            >
+              about us
+            </p>
+            <p
+              class="text-content-ab-3 order-3 text-left"
+              data-aos="fade-down-left"
+              data-aos-delay="350"
+            >
+              Grocmart is a family-owned grocery store that has been offering
+              quality products for your everyday life since 1999, while also
+              providing superior service and competitive prices.
+            </p>
+            <div class="next-about d-flex gap-3 order-4">
+              <div class="icon-next-ab hvr-push">
+                <i class="i-ab bi bi-arrow-right"></i>
+              </div>
+              <div class="text-next-ab">
+                <p class="text-next-ab-1">SAM WILLIAMS</p>
+                <p class="text-next-ab-2">CEO, Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- comment -->
+    <section
+      class="section-cmthome"
+      data-aos="zoom-in-down"
+      data-aos-delay="200"
+    >
+      <div class="cmt-home position-relative">
+        <p class="font-mali tittle-cmt text-center position-absolute">
+          Our Clients
+        </p>
+        <img class="img-cmt" src="img/i-cmthome.png" alt="dsd" />
+        <div class="section-slider-cmt-home position-absolute">
+          <div class="bg-cm-home-1 position-absolute"></div>
+          <div class="slider-home position-relative">
+            <div
+              class="box-cmt text-center font-poppins d-flex flex-column gap-0 align-items-center gap-sm-3 gap-lg-4"
+            >
+              <img src="img/user-1.jpg" alt="ss" />
+              <p class="text-cmthome-1">
+                I wanted to tell you how amazing it was to see the farm and how
+                much we love the food. Your apples and carrots are just
+                wonderful and their taste is great.
+              </p>
+              <div class="d-flex flex-column gap-1">
+                <span class="text-cmthome-2">John Wilson</span>
+                <span class="text-cmthome-3">Regular Client</span>
+              </div>
+            </div>
+            <div
+              class="box-cmt text-center font-poppins d-flex flex-column gap-0 align-items-center gap-sm-3 gap-lg-4"
+            >
+              <img src="img/user-2.jpg" alt="ss" />
+              <p class="text-cmthome-1">
+                The food from your farm is wonderful. So many nights when we sit
+                down to dinner we can say everything on this plate is locally
+                grown and delicious. Thank you!
+              </p>
+              <div class="d-flex flex-column gap-1">
+                <span class="text-cmthome-2">Kate Anderson</span>
+                <span class="text-cmthome-3">Regular Client</span>
+              </div>
+            </div>
+            <div
+              class="box-cmt text-center font-poppins d-flex flex-column gap-0 align-items-center gap-sm-3 gap-lg-4"
+            >
+              <img src="img/user-3.jpg" alt="ss" />
+              <p class="text-cmthome-1">
+                I picked up a head of your lettuce at a local grocery store
+                today. What an amazing and beautiful lettuce it is! I’ve never
+                seen another so full and green and tempting.
+              </p>
+              <div class="d-flex flex-column gap-1">
+                <span class="text-cmthome-2">Samantha Peterson</span>
+                <span class="text-cmthome-3">Regular Client</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- partners -->
+    <section
+      class="section-partners"
+      data-aos="zoom-in-up"
+      data-aos-delay="200"
+    >
+      <div class="container">
+        <div
+          class="title-partners font-mali"
+          data-aos="zoom-in-up"
+          data-aos-delay="300"
+        >
+          Our Partner
+        </div>
+        <div class="partners" data-aos="fade-up" data-aos-delay="300">
+          <div class="slider-partners">
+            <div class="partner">
+              <img src="img/partner-1.png" alt="" />
+            </div>
+            <div class="partner">
+              <img src="img/partner2.png" alt="" />
+            </div>
+            <div class="partner">
+              <img src="img/partner3.png" alt="" />
+            </div>
+            <div class="partner">
+              <img src="img/partner4.png" alt="" />
+            </div>
+            <div class="partner">
+              <img src="img/partner-1.png" alt="" />
+            </div>
+            <div class="partner">
+              <img src="img/partner2.png" alt="" />
+            </div>
+            <div class="partner">
+              <img src="img/partner3.png" alt="" />
+            </div>
+            <div class="partner">
+              <img src="img/partner4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="text-white font-poppins bg-dark"
+      data-aos="zoom-in-down"
+      data-aos-delay="200"
+    >
+      <div class="container">
+        <div class="row gap-3 gap-md-0">
+          <div
+            class="col-12 col-md-6 col-lg-4"
+            data-aos="fade-down-right"
+            data-aos-delay="250"
+          >
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <div><img src="img/logo2.png" alt="ss" /></div>
+              <p class="text-gray-fo">Weekdays: 08:00am - 08:00pm</p>
+              <p class="text-gray-fo">Weekends: 10:00am - 06:00pm</p>
+              <div class="line"></div>
+              <div class="list-icon-footer d-flex gap-5 justify-content-center">
+                <div>Follow Us:</div>
+                <div class="d-flex gap-3">
+                  <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                  ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 ft-2 col-lg-4"
+            data-aos="fade-down"
+            data-aos-delay="250"
+          >
+            <div class="gird-footer2 text-center d-flex flex-column gap-3">
+              <h4>CONTACTS</h4>
+              <p>
+                <span><i class="bi bi-phone"></i></span> &nbsp;
+                <span class="text-gray-fo">+ 84 981 953 791</span>
+              </p>
+              <p>
+                <span><i class="bi bi-geo-alt-fill"></i></span> &nbsp;
+                <span class="text-gray-fo">
+                  298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm, Hà Nội
+                </span>
+              </p>
+              <p>
+                <span><i class="bi bi-envelope"></i></span> &nbsp;
+                <span class="text-gray-fo">TFruit@gmail.com</span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 ft-3 col-lg-4"
+            data-aos="fade-down-left"
+            data-aos-delay="250"
+          >
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <h4>NEWSLETTER</h4>
+              <p class="text-gray-fo">
+                Join our email newsletter for news and tips.
+              </p>
+              <div class="form-footer">
+                <form action="" method="POST" class="form bg-dark" id="form-3">
+                  <div class="form-group">
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      placeholder="Enter your E-mail"
+                      class="form-control text-center"
+                    />
+                    <span class="form-message"></span>
+                  </div>
+                  <button class="form-submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="back-to-top text-white position-fixed hvr-grow-rotate">
+      <a class="text-none text-white" href="#"
+        ><i class="bi bi-box-arrow-up"></i
+      ></a>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/swiper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="js/validator.js"></script>
     <script src="js/script.js"></script>
   </body>
