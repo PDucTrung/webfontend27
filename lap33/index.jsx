@@ -58,10 +58,97 @@ const App = () => {
   );
 };
 
+const HandlingEvent = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
+  const handleChange = () => {
+    console.log(e.target.value);
+  };
+
+  return (
+    <form action="" onSubmit={handleSubmit} onChange={handleChange}>
+      <input type="text" name="userName" />
+
+      <select name="gender" id="">
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+      </select>
+
+      <button>Submit</button>
+    </form>
+  );
+};
+
+class State extends React.Component {
+  state = {
+    value: 1,
+  };
+
+  increment = () => {
+    this.setState({ value: this.state.value + 1 });
+  };
+
+  decrement = () => {
+    this.setState({ value: this.state.value - 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.increment}>plus</button>
+        {this.state.value}
+        <button onClick={this.decrement}>minus</button>
+      </div>
+    );
+  }
+}
+
+const App2 = () => {
+  const [count, setCount] = React.useState(0);
+
+  const timer = React.useRef(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount((preriousCount) => preriousCount - 1);
+  };
+
+  const colorValue = {
+    color: count > 0 ? "blue" : count < 0 ? "red" : "#333333",
+  };
+
+  // const start = () => {
+  //   if (!timer.current)
+  //     timer.current = setInterval(() => {
+  //       setCount((preriousCount) => preriousCount + 1);
+  //     }, 1000);
+  // };
+
+  // const stop = () => {
+  //   if (timer.current) clearInterval(timer, current);
+  // };
+
+  return (
+    <div className="counter">
+      <button onClick={decrement}>-</button>
+      <div style={colorValue}>{count}</div>
+      <button onClick={increment}>+</button>
+      {/* <div>{count}</div>
+      <button onClick={start}>start</button>
+      <button onClick={stop}>pause</button> */}
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.querySelector("#app"));
-root.render(<App />);
+root.render(<App2 />);
 
 // tim hieu ve xu ly su kien trong react
 // tim hiue ve key khi su dung map
 // tim hieu ve hook va usestate
-
