@@ -45,6 +45,7 @@ const Audio = ({ audio, onPrev, onNext }) => {
   return (
     <div className="section-audio">
       <img src={audio.img} alt={audio.artist} />
+      <h1 className="number font-mali">{audio.id}</h1>
       <div className="author">
         <h3 className="font-mali">{audio.title}</h3>
         <p className="font-poppins">Singer: {audio.artist}</p>
@@ -132,6 +133,7 @@ const App = () => {
   const getRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
   };
+
   const randomSongIndex = getRandom(0, audios.length);
   const audio = audios[index];
   // const audioRandom = audios[randomSongIndex];
