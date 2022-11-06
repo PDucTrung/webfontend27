@@ -134,13 +134,15 @@ const App = () => {
     return Math.floor(Math.random() * (max - min) + min);
   };
 
-  const randomSongIndex = getRandom(0, audios.length);
   const audio = audios[index];
   // const audioRandom = audios[randomSongIndex];
 
   const handleNext = () => {
     if (document.querySelector(".random").classList.contains("active")) {
-      setIndex(randomSongIndex);
+      const randomSongIndex = getRandom(0, audios.length);
+      if (randomSongIndex == audios.length) {
+        setIndex(0);
+      } else setIndex(randomSongIndex);
     } else if (index == audios.length - 1) {
       setIndex(0);
     } else setIndex(index + 1);
