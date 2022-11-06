@@ -6,7 +6,7 @@ const Audio = ({ audio, onPrev, onNext }) => {
   const [audioRepeat, changeAudioRepeat] = React.useState(false);
   const [audioRandom, changeAudioRandom] = React.useState(false);
 
-  const ramdomAudio = () => {
+  function ramdomAudio() {
     if (audioRandom == false) {
       document.querySelector(".random").classList.add("active");
       changeAudioRandom(true);
@@ -14,7 +14,7 @@ const Audio = ({ audio, onPrev, onNext }) => {
       document.querySelector(".random").classList.remove("active");
       changeAudioRandom(false);
     }
-  };
+  }
 
   const repeatAudio = () => {
     if (audioRepeat == false) {
@@ -46,14 +46,13 @@ const Audio = ({ audio, onPrev, onNext }) => {
     <div className="section-audio">
       <img src={audio.img} alt={audio.artist} />
       <div className="author">
-        <h2 className="font-mali">{audio.title}</h2>
+        <h3 className="font-mali">{audio.title}</h3>
         <p className="font-poppins">Singer: {audio.artist}</p>
       </div>
       <div className="audio">
         <audio
           ref={audioRef}
           src={audio.src}
-          onLoadedData={handleLoadedData}
           onEnded={() => {
             if (audioRepeat == true) {
               audioRef.current.play();
@@ -63,6 +62,7 @@ const Audio = ({ audio, onPrev, onNext }) => {
               changeAudioStatus(true);
             }
           }}
+          onLoadedData={handleLoadedData}
           controls
         ></audio>
         <div className="control d-flex align-items-center gap-4">
@@ -129,10 +129,17 @@ const App = () => {
     },
   ];
 
+  const getRandom = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+  const randomSongIndex = getRandom(0, audios.length);
   const audio = audios[index];
-  // const shuffledArr = (array) => array.sort(() => 0.5 - Math.random());
+  // const audioRandom = audios[randomSongIndex];
+
   const handleNext = () => {
-    if (index == audios.length - 1) {
+    if (document.querySelector(".random").classList.contains("active")) {
+      setIndex(randomSongIndex);
+    } else if (index == audios.length - 1) {
       setIndex(0);
     } else setIndex(index + 1);
   };
