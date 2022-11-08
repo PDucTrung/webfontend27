@@ -1,6 +1,9 @@
-# Context
+# ***React4***
 
-Trong ứng dụng React, data thường truyền từ trên xuống dưới thông qua props. Nhưng cách này sẽ trở nên phức tạp đối với các loại dữ liệu global như locale, theme…, chúng ta phải truyền chúng qua nhiều lớp component để sử dụng. Context lúc này như vị cứu tinh của React: cung cấp một cách chia sẻ dữ liệu giữa các component như một biến global mà không cần phải truyền props qua mỗi cấp component.
+# 1.Optimistic vs Pessimistic update
+# 2.Context
+
+Trong ứng dụng React, data thường truyền từ trên xuống dưới thông qua props. Nhưng cách này sẽ trở nên phức tạp đối với các loại dữ liệu global như locale, theme…, chúng ta phải truyền chúng qua nhiều lớp component để sử dụng. Context cung cấp một cách chia sẻ dữ liệu giữa các component như một biến global mà không cần phải truyền props qua mỗi cấp component.
 
 ![alt](https://wiki.tino.org/wp-content/uploads/2021/10/context-react-idea.drawio.png)
 
@@ -93,7 +96,7 @@ MyContext.displayName = 'MyDisplayName';
 <MyContext.Consumer> // "MyDisplayName.Consumer" in DevTools
 ```
 
-# Tìm nạp dữ liệu với useEffect
+# 3.Tìm nạp dữ liệu với useEffect
 
 Khi chúng ta muốn thực hiện hành động này một lần, đặc biệt là khi sử dụng loads hoặc mounts, có thể sử dụng useEffect() để thực hiện. Trong trường hợp cụ thể dưới đây, chúng ta gọi fetch() yêu cầu GET khi ứng dụng được mount, sử dụng một array rỗng làm giá trị phụ thuộc:
 
@@ -127,7 +130,7 @@ const UseCaseFetchApi = (props) => {
 export default UseCaseFetchApi;
 ```
 
-# Custom hooks
+# 4.Custom hooks
 
 ## Custom hooks là gì ?
 
