@@ -16,10 +16,7 @@ const TodoList = ({ todos, onUpdateTodo, deleteTodo }) => {
             key={todo.id}
             className="d-flex justify-content-between align-items-center"
           >
-            <div className="title" style={a(todo)}>
-              {todo.title}
-            </div>
-            <div className="check-delete">
+            <div className="title d-flex align-items-center gap-2" style={a(todo)}>
               <div className="form-switch">
                 <input
                   className="form-check-input"
@@ -28,6 +25,9 @@ const TodoList = ({ todos, onUpdateTodo, deleteTodo }) => {
                   onChange={() => onUpdateTodo(todo)}
                 />
               </div>
+              {todo.title}
+            </div>
+            <div className="check-delete">
               <button
                 className="btn-del btn btn-danger"
                 onClick={() => {
