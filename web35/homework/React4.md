@@ -100,30 +100,107 @@ Khi chúng ta muốn thực hiện hành động này một lần, đặc biệt
 ```js
 import { useState, useEffect } from "react";
 
-const UseCaseFetchApi = props => {
-  
-    const [bio, setBio] = useState({});
-    
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch('https://api/people/1/');
-            const data = await response.json();
-            console.log(data);
-            setBio(data);
-        };
-        fetchData();
-    }, []);
+const UseCaseFetchApi = (props) => {
+  const [bio, setBio] = useState({});
 
-    return (
-        <>
-            <hr />
-            <h2>useEffect use case</h2>
-            <h3>Running once on mount: fetch API data</h3>
-            <p>bio:</p>
-            <pre>{JSON.stringify(bio, null, '\t')}</pre>
-        </>
-    );
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("https://api/people/1/");
+      const data = await response.json();
+      console.log(data);
+      setBio(data);
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <>
+      <hr />
+      <h2>useEffect use case</h2>
+      <h3>Running once on mount: fetch API data</h3>
+      <p>bio:</p>
+      <pre>{JSON.stringify(bio, null, "\t")}</pre>
+    </>
+  );
 };
 
 export default UseCaseFetchApi;
+```
+
+# Custom hooks
+
+## Custom hooks là gì ?
+
+Custom hooks là việc các bạn tự tạo ra một hook mới với chức năng riêng biệt của nó. Việc này giúp tách phần code logic ra khỏi UI giúp code tường minh, dễ quản lý hơn, tránh lặp lại code và tái sử dụng.
+
+## example
+
+- Khi không dùng custom hook:
+
+```js
+import { useState, useEffect } from "react";
+import Sidebar from "components/Sidebar";
+
+const App = () => {
+  const [width, setWidth] = useState < number > window.innerWidth;
+
+  useEffect(() => {
+    const handler = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handler);
+
+    return () => {
+      window.removeEventListener("resize", handler);
+    };
+  }, []);
+
+  return <>{width >= 1024 && <Sidebar />}</>;
+};
+```
+
+Bây giờ muốn dùng window width ở component khác thì phải lặp lại phần code trên. Đây là lúc custom hooks phát huy tác dụng.
+
+- Xây dựng custom hooks
+
+Tạo ra hook useWindowSize để giải quyết vấn đề.
+
+```js
+import { useState, useEffect } from "react";
+
+export const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handler = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    window.addEventListener("resize", handler);
+
+    return () => {
+      window.removeEventListener("resize", handler);
+    };
+  }, []);
+
+  return windowSize;
+};
+```
+
+Giờ có thể sử dụng hook useWindowSize ở bất kì component nào.
+
+```js
+import { useWindowSize } from "hooks";
+
+const App = () => {
+  const { width, height } = useWindowSize();
+
+  return <>{width >= 1024 && <Sidebar />}</>;
+};
 ```
