@@ -48,6 +48,7 @@ const TodoList = ({ todos, onUpdateTodo, deleteTodo }) => {
 const App = () => {
   // client state
   const [todos, setTodos] = React.useState([]);
+  const [state, setState] = React.useState("all");
   React.useEffect(() => {
     const controller = new AbortController();
     // server state
@@ -75,15 +76,15 @@ const App = () => {
   };
 
   // false
-  const filterTodo = () => {
+  const onChangevalue = (event) => {
+    setState(event.target.value);
     const newTodos = [...todos];
     const active = newTodos.filter((todo) => todo.completed == false);
     const completed = newTodos.filter((todo) => todo.completed == true);
-
     setTodos(() => {
-      return document.getElementById("flexRadioDefault2").checked == true
+      return event.target.value == "active"
         ? active
-        : document.getElementById("flexRadioDefault3").checked == true
+        : event.target.value == "completed"
         ? completed
         : newTodos;
     });
@@ -131,14 +132,15 @@ const App = () => {
           Create
         </button>
       </div>
-      <form action="" className="form-radio d-flex gap-3">
+      <form className="form-radio d-flex gap-3" onChange={onChangevalue}>
         <div className="form-check">
           <input
             className="form-check-input"
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={filterTodo}
+            value="all"
+            checked={state === "all"}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
             All
@@ -150,7 +152,8 @@ const App = () => {
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault2"
-            onChange={filterTodo}
+            value="active"
+            checked={state === "active"}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault2">
             Active
@@ -162,7 +165,8 @@ const App = () => {
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault3"
-            onChange={filterTodo}
+            value="completed"
+            checked={state === "completed"}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault3">
             Completed
