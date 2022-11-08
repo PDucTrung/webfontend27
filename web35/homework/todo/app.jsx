@@ -95,13 +95,13 @@ const App = () => {
     // const activeTodos = [...a];
     // const completedTodos = [...c];
     setState(event.target.value);
-    const active = activeTodos.filter((todo) => todo.completed == false);
-    const completed = completedTodos.filter((todo) => todo.completed == true);
-    return event.target.value == "active"
-      ? setTodos(active)
-      : event.target.value == "completed"
-      ? setTodos(completed)
-      : setTodos(allTodos);
+    // const active = activeTodos.filter((todo) => todo.completed == false);
+    // const completed = completedTodos.filter((todo) => todo.completed == true);
+    // return event.target.value == "active"
+    //   ? setTodos(active)
+    //   : event.target.value == "completed"
+    //   ? setTodos(completed)
+    //   : setTodos(allTodos);
   };
   //
 
