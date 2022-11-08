@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.font-mali {
+  font-family: "Mali", cursive;
+}
+
+body {
+  background: rgb(244, 63, 94);
+  background: linear-gradient(
+    27deg,
+    rgba(244, 63, 94, 1) 0%,
+    rgba(14, 133, 233, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.todo-app {
+  margin: 150px auto;
+  width: max-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.check-delete {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.title {
+  width: 400px;
+  font-size: 18px;
+}
+
+.list-group {
+  width: 600px;
+  gap: 10px;
+}
+
+.list-group li {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid gainsboro;
+}
+
+.form-switch input {
+  height: 20px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.btn-del:hover {
+  background-color: blueviolet;
+  transition: all 0.3s linear;
+}
+
+.todo-txt {
+  width: 100%;
+}
+
+.clear {
+  width: 100%;
+}
+
+.todotodo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
