@@ -57,6 +57,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   border: 1px solid gainsboro;
+  height: 60px;
 }
 
 .form-switch input {
@@ -65,9 +66,18 @@ body {
   cursor: pointer;
 }
 
+.btn-del {
+  display: none;
+}
+
+.list-group li:hover .btn-del {
+  display: block;
+  animation: fadeInLeft 0.3s ease-in-out;
+}
+
 .btn-del:hover {
   background-color: blueviolet;
-  transition: all 0.3s linear;
+  transition: all 1s linear;
 }
 
 .todo-txt {
@@ -83,4 +93,15 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+  }
 }

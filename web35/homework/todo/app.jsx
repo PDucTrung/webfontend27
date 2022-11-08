@@ -1,4 +1,13 @@
 const TodoList = ({ todos, onUpdateTodo, deleteTodo }) => {
+  const a = (todo) => {
+    if (todo.completed == true) {
+      return {
+        textDecorationLine: "line-through",
+        color: "gray",
+      };
+    }
+  };
+
   return (
     <div>
       <ul className="list-group">
@@ -7,7 +16,9 @@ const TodoList = ({ todos, onUpdateTodo, deleteTodo }) => {
             key={todo.id}
             className="d-flex justify-content-between align-items-center"
           >
-            <div className="title">{todo.title}</div>
+            <div className="title" style={a(todo)}>
+              {todo.title}
+            </div>
             <div className="check-delete">
               <div className="form-switch">
                 <input
