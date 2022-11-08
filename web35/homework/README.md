@@ -70,3 +70,60 @@ MyClass.contextType = MyContext;
 Để lấy giá trị props “value” của component <Provider> trong một function component, ta dùng component Consumer.
 
 Function component nhận giá trị “value” của <Provider> gần nhất trong các tầng component và trả về React element.
+
+```js
+const FunctionComponent = (props) => (
+  <MyContext.Consumer>
+    {(val) => <span className={val}>Function Component</span>}
+  </MyContext.Consumer>
+);
+```
+
+### Context.displayName
+
+Sau khi một Context được khởi tạo bởi createContext(), nó nhận một thuộc tính displayName kiểu string (chuỗi).
+
+React DevTools sẽ sử dụng chuỗi này để hiển thị lại tên Context. Điều này hữu ích cho việc debug.
+
+```js
+const MyContext = React.createContext(/* vài giá trị */);
+MyContext.displayName = 'MyDisplayName';
+
+<MyContext.Provider> // "MyDisplayName.Provider" in DevTools
+<MyContext.Consumer> // "MyDisplayName.Consumer" in DevTools
+```
+
+# Tìm nạp dữ liệu với useEffect
+
+Khi chúng ta muốn thực hiện hành động này một lần, đặc biệt là khi sử dụng loads hoặc mounts, có thể sử dụng useEffect() để thực hiện. Trong trường hợp cụ thể dưới đây, chúng ta gọi fetch() yêu cầu GET khi ứng dụng được mount, sử dụng một array rỗng làm giá trị phụ thuộc:
+
+```js
+import { useState, useEffect } from "react";
+
+const UseCaseFetchApi = props => {
+  
+    const [bio, setBio] = useState({});
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch('https://api/people/1/');
+            const data = await response.json();
+            console.log(data);
+            setBio(data);
+        };
+        fetchData();
+    }, []);
+
+    return (
+        <>
+            <hr />
+            <h2>useEffect use case</h2>
+            <h3>Running once on mount: fetch API data</h3>
+            <p>bio:</p>
+            <pre>{JSON.stringify(bio, null, '\t')}</pre>
+        </>
+    );
+};
+
+export default UseCaseFetchApi;
+```
