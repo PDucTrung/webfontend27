@@ -16,7 +16,10 @@ const TodoList = ({ todos, onUpdateTodo, deleteTodo }) => {
             key={todo.id}
             className="d-flex justify-content-between align-items-center"
           >
-            <div className="title d-flex align-items-center gap-2" style={a(todo)}>
+            <div
+              className="title d-flex align-items-center gap-2"
+              style={a(todo)}
+            >
               <div className="form-switch">
                 <input
                   className="form-check-input"
@@ -48,6 +51,11 @@ const TodoList = ({ todos, onUpdateTodo, deleteTodo }) => {
 const App = () => {
   // client state
   const [todos, setTodos] = React.useState([]);
+  //
+  const [a, setA] = React.useState([]);
+  const [c, setC] = React.useState([]);
+  const [all, setAll] = React.useState([]);
+  //
   const [state, setState] = React.useState("all");
   React.useEffect(() => {
     const controller = new AbortController();
@@ -58,6 +66,9 @@ const App = () => {
       .then((res) => res.json())
       .then((data) => {
         setTodos(data);
+        setA(data);
+        setC(data);
+        setAll(data);
       });
 
     return () => {
@@ -72,22 +83,25 @@ const App = () => {
     const newTodo = newTodos[todoItemIndex];
     newTodo.completed = !newTodo.completed;
     newTodos[todoItemIndex] = newTodo;
+    setA(newTodos);
+    setC(newTodos);
+    setAll(newTodos);
     setTodos(newTodos);
   };
 
   // false
   const onChangevalue = (event) => {
+    const allTodos = [...all];
+    const activeTodos = [...a];
+    const completedTodos = [...c];
     setState(event.target.value);
-    const newTodos = [...todos];
-    const active = newTodos.filter((todo) => todo.completed == false);
-    const completed = newTodos.filter((todo) => todo.completed == true);
-    setTodos(() => {
-      return event.target.value == "active"
-        ? active
-        : event.target.value == "completed"
-        ? completed
-        : newTodos;
-    });
+    const active = activeTodos.filter((todo) => todo.completed == false);
+    const completed = completedTodos.filter((todo) => todo.completed == true);
+    return event.target.value == "active"
+      ? setTodos(active)
+      : event.target.value == "completed"
+      ? setTodos(completed)
+      : setTodos(allTodos);
   };
   //
 
@@ -101,6 +115,9 @@ const App = () => {
       title: input,
       completed: false,
     });
+    setA(newTodos);
+    setC(newTodos);
+    setAll(newTodos);
     setTodos(newTodos);
   };
 
@@ -109,6 +126,18 @@ const App = () => {
     const newTodos = [...todos];
 
     newTodos.splice(todoItemIndex, 1);
+
+    if (state == "active") {
+      a.splice(todoItemIndex, 1);
+    } else if (state == "completed") {
+      c.splice(todoItemIndex, 1);
+    } else {
+      all.splice(todoItemIndex, 1);
+    }
+
+    setA(a);
+    setC(c);
+    setAll(all);
     setTodos(newTodos);
   };
 
