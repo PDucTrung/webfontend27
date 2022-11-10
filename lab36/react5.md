@@ -61,3 +61,108 @@ Trong HTML thì cặp thẻ để chuyển hướng đó là thẻ `<a></a>` th�
 trong đó:
 
 - **to**: Giống như thuộc tính href trong thẻ a.
+
+## 2.4) NavLink
+
+`NavLink` thì rất giống với `Link` về cách sử dụng, nhưng **NavLink** tốt hơn vì nó hỗ trợ thêm một số thuộc tính như là **activeClassName** và **activeStyle** 2 thuộc tính này giúp cho khi mà nó trùng khớp thì nó sẽ được active lên và chúng ta có thể style cho nó.
+
+```js
+<NavLink
+  exact
+  activeStyle={{
+    backgroundColor: "white",
+    color: "red",
+  }}
+  to="/"
+  className="my-link"
+>
+  Trang Chu
+</NavLink>
+```
+
+## 2.5) Custom Link
+
+ở trên ta có thẻ NavLink giúp chúng ta có thêm một thuộc tính nhưng giả sử khi bạn không muốn activeClassName hoặc activeStyle tại thẻ NavLink mà nó lại nằm ở một thẻ bao nó ví dụ như thẻ div hay thẻ li thì sao? sau đây chung ta sẽ custom lại để có thể sử dụng các class hoặc style ở thẻ bao ngoài của nó.
+
+```js
+const MenuLink = ({
+  label, // nội dung trong thẻ
+  to, // giống như href trong thẻ a
+  activeOnlyWhenExact,
+}) => {
+  return (
+    <Route
+      path={to}
+      exact={activeOnlyWhenExact}
+      children={({ match }) => {
+        //match la doi tuong xac dinh su trung khop cua URL
+        var active = match ? "active abc" : "";
+
+        return (
+          <li className={`my-li ${active}`}>
+            <Link to={to} className="my-link">
+              {label}
+            </Link>
+          </li>
+        );
+      }}
+    />
+  );
+};
+```
+
+## 2.6) Đối tượng Match
+
+Khi bạn muốn lấy một số thông tin ở trên URL thì bạn có thể dùng đối tượng `match` để lấy dữ liệu về. Tại cấu hình `Router` ta chỉ cần truyền thêm đối tượng `match` vào `component` mà cần sử dụng đối tượng `match`
+
+```js
+   {
+        path : '/products',
+        exact : false,
+        main : ({match}) => <Products match={match} />
+    }
+```
+
+Khi `console.log(match)` ta sẽ có kết quả như sau.
+
+![alt](https://images.viblo.asia/f0ea77eb-f128-4e4e-bfd9-88fbaeb67f38.png)
+
+Trong đối tượng params sẽ chứa các tham số mà ta truyền trên URL.
+
+## 2.7) Đối tượng prompt - Xác nhận trước khi chuyển trang
+
+Giả sử khi bạn đang nhập liệu ở form nào đó mà không may click nút back hay chuyển trang thì thôi xong dữ liệu bạn nhập sẽ mất hết để khác phục điều đó ta có đối tượng prompt nó sẽ giúp chúng ta trước khi back hay chuyển trang nó sẽ xác nhận xem là chúng ta có chắc chắn muốn back hay chuyển trang không!.
+
+Khi muốn sử dụng đối tượng prompt thì chúng ta chỉ cần import nó từ react-router.
+
+```js
+import { Prompt } from "react-router-dom";
+
+<Prompt
+  when={true} // true | false
+  message={(location) => `Ban chac chan muon di den ${location.pathname}`}
+/>;
+```
+
+![alt](https://images.viblo.asia/00e6deaa-24b5-453e-b579-d57330d6ac5e.png)
+
+## 2.8) Redirect
+
+- Chức năng dùng để chuyển trang.
+- Có thể truy xuất thông tin trang trước đó thông qua đối tượng location. Để sử dụng Redirect ta chỉ cần import nó từ react-router.
+
+```js
+import { Redirect } from "react-router-dom";
+```
+
+Khi bạn muốn sử dụng location thì tại cấu hình Router ta chỉ cần truyền thêm đối tượng location vào component mà cần sử dụng đối tượng location.
+
+```js
+{
+    path : '/login',
+    exact : false,
+    main : ({location}) => <Login location={location} />
+}
+```
+
+![alt](https://images.viblo.asia/04995437-b55c-41ce-a740-23bdcbd10961.png)
