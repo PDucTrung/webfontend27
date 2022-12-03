@@ -60,7 +60,7 @@ const App = () => {
   React.useEffect(() => {
     const controller = new AbortController();
     // server state
-    fetch("https://jsonsv.herokuapp.com/todos", {
+    fetch("https://tfruitapi.vercel.app/todos", {
       signal: controller.signal,
     })
       .then((res) => res.json())

@@ -1,0 +1,70 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --a: 200px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.box:hover {
+  border: 1px solid red;
+  color: orange;
+}
+
+.box-list-container {
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.box-list img {
+  width: calc(var(--a) * 3 + 20px);
+  height: calc(var(--a));
+  top: calc(var(--a) + 10px);
+  z-index: 2;
+  transition: all 0.2s linear;
+  display: none;
+}
+
+.box-list {
+  gap: 10px;
+}
+
+.box-list img.active {
+  display: block;
+  animation: remove 1s linear 0s 1 forwards;
+}
+
+.img-end {
+  top: calc((var(--a) * -1) - 10px) !important;
+}
+
+@keyframes remove {
+  0% {
+    opacity: 0;
+    padding: 0px 0px;
+    max-height: 1000px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
